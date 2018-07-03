@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H_博主图片详情页-首页_PxCook</title>
+    <meta http-equiv="X-UA-Compatible"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="keywords" content="赫桥财经"/>
+    <meta name="Description" content=""/>
+    <meta name="author" content="陆宣良">
+    <link rel="stylesheet" href="./../css/heqiao.css">
+    <link rel="stylesheet" href="./../css/common.css">
+    <link rel="stylesheet" href="./../css/blogger.css">
+    <link rel="stylesheet" href="../css/bloggerDetail.css">
+    <link rel="stylesheet" href="../css/ask-question.css">
+    <link rel="stylesheet" href="./../css/calendar.css">
+    <!--报名 赞助-->
+    <link rel="stylesheet" href="../css/baoming.css">
+    <link rel="stylesheet" href="../css/zanzhu.css">
+    <script src="./../js/jquery-2.1.4.js"></script>
+    <script src="./../js/calendar.js"></script>
+    <script src="./../js/uicontroller.js"></script>
+    <style>
+        #ask-question {
+            padding: 20px 20px 70px 20px;
+        }
+
+        #ask-question  .send-back .right form div {
+            display: inline-block;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="topArea">
+        <div class="topLogo">
+            <ul>
+                <li class="logo">
+                    <a href="#">
+                        <img src="./../images/icon/logo.png" width="215">
+                    </a>
+                </li>
+                <li class="subtitle">会议</li>
+            </ul>
+
+        </div>
+
+        <div class="topOpera">
+            <ul>
+                <li class="navbar">
+
+                    <a href="" style="margin-right: 0">登录</a>/
+                    <a href="" style="margin-left: 0">注册</a>
+                    <a href="">个人中心</a>
+                    <a href="">提问</a>
+                    <a href="">关于赫桥</a>
+                    <a href="">返回首页</a>
+                </li>
+                <li class="searchbox">
+                    <div class="search">
+                        <input type="text" placeholder="输入关键词">
+                        <span class="btn"></span>
+                    </div>
+                </li>
+                <li class="hotline">
+                    <dl>
+                        <dt>全国服务热线:</dt>
+                        <dd>400-871-6766</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="redLine"></div>
+</header>
+<div class="container">
+    <div class="container-header">
+        <h1><em>火热报名</em><span>2017金融衍生品高峰论坛暨创新驱动发展（研讨）大会</span></h1>
+        <section>
+            <div class="top-img">
+                <img src="./../images/upload/huodong01.jpg">
+            </div>
+            <div class="info">
+                <p class="time">会议时间：<span>2017/08/25 09:00~12:00</span></p>
+                <p class="address">会议地点：<span> 深圳市  君悦酒店</span></p>
+                <p class="sponsor">主办方：<span>赫桥网</span></p>
+                <p class="pay"> 参会费用：<span>免费</span></p>
+                <p class="type">会议方式：<span> 线上+线下</span></p>
+
+                <div class="user_operate">
+                    <button class="forName" id="forName">我要报名</button>
+                    <button class="forPay" id="forPay">我要赞助</button>
+                </div>
+
+                <div class="result">
+                    <p class="baoming">报名(<span class="num1">300</span>/<span>500</span>)</p>
+                    <p class="operate"><span class="share">分享</span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="collection">收藏</span></p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container-main">
+        <div class="theme-celect">
+            <h1>
+                <span class="theme-active" data-content="1">主题背景</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span data-content="2">主题议程</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span data-content="3">主题嘉宾</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span data-content="4">活动指南</span>
+            </h1>
+            <div class="content" id="order_content_1">
+                <p>
+                    它可以回答问题，完成任务，管理日历，在大多数情况下，你听到的是一个舒缓的女性声音。但苹果是如何让Siri听起来像现在这样的呢？
+                    它可以回答问题，完成任务，管理日历，在大多数情况下，你听到的是一个舒缓的女性声音。但苹果是如何让Siri听起来像现在这样的呢？
+                </p>
+                <div class="info">
+                    <p>会议名称&nbsp;:&nbsp;<span>2017浦江创新会</span></p>
+                    <p>会议时间&nbsp;:&nbsp;<span>2017年9月23-24日</span></p>
+                    <p>会议地点&nbsp;:&nbsp;<span>上海东郊宾馆</span></p>
+                    <section>
+                        <div>
+                            <p>主办方&nbsp;:&nbsp;</p>
+                        </div>
+                        <div>
+                            <p><span>中华人名共和国技术部</span><em>展开&nbsp;<i></i></em></p>
+                            <p><span>上海市人名政府</span><em>展开&nbsp;<i></i></em></p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <p>协办方&nbsp;:&nbsp;</p>
+                        </div>
+                        <div>
+                            <p><span>上海市科学技术委员会</span><em>展开&nbsp;<i></i></em></p>
+                            <p><span>中国科学技术发展战略研究院</span><em>展开&nbsp;<i></i></em></p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <p>承办方&nbsp;:&nbsp;</p>
+                        </div>
+                        <div>
+                            <p><span>同济大学</span><em>展开&nbsp;<i></i></em></p>
+                            <p><span>上海漳江（集团）有限公司</span><em>展开&nbsp;<i></i></em></p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <p>支持单位&nbsp;:&nbsp;</p>
+                        </div>
+                        <div>
+                            <p>
+                                <span>明日科技</span><em>展开&nbsp;<i></i></em>
+                                <span>上海广播电视台（SMG）</span><em>展开&nbsp;<i></i></em>
+                                <span>上海广播电视台（SMG）</span><em>展开&nbsp;<i></i></em>
+                            </p>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+            <div class="content" id="order_content_2"  style="display: none;">
+                <h1><span>日程相关</span></h1>
+                <table>
+                    <caption>
+                        <span>9月23日星期五上午</span>
+                        <span>主持人&nbsp;:&nbsp;<em>李双双</em></span>
+                        <span>会场&nbsp;:&nbsp;<em>5F-紫荆厅</em></span>
+                    </caption>
+                    <thead>
+                    <tr>
+                        <td class="time">时间</td>
+                        <td class="people">嘉宾</td>
+                        <td class="theme">主题</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="time">9:00~10:30</td>
+                        <td class="people">
+                            <p><span>李强</span></p>
+                            <p><span>上海市委员会</span></p>
+                        </td>
+                        <td class="theme">
+                            <span>具有全球影响力的科技创新中心（格局与使命）</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="time">9:00~10:30</td>
+                        <td class="people">
+                            <p><span>李强</span></p>
+                            <p><span>上海市委员会</span></p>
+                        </td>
+                        <td class="theme">
+                            <span>具有全球影响力的科技创新中心（格局与使命）</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="time">10:33~11:00</td>
+                        <td class="people">
+                            <p><span>张伟婷</span></p>
+                            <p><span>上海河桥投资</span></p>
+                        </td>
+                        <td class="theme">
+                            <span>具有全球影响力的科技创新中心</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="time">11:10~11:30</td>
+                        <td class="people">
+                            <p><span>张伟婷</span></p>
+                            <p><span>上海河桥投资委员会</span></p>
+                        </td>
+                        <td class="theme">
+                            <span>具有全球影响力的科技创新中心</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="time">11:32~11:00</td>
+                        <td class="people">
+                            <p><span>张伟婷</span></p>
+                            <p><span>上海河桥投资</span></p>
+                        </td>
+                        <td class="theme">
+                            <span>具有全球影响力的科技创新中心</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <caption>
+                        <span>9月23日星期五上午</span>
+                        <span>主持人&nbsp;:&nbsp;<em>李双双</em></span>
+                        <span>会场&nbsp;:&nbsp;<em>5F-紫荆厅</em></span>
+                    </caption>
+                    <thead>
+                    <tr>
+                        <td class="time">时间</td>
+                        <td class="people">嘉宾</td>
+                        <td class="theme">主题</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="time">9:00~10:30</td>
+                        <td class="people">
+                            <p><span>李强</span></p>
+                            <p><span>上海市委员会</span></p>
+                        </td>
+                        <td class="theme">
+                            <span>具有全球影响力的科技创新中心（格局与使命）</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="time">9:00~10:30</td>
+                        <td class="people">
+                            <p><span>李强</span></p>
+                            <p><span>上海市委员会</span></p>
+                        </td>
+                        <td class="theme">
+                            <span>具有全球影响力的科技创新中心（格局与使命）</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="time">10:33~11:00</td>
+                        <td class="people">
+                            <p><span>张伟婷</span></p>
+                            <p><span>上海河桥投资</span></p>
+                        </td>
+                        <td class="theme">
+                            <span>具有全球影响力的科技创新中心</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="time">11:10~11:30</td>
+                        <td class="people">
+                            <p><span>张伟婷</span></p>
+                            <p><span>上海河桥投资委员会</span></p>
+                        </td>
+                        <td class="theme">
+                            <span>具有全球影响力的科技创新中心</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="time">11:32~11:00</td>
+                        <td class="people">
+                            <p><span>张伟婷</span></p>
+                            <p><span>上海河桥投资</span></p>
+                        </td>
+                        <td class="theme">
+                            <span>具有全球影响力的科技创新中心</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="content" id="order_content_3"  style="display: none;">
+                <ul>
+                    <li>
+                        <section class="top-img">
+                            <img src="./../images/upload/bloggerUser.png">
+                            <div>
+                                <h1><span>锦坤石</span></h1>
+                                <p><span>坤锦文化集团</span></p>
+                                <p><span>董事长</span></p>
+                            </div>
+                        </section>
+                        <div class="content-value">
+                            <p>
+                                <span>
+                                    我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法
+                                    我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法
+                                    人的想法我觉得好好啦，每个人有每个人的想法
+                                 </span>
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <section class="top-img">
+                            <img src="./../images/upload/bloggerUser.png">
+                            <div>
+                                <h1><span>锦坤石</span></h1>
+                                <p><span>坤锦文化集团</span></p>
+                                <p><span>董事长</span></p>
+                            </div>
+                        </section>
+                        <div class="content-value">
+                            <p>
+                                <span>
+                                    我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法
+                                    我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法
+                                    人的想法我觉得好好啦，每个人有每个人的想法
+                                 </span>
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <section class="top-img">
+                            <img src="./../images/upload/bloggerUser.png">
+                            <div>
+                                <h1><span>锦坤石</span></h1>
+                                <p><span>坤锦文化集团</span></p>
+                                <p><span>董事长</span></p>
+                            </div>
+                        </section>
+                        <div class="content-value">
+                            <p>
+                                <span>
+                                    我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法
+                                    我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法
+                                    人的想法我觉得好好啦，每个人有每个人的想法
+                                 </span>
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <section class="top-img">
+                            <img src="./../images/upload/bloggerUser.png">
+                            <div>
+                                <h1><span>锦坤石</span></h1>
+                                <p><span>坤锦文化集团</span></p>
+                                <p><span>董事长</span></p>
+                            </div>
+                        </section>
+                        <div class="content-value">
+                            <p>
+                                <span>
+                                    我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法
+                                    我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法
+                                    人的想法我觉得好好啦，每个人有每个人的想法
+                                 </span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="content" id="order_content_4"  style="display: none;">
+                <p>
+                    由中华人民共和国科学技术部和上海市人民政府共同主办的浦江创新论坛，创设于2008年，论坛主席为科技部前部长徐冠华院士。论坛围绕创新主题，紧扣时代脉搏，携手全球创新力量，聚焦创新驱动战略，关注创新体系建设，洞悉产业变革风云，以全球视野谋划和推动创新。
+                    论坛已成功举办九届，共吸引了全球近千位政界高层、学界泰斗和商界精英汇聚浦江，围绕国际国内创新领域中的各类热点问题展开深度交流探讨，形成了一批对经济发展和创新具有突出价值的深刻见解。过去几年，习近平主席和李克强总理以及历届主宾国国家领导人（2014年为俄罗斯总统普京，2015年为以色列总理内塔尼亚胡，2016年英国首相特雷莎•梅向论坛）分别先后为论坛发来贺信。在刚刚过去的2016年论坛上，万钢部长连续第九年在论坛上发表主旨演讲，来自全球15个国家和地区的110余位政界高层、学界泰斗和商界精英围绕创新主题纵论风云，分享智慧，激荡思想、交锋观点，引起全社会广泛关注
+
+                </p>
+            </div>
+        </div>
+        <div id="ask-question" data-space="1">
+            <h1>评论<span>&nbsp;(214)</span>&nbsp;|&nbsp;提问<span>&nbsp;(244)</span></h1>
+            <form>
+                <input type="text" placeholder="我也来说两句" class="text  placeholder">
+                <input type="button" value="发表评论" class="button">
+            </form>
+            <h2><span class="active" data-index="1">按热门</span>&nbsp; &nbsp;|&nbsp; &nbsp;<span data-index="2">按时间</span>
+            </h2>
+            <div class="order" id="order_1">
+                <div class="send-back">
+                    <div class="left">
+                        <img src="./../images/upload/bloggerUser.png">
+                    </div>
+                    <div class="right">
+                        <h3>完美1985&nbsp;&nbsp;&nbsp;<span>昨日&nbsp;&nbsp;&nbsp;19:46</span></h3>
+                        <p>
+                            我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法
+                        </p>
+                        <h4><img src="./../images/icon/icon_pointer.jpg">&nbsp;<span>4</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                                src="./../images/icon/icon_send.jpg">&nbsp;<span>5</span></h4>
+                        <form>
+                            <div>
+                                <input type="text" placeholder="回复一下你的看法" class="text placeholder">
+                                <input type="button" value="回复" class="button">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="clearleft  clearfix"></div>
+                <!--<div class="pagebox">-->
+                <!--<div class="page">-->
+                <!--<ul>-->
+                <!--<li class="prev"><a href="javascript:void(0);">上一页</a></li>-->
+                <!--<li class="next"><a href="javascript:void(0);">下一页</a></li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+            <div class="" id="order_2">
+                <div class="send-back">
+                    <div class="left">
+                        <img src="./../images/upload/bloggerUser.png">
+                    </div>
+                    <div class="right">
+                        <h3>完2美1985&nbsp;&nbsp;&nbsp;<span>昨日&nbsp;&nbsp;&nbsp;19:46</span></h3>
+                        <p>
+                            我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法我觉得好好啦，每个人有每个人的想法
+                        </p>
+                        <h4><img src="./../images/icon/icon_pointer.jpg">&nbsp;<span>4</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                                src="./../images/icon/icon_send.jpg">&nbsp;<span>5</span></h4>
+                        <form>
+                            <div>
+                                <input type="text" placeholder="回复一下你的看法" class="text placeholder">
+                                <input type="button" value="回复" class="button">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="clearleft  clearfix"></div>
+                <!--<div class="pagebox">-->
+                <!--<div class="page">-->
+                <!--<ul>-->
+                <!--<li class="prev"><a href="javascript:void(0);">上一页</a></li>-->
+                <!--<li class="next"><a href="javascript:void(0);">下一页</a></li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+    <div class="container-right">
+        <div class="Title">相关活动</div>
+        <div class="list">
+            <ul>
+                <li>
+                    <div class="top-img">
+                        <img src="./../images/upload/finance_meeting_02.jpg">
+                        <p class="state"><span>正在播出</span></p>
+                        <p class="address"><span>上海</span></p>
+                    </div>
+                    <div class="content">
+                        <h3>2017年金融艳萍高峰论坛创新驱动发展研讨会</h3>
+                        <div>
+                            <p class="time">&nbsp;&nbsp;<span>2017-08  AM 09:15</span></p>
+                            <p class="num">报名&nbsp;&nbsp;<span>1254</span></p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="top-img">
+                        <img src="./../images/upload/finance_meeting_02.jpg">
+                        <p class="state"><span>正在播出</span></p>
+                        <p class="address"><span>上海</span></p>
+                    </div>
+                    <div class="content">
+                        <h3>2017年金融艳萍高峰论坛创新驱动发展研讨会</h3>
+                        <div>
+                            <p class="time">&nbsp;&nbsp;<span>2017-08  AM 09:15</span></p>
+                            <p class="num">报名&nbsp;&nbsp;<span>1254</span></p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="top-img">
+                        <img src="./../images/upload/finance_meeting_02.jpg">
+                        <p class="state"><span>正在播出</span></p>
+                        <p class="address"><span>上海</span></p>
+                    </div>
+                    <div class="content">
+                        <h3>2017年金融艳萍高峰论坛创新驱动发展研讨会</h3>
+                        <div>
+                            <p class="time">&nbsp;&nbsp;<span>2017-08  AM 09:15</span></p>
+                            <p class="num">报名&nbsp;&nbsp;<span>1254</span></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer">
+        <div class="footerLink">
+            <a href="">关于赫桥</a><span></span>
+            <a href="">联系我们</a><span></span>
+            <a href="">人才招聘</a><span></span>
+            <a href="">内容合作</a><span></span>
+            <a href="">网站导航</a><span></span>
+            <a href="">使用条款</a><span></span>
+            <a href="">版权声明</a><span></span>
+            <a href="">隐私保护</a><span></span>
+            <a href="">信息举报</a>
+        </div>
+        <p class="copyright">Copyright 2017-2028 赫桥财经 www.heqiaocaijing.com 版权所有</p>
+    </div>
+</footer>
+
+<!--报名-->
+<div id="tip-baoming">
+    <div class="cover"></div>
+    <div class="tip-content">
+        <h1>报名</h1>
+        <form>
+            <table>
+                <thead>
+                <tr>
+                    <th>门票名称</th>
+                    <th>单价</th>
+                    <th>截止时间</th>
+                    <th>数量</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>个人</td>
+                    <td>500</td>
+                    <td>2017-07-13 18:00</td>
+                    <td>
+                        <p>
+                            <img src="./../images/icon/icon_addup.jpg">
+                            <span>1</span>
+                            <img src="./../images/icon/icon_reducedown.jpg">
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>个人</td>
+                    <td>500</td>
+                    <td>2017-07-13 18:00</td>
+                    <td>
+                        <p>
+                            <img src="./../images/icon/icon_addup.jpg">
+                            <span>1</span>
+                            <img src="./../images/icon/icon_reducedown.jpg">
+                        </p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="name"><label for="bmname">姓名&nbsp;:&nbsp;</label> <input type="text" id="bmname"></div>
+            <div class="tel"><label for="bmtel">手机号码&nbsp;:&nbsp;</label> <input type="tel" id="bmtel"></div>
+            <div class="Verification"><label for="bmVerification">验证码&nbsp;:&nbsp;</label> <input type="text"
+                                                                                                  id="bmVerification">
+            </div>
+            <div class="company"><label for="bmcompany">公司&nbsp;:&nbsp;</label> <input type="text" id="bmcompany"></div>
+            <div class="job"><label for="bmjob">职位&nbsp;:&nbsp;</label> <input type="text" id="bmjob"></div>
+            <div class="email"><label for="bmemail">邮箱&nbsp;:&nbsp;</label> <input type="email" id="bmemail"></div>
+            <div class="remarks"><label for="remarks">备注&nbsp;:&nbsp;</label><textarea id="remarks"></textarea></div>
+            <div class="payType">
+                <label>支付方式&nbsp;:&nbsp;</label>
+                <div class="yinlain">
+                    <img src="./../images/icon/icon_yinlainpay.jpg">
+                </div>
+                <div>
+                    <img src="./../images/icon/icon_zhufubaopay.jpg">
+                </div>
+                <div>
+                    <img src="./../images/icon/icon_weixinpay.jpg">
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="tip-zanzhu">
+    <div class="cover"></div>
+    <div class="tip-content">
+        <h1>赞助</h1>
+        <form>
+            <section>
+                <div class="money-entity">
+                    <p class="money"><label for="zzmoney">货币&nbsp;:&nbsp;</label><input type="text" id="zzmoney"> <em>&nbsp;*&nbsp;填报拟赞助资金</em>
+                    </p>
+                    <p class="entity"><label for="zzentity">实物&nbsp;:&nbsp;</label><input type="text" id="zzentity">
+                        <em>&nbsp;*&nbsp;填报拟实物名称及数量</em></p>
+                </div>
+                <p class="name"><label for="zzname">名称&nbsp;:&nbsp;</label><input type="text" id="zzname"></p>
+                <p class="tel"><label for="zztel">手机号&nbsp;:&nbsp;</label><input type="tel" id="zztel">
+                    <button>获取验证码</button>
+                </p>
+                <p class="Verification"><label for="zzVerification">验证码&nbsp;:&nbsp;</label><input type="text"
+                                                                                                   id="zzVerification">
+                </p>
+                <p class="company"><label for="zzcompany">公司&nbsp;:&nbsp;</label><input type="text" id="zzcompany"></p>
+                <p class="email"><label for="zzemail">邮箱&nbsp;:&nbsp;</label><input type="email" id="zzemail"></p>
+                <p class="error"><span>提示&nbsp;:&nbsp;提交信息后，客服会及时与您联系!</span></p>
+            </section>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>赫桥财经</title>
+    <title></title>
+    <meta name="keywords" content="赫桥财经"/>
+    <meta name="Description" content=""/>
+    <link rel="stylesheet" href="../../css/heqiao.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/account.css">
+    <link rel="stylesheet" href="../../css/userCenter.css">
+    <script src="../../js/jquery-2.1.4.js"></script>
+    <script src="../../js/ajaxfileupload.js"></script>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<header>
+    <div class="topArea">
+        <div class="topLogo">
+            <ul>
+                <li class="logo"><a href="../index.html"><img src="../../images/icon/logo.png" width="215"></a></li>
+                <li class="blogger"><img src="../../images/upload/bloggerUser.png">
+
+                    <div class="summary"><h1>博主名</h1>
+
+                        <p>锦坤文化发展集团</p></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="topOpera">
+            <ul>
+                <li class="navbar"><a href="">返回首页</a><a href="" style="margin-right: 0">登录</a>/<a href=""
+                                                                                                   style="margin-left: 0">注册</a><a
+                        href="">个人中心</a><a href="">提问</a><a href="">关于赫桥</a></li>
+                <li class="searchbox">
+                    <div class="search"><input type="text" placeholder="输入关键词"><span class="btn"></span></div>
+                </li>
+                <li class="hotline">
+                    <dl>
+                        <dt>全国服务热线:</dt>
+                        <dd>400-871-6766</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="redLine"></div>
+</header>
+<div class="bg-body" id="userCenterApp">
+    <div class="container">
+        <div class="actNav">
+            <ul>
+                <li><a id="user" href="user_center.html">用户中心</a></li>
+                <li><a id="message" href="message.html">消息中心</a></li>
+                <li><a id="setting" href="setting.html">我的设置</a></li>
+                <li><a id="wealth" href="wealth.html">我的财富</a></li>
+                <li><a id="video" href="video.html">我的视频</a></li>
+                <li><a id="audio" href="audio.html">我的音频</a></li>
+                <li><a id="report" href="report.html">我的报告</a></li>
+                <li><a id="photo" href="photo.html">我的图片</a></li>
+                <li><a id="data" href="data.html">我的数据</a></li>
+                <li><a id="metting" href="metting.html">我的会议</a></li>
+                <li><a id="interlocution" href="interlocution.html">我的问答</a></li>
+                <li><a id="questionnaire" href="questionnaire.html">我的问卷</a></li>
+                <li><a id="follow" href="follow.html">我的关注</a></li>
+                <li><a id="collect" href="collect.html">我的收藏</a></li>
+                <li><a href="javascript:;">退出登录</a></li>
+            </ul>
+        </div>
+        <div class="actContent">
+            <div class="actTab">
+                <div class="hd actTitle">
+                    <div class="alogo alogo-user"></div>
+                    <div class="alogo alogo-user"></div>
+                    <ul>
+                        <li class="on">个人资料</li>
+                        <li>账户安全</li>
+                        <li>修改密码</li>
+                        <li>站点统计</li>
+                    </ul>
+                </div>
+                <div class="bd actMain">
+                    <!-- 个人资料 -->
+                    <div class="personel">
+                        <ul class="infoIntro">
+                            <li>
+                                <div class="big"><label>ID：</label>
+                                    <vue v-cloak>{{userInfo.id}}</vue>
+                                </div>
+                                <div><label>会员等级：</label><span class="vip">VIP
+                                    <vue v-cloak>{{userInfo.rank}}</vue></span></div>
+                                <div>
+                                    <label>会员等级：</label>
+
+                                    <div class="progressbar">
+                                        <span id="safe" style="width: 30%"></span>
+                                    </div>
+                                    <em class="yellow">较高</em>
+                                </div>
+                            </li>
+                            <li>
+                                <div><label>我的粉丝：</label>
+                                    <vue v-cloak>{{userInfo.user_follow}}</vue>
+                                </div>
+                                <div><label>我的关注：</label>
+                                    <vue v-cloak>{{userInfo.user_connect}}</vue>
+                                </div>
+                                <div><label>未读消息：</label>
+                                    <vue v-cloak>{{userInfo.message_count}}</vue>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="txt-yellow"><label>我的收入：</label>
+                                    <vue v-cloak>{{userInfo.income}}</vue>
+                                </div>
+                                <div class="txt-yellow"><label>我的支出：</label>
+                                    <vue v-cloak>{{userInfo.outcome}}</vue>
+                                </div>
+                                <div class="txt-yellow"><label>可提现余额：</label>
+                                    <vue v-cloak>{{userInfo.balance}}</vue>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="information">
+                            <div class="personel-tx">
+                                <div class="pic-box">
+                                    <img :src="userInfo.headsmall">
+                                </div>
+                                <p>规格90px*90px</p>
+
+                                <p class="clsSelect">
+                                    <input name="iscom" type="radio" value="1" v-model="userInfo.user_type">&nbsp;个人&nbsp;&nbsp;
+                                    <input name="iscom" type="radio" value="2" v-model="userInfo.user_type">&nbsp;机构
+                                </p>
+                            </div>
+                            <div class="personel-content">
+                                <div class="iscom" style="display: block">
+                                    <div class="part1 clearfix">
+                                        <div class="fl baseinfo">
+                                            <div>
+                                                <label>博主姓名</label>
+                                                <input type="text" placeholder="填写后不能修改"
+                                                       v-model="userInfo.realname">
+                                                <span class="isshow txt-blue">显示</span>
+                                            </div>
+                                            <div>
+                                                <label>昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称</label>
+                                                <input type="text" placeholder="限5个字以内"
+                                                       v-model="userInfo.nickname">
+                                                <span class="isshow">不显示</span>&nbsp;&nbsp;
+                                                <a href="javascript:;">修改</a>
+                                            </div>
+                                            <div>
+                                                <label>上传头像</label>
+                                                <input type="text" v-model="userInfo.headsmall">
+                                                <span @click="uploadHeader">浏览</span>
+                                                <input type="file" name="file" id="uploadHeader" style="display: none;">
+                                            </div>
+                                            <div>
+                                                <label>主页网址</label>
+                                                <em class="f12">http://blog.heqiaocn.com/</em>
+                                                <input class="small" type="text" :value="userInfo.id">
+                                                <a href="javascript:;">修改</a>
+                                            </div>
+
+                                            <div>
+                                                <label>手机号码</label>
+                                                <input class="longer" type="text" v-model="userInfo.phone">
+                                                <a href="javascript:;">修改</a>
+                                            </div>
+
+                                        </div>
+                                        <div class="fr baseinfo">
+                                            <div>
+                                                <label>单位名称</label>
+                                                <input class="long" type="text" placeholder="限8个字以内"
+                                                       v-model="userInfo.company">
+                                                <a href="javascript:;">修改</a>
+                                            </div>
+                                            <div>
+                                                <label>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;务</label>
+                                                <input type="text" placeholder="限5个字以内" v-model="userInfo.career">
+                                                <a href="javascript:;">修改</a>
+                                            </div>
+                                            <div>
+                                                <label>邮寄地址</label>
+                                                <input class="longer" type="text" v-model="userInfo.email_address">
+                                                <a href="javascript:;">修改</a>
+                                            </div>
+                                            <div>
+                                                <label>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</label>
+                                                <input class="long" type="text" v-model="userInfo.email">
+                                                <a href="javascript:;">修改</a>
+                                            </div>
+                                            <div>
+                                                <label class="mr10">银行卡绑定</label>
+                                                <a href="wealth.html" class="enter txt-blue">进入绑定</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="part2">
+                                        <p>个人简介</p>
+                                        <textarea rows="3" placeholder="限定150字以内">{{userInfo.u_intro}}</textarea>
+                                    </div>
+                                    <div class="part3">
+                                        <p>关注领域</p>
+                                        <ul class="clearfix">
+                                            <li><input type="checkbox">宏观</li>
+                                            <li><input type="checkbox">金融</li>
+                                            <li><input type="checkbox">股票</li>
+                                            <li><input type="checkbox">债券</li>
+                                            <li><input type="checkbox">外汇</li>
+                                            <li><input type="checkbox">有色金属</li>
+                                            <li><input type="checkbox">贵金属</li>
+                                            <li><input type="checkbox">黑色系列</li>
+                                            <li><input type="checkbox">能源化工</li>
+                                            <li><input type="checkbox">油脂油料</li>
+                                            <li><input type="checkbox">谷物饲料</li>
+                                            <li><input type="checkbox">畜牧农林</li>
+                                            <li><input type="checkbox">棉花</li>
+                                            <li><input type="checkbox">白糖</li>
+                                            <li><input type="checkbox">橡胶</li>
+                                            <li><input type="checkbox">其他</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="safe-bns">
+                                <button class="btn-blue">保存</button>
+                                <button class="btn-blue">提交</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 账户安全 -->
+                    <div class="safety">
+                        <div class="safety-options">
+                            <ul>
+                                <li><i class="password"></i>登陆密码</li>
+                                <li>互联网账号存在被盗风险，建议定期更改密码保证账号安全<i class="completed"></i></li>
+                                <li><a class="edit trigger toUpdatePassword" href="javascript:;">修改</a></li>
+                            </ul>
+                        </div>
+                        <div class="safety-options">
+                            <ul>
+                                <li><i class="mobile"></i>绑定手机</li>
+                                <li>已绑定手机号
+                                    <vue v-cloak>{{userInfo.hiddenPhone}}</vue>
+                                    <i class="completed"></i></li>
+                                <li><a class="edit showEditUI" href="javascript:;">修改</a></li>
+                            </ul>
+                            <div class="bangding">
+                                <div class="row">
+                                    <lable>输入手机号：</lable>
+                                    <input type="text" v-model="changeMobile" @blur="getChangeMobileSmsCode">
+                                </div>
+                                <div class="row">
+                                    <lable>输入验证码：</lable>
+                                    <input type="text" v-model="changeMobileSmsCode">
+                                    <span></span>
+                                </div>
+                                <div class="row">
+                                    <button type="submit" class="btn-blue" @click="submitChangeMobileData">绑定手机</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="safety-options">
+                            <ul>
+                                <li><i class="email"></i>绑定邮箱</li>
+                                <li>验证邮箱可用于直接登陆<i
+                                        :class="(userInfo.email == null || userInfo.email.length == 0) ? 'hang' : 'completed'"></i>
+                                </li>
+                                <li><a class="edit showEditUI" href="javascript:;">修改</a></li>
+                            </ul>
+                            <div class="bangding bangdingEmailDiv">
+                                <div class="row">
+                                    <lable>输入邮箱地址：</lable>
+                                    <input type="email" v-model="email">
+                                </div>
+                                <div class="row">
+                                    <lable>输入邮箱验证码：</lable>
+                                    <input class="small" type="text" v-model="emailCode">
+                                    <a class="btn-yellow" href="javascript:;" @click="getEmailCode">获取验证码</a>
+                                </div>
+                                <div class="row">
+                                    <button type="submit" class="btn-blue" @click="submitBindEmail">绑定邮箱</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="safe-bns">
+                            <button class="btn-blue">保存</button>
+                            <button class="btn-blue">提交</button>
+                        </div>
+                    </div>
+
+
+                    <!-- 修改密码 -->
+                    <div class="rePassword">
+                        <div class="control">
+                            <a class="control-item active">手机验证</a>|
+                            <a class="control-item ">旧密码</a>
+                        </div>
+                        <div>
+                            <div class="control-content active">
+                                <div class="row">
+                                    <label>手机号码：</label>
+                                    <input type="text" v-model="forgetMobile">
+                                </div>
+                                <div class="row">
+                                    <label>验&nbsp;&nbsp;证&nbsp;&nbsp;码： </label>
+                                    <input class="short" type="text" v-model="forgetSmsCode">
+                                    <span class="btn-yellow" style="cursor:pointer;" @click="forgetGetSmsCode">{{forgetGetSmsCodeText}}</span>
+                                </div>
+                                <div class="row">
+                                    <label>新&nbsp;&nbsp;密&nbsp;&nbsp;码： </label>
+                                    <input type="text" v-model="forgetPassword">
+                                </div>
+                                <div class="row">
+                                    <label>确认密码：</label>
+                                    <input type="text" v-model="forgetPassword2">
+                                </div>
+                                <div class="row">
+                                    <button type="submit" class="btn-blue" @click="forgetSmsSubmitData">
+                                        {{forgetSubmitText}}
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="control-content">
+                                <div class="row">
+                                    <label>旧&nbsp;&nbsp;密&nbsp;&nbsp;码： </label>
+                                    <input type="text" v-model="forget2OldPassword">
+                                </div>
+                                <div class="row">
+                                    <label>新&nbsp;&nbsp;密&nbsp;&nbsp;码： </label>
+                                    <input type="text" v-model="forget2Password">
+                                </div>
+                                <div class="row">
+                                    <label>确认密码：</label>
+                                    <input type="text" v-model="forget2Password2">
+                                </div>
+                                <div class="row">
+                                    <button type="submit" class="btn-blue" @click="forget2SubmitData">确定</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 站点统计 -->
+                    <div class="statistic">
+                        <div class="statistic-item">
+                            <dl class="statistic-tb">
+                                <dt><i class="unread"></i>用户互动分析</dt>
+                                <dd>
+                                    <ul class="parameter">
+                                        <li><input name="type" type="checkbox">点赞</li>
+                                        <li><input name="type" type="checkbox">评论</li>
+                                        <li><input name="type" type="checkbox">分享</li>
+                                        <li><input name="type" type="checkbox">关注</li>
+                                        <li><input name="type" type="checkbox">收藏</li>
+                                    </ul>
+                                </dd>
+                                <dd>
+                                    <input type="text" value="2017-05-01">
+                                    &nbsp;&nbsp;至&nbsp;&nbsp;
+                                    <input type="text" value="2017-09-01">
+                                </dd>
+                            </dl>
+
+                            <div class="statistic-tj">
+                                <img src="../../images/upload/char.jpg">
+                            </div>
+                        </div>
+                        <div class="statistic-item">
+                            <dl class="statistic-tb">
+                                <dt><i class="unread"></i>用户访问分析</dt>
+                                <dd>
+                                    <ul class="parameter">
+                                        <li><input name="type" type="checkbox">浏览量</li>
+                                        <li><input name="type" type="checkbox">访问时长</li>
+                                        <li><input name="type" type="checkbox">平均访问时长</li>
+                                    </ul>
+                                </dd>
+                                <dd>
+                                    <input type="text" value="2017-05-01">
+                                    &nbsp;&nbsp;至&nbsp;&nbsp;
+                                    <input type="text" value="2017-09-01">
+                                </dd>
+                            </dl>
+
+                            <div class="statistic-tj">
+                                <img src="../../images/upload/char.jpg">
+                            </div>
+                        </div>
+                        <div class="statistic-item">
+                            <dl class="statistic-tb">
+                                <dt><i class="unread"></i>内容发布分析</dt>
+                                <dd>
+                                    <ul class="parameter">
+                                        <li><input name="type" type="checkbox">视频</li>
+                                        <li><input name="type" type="checkbox">音频</li>
+                                        <li><input name="type" type="checkbox">报告</li>
+                                        <li><input name="type" type="checkbox">图片</li>
+                                        <li><input name="type" type="checkbox">会议</li>
+                                        <li><input name="type" type="checkbox">问答</li>
+                                        <li><input name="type" type="checkbox">问卷</li>
+                                    </ul>
+                                </dd>
+                                <dd>
+                                    <input type="text" value="2017-05-01">
+                                    &nbsp;&nbsp;至&nbsp;&nbsp;
+                                    <input type="text" value="2017-09-01">
+                                </dd>
+                            </dl>
+
+                            <div class="statistic-tj">
+                                <img src="../../images/upload/char.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer">
+        <div class="footerLink">
+            <a href="">关于赫桥</a><span></span>
+            <a href="">联系我们</a><span></span>
+            <a href="">人才招聘</a><span></span>
+            <a href="">内容合作</a><span></span>
+            <a href="">网站导航</a><span></span>
+            <a href="">使用条款</a><span></span>
+            <a href="">版权声明</a><span></span>
+            <a href="">隐私保护</a><span></span>
+            <a href="">信息举报</a>
+        </div>
+        <p class="copyright">Copyright 2017-2028 赫桥财经 www.heqiaocaijing.com 版权所有</p>
+    </div>
+</footer>
+
+<script src="../../js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="../../js/nav.js"></script>
+<script>
+    $(function () {
+        $('.rePassword .control-item').click(function () {
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
+
+            $(this).parent().parent().find('.control-content').removeClass('active');
+            $(this).parent().parent().find('.control-content:eq(' + $(this).index() + ')').addClass('active');
+        });
+        $('.toUpdatePassword').click(function () {
+            $('.actTab ul li').removeClass('on');
+            $('.actTab ul li:eq(2)').addClass('on');
+            $('.safety').hide();
+            $('.rePassword').fadeIn(500);
+        });
+
+        $('.showEditUI').click(function () {
+            $('.bangding').hide();
+            $(this).parent().parent().next().fadeIn(500);
+        });
+    });
+</script>
+<script src="../../js/axios.min.js"></script>
+<script src="../../js/common2.js"></script>
+<script type="text/javascript">
+
+
+    function getUserInfo() {
+        heqiao.getResponseData('User', 'userDetail', null)
+            .then(function (response) {
+                if (response.data.data.error === 0) {
+                    let data = response.data.data.obj;
+                    data.hiddenPhone = ttlj.hiddenPhoneNumber(data.phone);
+                    userCenterApp.userInfo = data;
+                } else {
+                    ttlj.alerterror('获取用户信息失败！' + response.data.data.error_msg);
+                }
+            })
+            .catch(function (error) {
+                ttlj.alerterror('获取用户信息失败！')
+            });
+    }
+
+    /**
+     * 邮箱验证码
+     * @param type
+     * @param email
+     * @returns {string}
+     */
+    function getEmailCodeParams(type, email) {
+        let params = {};
+        params.type = type;
+        params.email = email;
+        return JSON.stringify(params);
+    }
+
+    function getBindEmailParams(email, code) {
+        let params = {};
+        params.email = email;
+        params.code = code;
+        return JSON.stringify(params);
+    }
+
+    /**
+     * 短信验证码
+     * @param type
+     * @param phone
+     * @returns {string}
+     */
+    function getSmsCodeParams(type, phone) {
+        let params = {};
+        params.type = type;
+        params.phone = phone;
+        return JSON.stringify(params);
+    }
+
+    function getUpdatePasswordParams(type, phone, code, pwd, repwd, oldpwd) {
+        let params = {};
+        params.type = type;
+        params.phone = phone;
+        params.code = code;
+        params.pwd = pwd;
+        params.repwd = repwd;
+        params.oldpwd = oldpwd;
+        return JSON.stringify(params);
+    }
+
+    function getUpdatePasswordParams2(type, pwd, repwd, oldpwd) {
+        let params = {};
+        params.type = type;
+        params.pwd = pwd;
+        params.repwd = repwd;
+        params.oldpwd = oldpwd;
+        return JSON.stringify(params);
+    }
+
+    var userCenterApp = new Vue({
+        el: '#userCenterApp',
+        data: {
+            userInfo: {},
+            email: null,
+            emailCode: null,
+
+            forgetMobile: null,
+            forgetGetCodingStatus: false,
+            forgetGetSmsCodeText: '获取验证码',
+            forgetSmsCode: null,
+            forgetPassword: null,
+            forgetPassword2: null,
+            forgetSubmitText: '确定',
+
+
+            forget2OldPassword: null,
+            forget2Password: null,
+            forget2Password2: null,
+
+            changeMobile: null,
+            changeMobileSmsCode: null,
+            changeMobileGetCodingStatus: false
+        },
+        methods: {
+            uploadHeader: function () {
+                $('[name=file]').click();
+                $('[name=file]').change(function () {
+                    let params1 = heqiao.getCommonParams();
+
+                    var file_data = $(this).prop("files")[0];
+                    /*                 $.ajaxFileUpload({
+                                         url: heqiao.getRootURL(),//用于文件上传的服务器端请求地址
+                                         secureuri: false,          //一般设置为false
+                                         fileElementId: 'uploadHeader',     //文件上传空间的id属性  <input type="file" id="file" name="file" />
+                                         dataType: 'json',          //返回值类型 一般设置为json
+                                         data: params1,
+                                         success: function (data) {
+                                             console.log(data);
+                                         }
+                                     });*/
+                    heqiao.uploadFile('api', 'ossUpload', '{"type":"1"}', file_data)
+                        .then(function (response) {
+                            console.log(response);
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                });
+            },
+            getEmailCode: function () {
+                if (!ttlj.checkmail(this.email)) {
+                    ttlj.alerterror('您输入的邮箱不正确！');
+                    return false;
+                }
+                heqiao.getResponseData('api', 'sendMailCode', getEmailCodeParams(2, this.email))
+                    .then(function (response) {
+                        if (response.data.data.error === 0) {
+                            ttlj.alertsuccess(response.data.data.error_msg)
+                        } else {
+                            ttlj.alerterror(response.data.data.error_msg);
+                        }
+                    })
+                    .catch(function (error) {
+                        ttlj.alerterror('邮箱验证码获取失败！')
+                    });
+            },
+            submitBindEmail: function () {
+                if (!ttlj.checkmail(this.email)) {
+                    ttlj.alerterror('您输入的邮箱不正确！');
+                    return false;
+                }
+                if (ttlj.isEmpty(this.emailCode)) {
+                    ttlj.alerterror('邮箱验证码不能为空！');
+                    return false;
+                }
+                heqiao.getResponseData('User', 'updateBandEmail', getBindEmailParams(this.email, this.emailCode))
+                    .then(function (response) {
+                        if (response.data.data.error === 0) {
+                            ttlj.alertsuccess(response.data.data.error_msg)
+                        } else {
+                            ttlj.alerterror(response.data.data.error_msg);
+                        }
+                    })
+                    .catch(function (error) {
+                        ttlj.alerterror('绑定邮箱失败！')
+                    });
+            },
+            forgetGetSmsCode: function () {
+                if (this.forgetGetCodingStatus) {
+                    return false;
+                }
+                if (ttlj.checkmobile(this.forgetMobile)) {
+                    let vm = this;
+                    this.forgetGetCodingStatus = true;
+                    this.forgetGetSmsCodeText = '获取中...';
+                    heqiao.getResponseData('Api', 'sendSms', getSmsCodeParams(2, this.forgetMobile))
+                        .then(function (response) {
+                            if (response.data.data.error === 0) {
+                                ttlj.alertsuccess(response.data.data.error_msg);
+                                let backSeconds = 60;
+                                vm.forgetGetSmsCodeText = backSeconds + 'S';
+                                var id = setInterval(function () {
+                                    if (backSeconds <= 1) {
+                                        clearInterval(id);
+                                        vm.resetForgetSmsCodeStatus();
+                                        return false;
+                                    }
+                                    vm.forgetGetSmsCodeText = (--backSeconds) + 'S';
+                                }, 1000);
+                            } else {
+                                ttlj.alerterror(response.data.data.error_msg);
+                                vm.resetForgetSmsCodeStatus();
+                            }
+                        })
+                        .catch(function (error) {
+                            ttlj.alerterror('验证码获取失败！');
+                            vm.resetForgetSmsCodeStatus();
+                        });
+                } else {
+                    ttlj.alerterror("手机号码格式不正确！")
+                }
+            },
+            resetForgetSmsCodeStatus: function () {
+                this.forgetGetCodingStatus = false;
+                this.forgetGetSmsCodeText = '获取验证码';
+            },
+            forgetSmsSubmitData: function () {
+                if (!ttlj.checkmobile(this.forgetMobile)) {
+                    ttlj.alerterror('手机号码格式不正确！');
+                    return false;
+                }
+                if (ttlj.isEmpty(this.forgetSmsCode)) {
+                    ttlj.alerterror('短信验证码不能为空！');
+                    return false;
+                }
+                if (ttlj.isEmpty(this.forgetPassword)) {
+                    ttlj.alerterror('密码不能为空！');
+                    return false;
+                }
+                if (ttlj.isEmpty(this.forgetPassword2)) {
+                    ttlj.alerterror('再次输入的密码不能为空！');
+                    return false;
+                }
+                if (this.forgetPassword != this.forgetPassword2) {
+                    ttlj.alerterror('两次输入的密码不相同，请检查后再重新输入！');
+                    return false;
+                }
+                this.forgetSubmitText = '请稍等...';
+                let vm = this;
+                heqiao.getResponseData('User', 'updatePwd',
+                    getUpdatePasswordParams(1, this.forgetMobile, this.forgetSmsCode, this.forgetPassword, this.forgetPassword2, null))
+                    .then(function (response) {
+                        if (response.data.data.error === 0) {
+                            ttlj.alertsuccess(response.data.data.error_msg);
+                            vm.forgetSubmitText = '提交';
+                        } else {
+                            ttlj.alerterror(response.data.data.error_msg);
+                            vm.forgetSubmitText = '提交';
+                        }
+                    })
+                    .catch(function (error) {
+                        ttlj.alerterror('修改密码失败！');
+                        vm.forgetSubmitText = '确定';
+                    });
+            },
+            forget2SubmitData: function () {
+                if (ttlj.isEmpty(this.forget2OldPassword)) {
+                    ttlj.alerterror('旧密码不能为空！');
+                    return false;
+                }
+                if (ttlj.isEmpty(this.forget2Password)) {
+                    ttlj.alerterror('密码不能为空！');
+                    return false;
+                }
+                if (ttlj.isEmpty(this.forget2Password2)) {
+                    ttlj.alerterror('再次输入的密码不能为空！');
+                    return false;
+                }
+                heqiao.getResponseData('User', 'updatePwd',
+                    getUpdatePasswordParams2(2, this.forget2Password, this.forget2Password2, this.forget2OldPassword))
+                    .then(function (response) {
+                        if (response.data.data.error === 0) {
+                            ttlj.alertsuccess(response.data.data.error_msg);
+                        } else {
+                            ttlj.alerterror(response.data.data.error_msg);
+                        }
+                    })
+                    .catch(function (error) {
+                        ttlj.alerterror('修改密码失败！');
+                    });
+            },
+            getChangeMobileSmsCode: function () {
+                //获取修改短信验证码
+                if (this.changeMobileGetCodingStatus) {
+                    return false;
+                }
+                if (ttlj.checkmobile(this.changeMobile)) {
+                    let vm = this;
+                    this.changeMobileGetCodingStatus = true;
+                    heqiao.getResponseData('Api', 'sendSms', getSmsCodeParams(3, this.changeMobile))
+                        .then(function (response) {
+                            if (response.data.data.error === 0) {
+                                ttlj.alertsuccess('验证码获取成功！');
+                                let backSeconds = 60;
+                                var id = setInterval(function () {
+                                    if (backSeconds <= 1) {
+                                        clearInterval(id);
+                                        vm.changeMobileGetCodingStatus = false;
+                                        return false;
+                                    }
+                                }, 1000);
+                            } else {
+                                ttlj.alerterror(response.data.data.error_msg);
+                                vm.changeMobileGetCodingStatus = false;
+                            }
+                        })
+                        .catch(function (error) {
+                            ttlj.alerterror('验证码获取失败！');
+                            vm.changeMobileGetCodingStatus = false;
+                        });
+                } else {
+                    ttlj.alerterror("手机号码格式不正确！")
+                }
+            },
+            submitChangeMobileData: function () {
+                //提交修改的手机号
+                if (!ttlj.checkmobile(this.changeMobile)) {
+                    ttlj.alerterror('手机号码格式不正确！');
+                    return false;
+                }
+                if (ttlj.isEmpty(this.changeMobileSmsCode)) {
+                    ttlj.alerterror('短信验证码不能为空！');
+                    return false;
+                }
+            }
+        },
+        mounted: function () {
+            getUserInfo();
+        }
+    });
+</script>
+</body>
+</html>

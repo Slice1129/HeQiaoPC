@@ -1,0 +1,17 @@
+/*我要赞助*/
+#tip-zanzhu .tip-content form section .money {
+    padding-left: 24px;
+    background: url(./../images/icon/icon_checked.png) no-repeat left center;
+    margin-left: 5px;
+    margin-bottom: 9px;
+}
+
+#tip-zanzhu .tip-content form section .entity {
+    margin-bottom: 9px;
+    padding-left: 24px;
+    background: url(./../images/icon/icon_check.png) no-repeat left center;
+    margin-top: 14px;
+    margin-left: 5px;
+}
+
+

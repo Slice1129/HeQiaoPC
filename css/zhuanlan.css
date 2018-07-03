@@ -1,0 +1,299 @@
+.container {
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.container .container-header {
+    width: 100%;
+    display: block;
+    min-width: 1500px;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+.container .container-header img {
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.container .container-main {
+    width: 1200px;
+    margin: 0 auto;
+    display: block;
+}
+
+.container .container-main-left {
+    width: 900px;
+    display: block;
+    float: left;
+}
+
+.container .container-main-left .people-list {
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.container .container-main-left h1 {
+    height: 40px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid #ececec;
+    position: relative;
+    margin-bottom: 2px;
+}
+
+.container .container-main-left h1 span {
+    display: inline-block;
+    height: 40px;
+    width: 80px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: normal;
+}
+.container .container-main-left h1 button {
+    display: inline-block;
+    height: 30px;
+    width: 80px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid #ececec;
+    background-color: transparent;
+    color: #999999;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    border-radius: 5px;
+}
+
+.container .container-main-left .people-list ul {
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+
+    -webkit-flex-wrap: wrap;
+    -webkit-box-lines: multiple;
+    -moz-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.container .container-main-left .people-list ul li {
+    width: 216px;
+    position: relative;
+    padding: 0;
+    margin-right: 10px;
+}
+.container .container-main-left .people-list ul li:nth-of-type(4n){
+    margin-right: 0;
+}
+
+.container .container-main-left .people-list ul li img {
+    width: 216px;
+    height: 316px;
+    padding: 0;
+    margin: 0;
+}
+
+.container .container-main-left .people-list ul li button {
+    position: absolute;
+    right: 12px;
+    top: 18px;
+    font-size: 12px;
+    color: #FFFFFF;
+    border-radius: 10px;
+    height: 30px;
+    width: 60px;
+    border: 1px solid rgb(49, 116, 144);
+    background-color: transparent;
+    outline: none;
+    color: #FFFFFF;
+}
+.container .container-main-left .people-list ul li button span{
+    margin-bottom: 9px;
+    padding-left: 14px;
+    color: #FFFFFF;
+    background: url(./../images/icon/icon_add.png) no-repeat left center;
+
+}
+
+.container .container-main-left .people-list ul li .info {
+    height: 56px;
+    width: 100%;
+    position: absolute;
+    top: 260px;
+    left: 0;
+    background-color: #000000;
+    opacity: 0.4;
+}
+
+.container .container-main-left .people-list ul li p.name {
+    position: absolute;
+    left: 20px;
+    top: 270px;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.container .container-main-left .people-list ul li p.business {
+    position: absolute;
+    left: 20px;
+    top: 295px;
+    font-size: 12px;
+    color: #e6e6e5;
+}
+
+.container .container-main-left .people-list ul li p.question {
+    position: absolute;
+    width: 64px;
+    height: 24px;
+    right: 10px;
+    top: 276px;
+    font-size: 12px;
+    color: #FFFFFF;
+    line-height: 24px;
+    background-color: #910010;
+    text-align: center;
+}
+.container .container-main-left .people-list ul li div.about {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0,0,0,0.4);
+    top: 56px;
+    left: 0;
+    padding: 10px;
+    display: none;
+}
+.container .container-main-left .people-list ul li div.about p{
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 23px;
+}
+
+.container .container-main-left .people-list ul li .num {
+    width: 216px;
+    height: 46px;
+    padding: 0;
+    margin: 0;
+    background-color: #FFFFFF;
+}
+
+.container .container-main-left .people-list ul li .num p {
+    width: 48%;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    float: left;
+    height: 46px;
+    line-height: 46px;
+    font-size: 12px;
+}
+
+.container .container-main-left .people-list ul li .num p:nth-of-type(1) {
+
+    text-align: left;
+}
+
+.container .container-main-left .people-list ul li .num p:nth-of-type(2) {
+
+    text-align: right;
+}
+
+.container .container-main-left .people-list ul li .num p span:nth-of-type(1) {
+    color: #999999;
+}
+
+.container .container-main-left .people-list ul li .num p span:nth-of-type(2) {
+    color: #666666;
+}
+
+.container .container-main-right {
+    width: 300px;
+    display: inline-block;
+    float: right;
+    padding:  0 0 0 20px;
+}
+.container .container-main-right .list-content ul li{
+    margin-top: 15px;
+    width: 282px;
+}
+.container .container-main-right .list-content ul li .up{
+    background-color: #FFFFFF;
+    padding: 20px 0 20px 20px;
+    border: 1px solid #ececec;
+}
+.container .container-main-right .list-content ul li .up .up-img{
+    display: inline-block;
+    vertical-align: top;
+}
+.container .container-main-right .list-content ul li .up .up-content{
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 0 0 15px;
+}
+.container .container-main-right .list-content ul li .up .up-content h1{
+    font-weight: bolder;
+    font-size: 15px;
+}
+.container .container-main-right .list-content ul li .up .up-content h2{
+    font-weight: normal;
+    color: #999999;
+    font-size: 14px;
+    margin: 8px 0  10px 0;
+}
+.container .container-main-right .list-content ul li .up .up-content p{
+    font-weight: normal;
+    color: #999999;
+    font-size: 12px;
+    margin: 8px 0  8px 0;
+}
+.container .container-main-right .list-content ul li .down{
+    background-color: #FFFFFF;
+    margin-top: 1px;
+    height: 46px;
+    line-height: 46px;
+    border: 1px solid #ececec;
+}
+.container .container-main-right .list-content ul li .down button{
+    border: 1px solid #ececec;
+    outline: none;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    padding: 5px 20px;
+    color: rgb(169,169,169);
+    display: inline-block;
+}
+.container .container-main-right .list-content ul li .down button.follow{
+    margin: 0 55px 0 20px;
+}
+
+.container .container-main-left .pagebox .page ul {
+    margin: 0 0 0 400px;
+}
+.container .container-main-left .pagebox{
+    height: 60px;
+}
+.container .container-main-left .pagebox .page{
+    margin: 0;
+    padding: 0;
+}
+
+.theme-active {
+    border-bottom: 5px solid #910010;
+    color: #910010;
+}
+footer {
+    min-width: 1200px;
+}

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>赫桥财经</title>
+    <title></title>
+    <meta name="keywords" content="赫桥财经"/>
+    <meta name="Description" content=""/>
+    <link rel="stylesheet" href="../css/heqiao.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/laydate.css">
+    <script src="../js/jquery-2.1.4.js"></script>
+    <script src="../js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="../js/vue.js"></script>
+    <style type="text/css">
+        indexQuickNewsView {
+            width: 100%;
+            height: 44px;
+            display: block;
+            line-height: 44px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        indexQuickNewsView p {
+            display: inline;
+        }
+
+        #item_quick_news {
+            height: 44px;
+            line-height: 44px;
+            overflow: hidden; /* 必要元素 */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="topArea">
+        <div class="topLogo">
+            <ul>
+                <li class="logo">
+                    <a href="index.html">
+                        <img src="../images/icon/logo.png" width="215">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="topOpera">
+            <ul>
+                <li class="navbar">
+                    <a href="../login.html" style="margin-right: 0">登录</a>/
+                    <a href="register.html" style="margin-left: 0">注册</a>
+                    <a id="account" href="">个人中心</a>
+                    <a id="quiz" href="../quiz.html">提问</a>
+                    <a id="blogger" href="about/aboutUs.html">关于赫桥</a>
+                </li>
+                <li class="searchbox">
+                    <div class="search">
+                        <input type="text" placeholder="输入关键词">
+                        <span class="btn"></span>
+                    </div>
+                </li>
+                <li class="hotline">
+                    <dl>
+                        <dt>全国服务热线:</dt>
+                        <dd>400-871-6766</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottomArea">
+        <div class="menubox">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="finance/video.html">视频</a></li>
+                <li><a href="finance/audio.html">音频</a></li>
+                <li><a href="finance/report.html">报告</a></li>
+                <li><a href="finance/photo.html">图片</a></li>
+                <li><a href="finance/newsflash.html">快讯</a></li>
+                <li><a href="finance/data.html">数据</a></li>
+                <li><a href="finance/metting.html">会议</a></li>
+                <li><a href="finance/columnist.html">专栏</a></li>
+                <li><a href="finance/interlocution.html">问答</a></li>
+                <li><a href="finance/questionnaire.html">问卷</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<div class="container" id="indexVue">
+    <div class="hQContent">
+        <div class="hQleftLayout">
+            <div class="superSlide" style="margin-bottom: 2px;">
+                <div id="slidebox" class="slidebox">
+                    <div class="bd">
+                        <ul class="slidebox_bd_ul" style="display: none;">
+                            <li v-for="(data,index) in banners" :key="index">
+                                <a :href="data.bannerurl" target="_blank">
+                                    <img :src="data.headsmall">
+                                    <div class="txt">{{data.title}}</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="suggestVideo">
+                <a class="sItem fl">
+                    <img src="../images/upload/aobam.jpg">
+
+                    <div class="play"><img src="../images/icon/play.png"></div>
+                    <div class="txt ellipsis">许家印牌友张松桥减持近六成万科H股许家印牌友张松桥减持近六成万科H股</div>
+                </a>
+                <a class="sItem fl">
+                    <img src="../images/upload/aobam.jpg">
+
+                    <div class="play"><img src="../images/icon/play.png"></div>
+                    <div class="txt ellipsis">许家印牌友张松桥减持近六成万科H股许家印牌友张松桥减持近六成万科H股</div>
+                </a>
+                <a class="sItem fl">
+                    <img src="../images/upload/aobam.jpg">
+
+                    <div class="play"><img src="../images/icon/play.png"></div>
+                    <div class="txt ellipsis">许家印牌友张松桥减持近六成万科H股许家印牌友张松桥减持近六成万科H股</div>
+                </a>
+            </div>
+            <div class="adviceWrap mb10">
+                <div class="advice clearfix">
+                    <div class="allow fr hd">
+                        <span class="prev"></span>
+                        <span class="next"></span>
+                    </div>
+                    <div class="bd" id="item_quick_news">
+                        <ul>
+                            <indexQuickNewsView v-for="(data,index) in quickNews">
+                                <a :href="'37_bloggerQuestion.html?id='+data.id">
+                                    <span>{{data.create_time.substring(0,data.create_time.lastIndexOf(':'))}} </span>
+                                    <p v-html="index+'_____'+data.content"></p>
+                                </a>
+                            </indexQuickNewsView>
+                        </ul>
+                    </div>
+                    <script>
+                        $(".advice").slide({
+                            mainCell: ".bd ul",
+                            autoPage: true,
+                            effect: "topLoop",
+                            autoPlay: true,
+                            trigger: "click"
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="hq-row">
+                <div class="hq-col5" style="margin-right: 9px">
+                    <div class="blogger_article slideTab">
+                        <div class="hd">
+                            <ul>
+                                <li class="on">最新</li>
+                                <li>宏观</li>
+                                <li>金融</li>
+                                <li>商品</li>
+                                <li>外汇</li>
+                                <li>其他</li>
+                            </ul>
+                        </div>
+                        <div class="bd">
+                            <div class="hq-pack mb5" v-for="(data,index) in lists" :key="index">
+                                <a class="pic" href="#"><img :src="data.headsmall"></a>
+
+                                <div class="content">
+                                    <h2><a href="#">{{data.title}}</a></h2>
+
+                                    <p>粮价催化剂旱情又来了 国际春小麦价格创七年来最大盘中涨幅粮食无小事 大米和小麦价格暴涨背后无人注意的“风险”粮价催化剂旱情又来了
+                                        国际春小麦价格创七年来最大盘中涨幅粮食....</p>
+
+                                    <div class="sub_info">
+                                        <i>{{data.author}}</i>
+                                        <i>{{data.create_time}}</i>
+                                        <i class="fr">{{data.views}}人浏览</i>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="hq-col2">
+                    <div class="hQTraTitle mb5">专栏</div>
+                    <ul>
+                        <li class="memberIntro mb5">
+                            <div class="m-info s-info">
+                                <div class="pic fl">
+                                    <img src="../images/upload/bloggerUser.png">
+                                </div>
+                                <div class="content">
+                                    <h2>锦坤石章强</h2>
+
+                                    <p>锦坤文化发展集团董事长</p>
+
+                                    <div><span>粉丝数:<i>3212</i></span></div>
+                                    <div><span>文章数:<i>3212</i></span></div>
+                                </div>
+                            </div>
+                            <div class="m-btn">
+                                <a class="follow">+ 关注</a>
+                                <a class="quiz">我要提问</a>
+                            </div>
+                        </li>
+                        <li class="memberIntro mb5">
+                            <div class="m-info s-info">
+                                <div class="pic fl">
+                                    <img src="../images/upload/bloggerUser.png">
+                                </div>
+                                <div class="content">
+                                    <h2>锦坤石章强</h2>
+
+                                    <p>锦坤文化发展集团董事长</p>
+
+                                    <div><span>粉丝数:<i>3212</i></span></div>
+                                    <div><span>文章数:<i>3212</i></span></div>
+                                </div>
+                            </div>
+                            <div class="m-btn">
+                                <a class="follow">+ 关注</a>
+                                <a class="quiz">我要提问</a>
+                            </div>
+                        </li>
+                        <li class="memberIntro mb5">
+                            <div class="m-info s-info">
+                                <div class="pic fl">
+                                    <img src="../images/upload/bloggerUser.png">
+                                </div>
+                                <div class="content">
+                                    <h2>锦坤石章强</h2>
+
+                                    <p>锦坤文化发展集团董事长</p>
+
+                                    <div><span>粉丝数:<i>3212</i></span></div>
+                                    <div><span>文章数:<i>3212</i></span></div>
+                                </div>
+                            </div>
+                            <div class="m-btn">
+                                <a class="follow">+ 关注</a>
+                                <a class="quiz">我要提问</a>
+                            </div>
+                        </li>
+                        <li class="memberIntro mb5">
+                            <div class="m-info s-info">
+                                <div class="pic fl">
+                                    <img src="../images/upload/bloggerUser.png">
+                                </div>
+                                <div class="content">
+                                    <h2>锦坤石章强</h2>
+
+                                    <p>锦坤文化发展集团董事长</p>
+
+                                    <div><span>粉丝数:<i>3212</i></span></div>
+                                    <div><span>文章数:<i>3212</i></span></div>
+                                </div>
+                            </div>
+                            <div class="m-btn">
+                                <a class="follow">+ 关注</a>
+                                <a class="quiz">我要提问</a>
+                            </div>
+                        </li>
+                        <li class="memberIntro mb5">
+                            <div class="m-info s-info">
+                                <div class="pic fl">
+                                    <img src="../images/upload/bloggerUser.png">
+                                </div>
+                                <div class="content">
+                                    <h2>锦坤石章强</h2>
+
+                                    <p>锦坤文化发展集团董事长</p>
+
+                                    <div><span>粉丝数:<i>3212</i></span></div>
+                                    <div><span>文章数:<i>3212</i></span></div>
+                                </div>
+                            </div>
+                            <div class="m-btn">
+                                <a class="follow">+ 关注</a>
+                                <a class="quiz">我要提问</a>
+                            </div>
+                        </li>
+                        <li class="memberIntro mb5">
+                            <div class="m-info s-info">
+                                <div class="pic fl">
+                                    <img src="../images/upload/bloggerUser.png">
+                                </div>
+                                <div class="content">
+                                    <h2>锦坤石章强</h2>
+
+                                    <p>锦坤文化发展集团董事长</p>
+
+                                    <div><span>粉丝数:<i>3212</i></span></div>
+                                    <div><span>文章数:<i>3212</i></span></div>
+                                </div>
+                            </div>
+                            <div class="m-btn">
+                                <a class="follow">+ 关注</a>
+                                <a class="quiz">我要提问</a>
+                            </div>
+                        </li>
+                        <li class="memberIntro mb5">
+                            <div class="m-info s-info">
+                                <div class="pic fl">
+                                    <img src="../images/upload/bloggerUser.png">
+                                </div>
+                                <div class="content">
+                                    <h2>锦坤石章强</h2>
+
+                                    <p>锦坤文化发展集团董事长</p>
+
+                                    <div><span>粉丝数:<i>3212</i></span></div>
+                                    <div><span>文章数:<i>3212</i></span></div>
+                                </div>
+                            </div>
+                            <div class="m-btn">
+                                <a class="follow">+ 关注</a>
+                                <a class="quiz">我要提问</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="loadingMore"><a href="javascript:void(0);">加载更多</a></div>
+        </div>
+        <div class="hQrightLayout">
+            <div class="calendarBox mb5">
+                <div class="hQTraTitle">交易日历</div>
+                <div id="calendar" class="calendar"></div>
+            </div>
+            <div class="dataCenter mb5">
+                <div class="hQTraTitle">数据中心</div>
+                <div class="dataCenter">
+                    <ul>
+                        <li>
+                            <h2>
+                                <span class="dataname"><i class="up"></i>类别名称</span>
+                                <span>1585</span>
+                                <span class="fr green">-5</span>
+                            </h2>
+
+                            <div class="dataChart active">
+                                <img src="../images/chart.jpg">
+                            </div>
+                        </li>
+                        <li>
+                            <h2>
+                                <span class="dataname"><i class="down"></i>类别名称</span>
+                                <span>1585</span>
+                                <span class="fr green">-5</span>
+                            </h2>
+
+                            <div class="dataChart">
+                                <img src="../images/chart.jpg">
+                            </div>
+                        </li>
+                        <li>
+                            <h2>
+                                <span class="dataname"><i class="down"></i>类别名称</span>
+                                <span>1585</span>
+                                <span class="fr green">-5</span>
+                            </h2>
+
+                            <div class="dataChart">
+                                <img src="../images/chart.jpg">
+                            </div>
+                        </li>
+                        <li>
+                            <h2>
+                                <span class="dataname"><i class="down"></i>类别名称</span>
+                                <span>1585</span>
+                                <span class="fr green">-5</span>
+                            </h2>
+
+                            <div class="dataChart">
+                                <img src="../images/chart.jpg">
+                            </div>
+                        </li>
+                        <li>
+                            <h2>
+                                <span class="dataname"><i class="down"></i>类别名称</span>
+                                <span>1585</span>
+                                <span class="fr green">-5</span>
+                            </h2>
+
+                            <div class="dataChart">
+                                <img src="../images/chart.jpg">
+                            </div>
+                        </li>
+                        <li>
+                            <h2>
+                                <span class="dataname"><i class="down"></i>类别名称</span>
+                                <span>1585</span>
+                                <span class="fr green">-5</span>
+                            </h2>
+
+                            <div class="dataChart">
+                                <img src="../images/chart.jpg">
+                            </div>
+                        </li>
+                        <li>
+                            <h2>
+                                <span class="dataname"><i class="down"></i>类别名称</span>
+                                <span>1585</span>
+                                <span class="fr green">-5</span>
+                            </h2>
+
+                            <div class="dataChart">
+                                <img src="../images/chart.jpg">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mettingCenter mb5">
+                <div class="hQTraTitle">会议中心<span><a></a></span></div>
+                <div class="conventionCenter">
+                    <div class="hq-media">
+                        <div class="p-thumb">
+                            <a href="#" title="" target="_blank"></a>
+                            <i class="bg"></i>
+                            <img class="quic" src="../images/upload/sping.jpg">
+                            <ul class="p-info pos-bottom">
+                                <li class="status">
+                                    <span class="p-txt ">
+                                        <i class="ibg"></i>
+                                        <span>正在播出</span>
+                                    </span>
+                                    <span class="p-txt fr">
+                                        <i class="ibg"></i>
+                                        <span>上海</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="info-list">
+                            <li class="title ">
+                                <a href="#" target="_blank">UCloud UCan技术夜场加油向未来第2季 撒贝宁成史上最帅龙虾侠</a>
+                            </li>
+                            <li>
+                                <span>2017-08-24</span>
+                                <span class="fr"><em>214</em>预约</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hq-media">
+                        <div class="p-thumb">
+                            <a href="#" title="" target="_blank"></a>
+                            <i class="bg"></i>
+                            <img class="quic" src="../images/upload/sping.jpg">
+                            <ul class="p-info pos-bottom">
+                                <li class="status">
+                                    <span class="p-txt ">
+                                        <i class="ibg"></i>
+                                        <span>正在播出</span>
+                                    </span>
+                                    <span class="p-txt fr">
+                                        <i class="ibg"></i>
+                                        <span>上海</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="info-list">
+                            <li class="title ">
+                                <a href="#" target="_blank">UCloud UCan技术夜场加油向未来第2季 撒贝宁成史上最帅龙虾侠</a>
+                            </li>
+                            <li>
+                                <span>2017-08-24</span>
+                                <span class="fr"><em>214</em>预约</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hq-media">
+                        <div class="p-thumb">
+                            <a href="#" title="" target="_blank"></a>
+                            <i class="bg"></i>
+                            <img class="quic" src="../images/upload/sping.jpg">
+                            <ul class="p-info pos-bottom">
+                                <li class="status">
+                                    <span class="p-txt ">
+                                        <i class="ibg"></i>
+                                        <span>正在播出</span>
+                                    </span>
+                                    <span class="p-txt fr">
+                                        <i class="ibg"></i>
+                                        <span>上海</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="info-list">
+                            <li class="title ">
+                                <a href="#" target="_blank">UCloud UCan技术夜场加油向未来第2季 撒贝宁成史上最帅龙虾侠</a>
+                            </li>
+                            <li>
+                                <span>2017-08-24</span>
+                                <span class="fr"><em>214</em>预约</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hq-media">
+                        <div class="p-thumb">
+                            <a href="#" title="" target="_blank"></a>
+                            <i class="bg"></i>
+                            <img class="quic" src="../images/upload/sping.jpg">
+                            <ul class="p-info pos-bottom">
+                                <li class="status">
+                                    <span class="p-txt ">
+                                        <i class="ibg"></i>
+                                        <span>正在播出</span>
+                                    </span>
+                                    <span class="p-txt fr">
+                                        <i class="ibg"></i>
+                                        <span>上海</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="info-list">
+                            <li class="title ">
+                                <a href="#" target="_blank">UCloud UCan技术夜场加油向未来第2季 撒贝宁成史上最帅龙虾侠</a>
+                            </li>
+                            <li>
+                                <span>2017-08-24</span>
+                                <span class="fr"><em>214</em>预约</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer>
+    <div class="footer footer-black">
+        <div class="footerLink">
+            <a href="">关于赫桥</a><span></span>
+            <a href="">联系我们</a><span></span>
+            <a href="">人才招聘</a><span></span>
+            <a href="">内容合作</a><span></span>
+            <a href="">网站导航</a><span></span>
+            <a href="">使用条款</a><span></span>
+            <a href="">版权声明</a><span></span>
+            <a href="">隐私保护</a><span></span>
+            <a href="">信息举报</a>
+        </div>
+        <p class="copyright">Copyright 2017-2028 赫桥财经 www.heqiaocaijing.com 版权所有</p>
+
+        <div class="QRcode">
+            <div class="fl">
+                <img src="../images/icon/qrcode.jpg">
+
+                <p>关注微信</p>
+            </div>
+            <div class="fr">
+                <img src="../images/icon/qrcode.jpg">
+
+                <p>关注微博</p>
+            </div>
+        </div>
+        <div class="Certificates">
+            <div><img src="../images/icon/f_c_1.png"></div>
+            <div><img src="../images/icon/f_c_2.png"></div>
+            <div><img src="../images/icon/f_c_3.png"></div>
+            <div><img src="../images/icon/f_c_4.png"></div>
+            <div><img src="../images/icon/f_c_5.png"></div>
+            <div><img src="../images/icon/f_c_6.png"></div>
+            <div><img src="../images/icon/f_c_7.png"></div>
+            <div><img src="../images/icon/f_c_8.png"></div>
+        </div>
+    </div>
+    <div class="cooWebsite">
+        <span>合作网站:</span>
+        <a href="">友情链接1</a><a href="">友情链接1</a><a href="">友情链接1</a><a href="">友情链接1</a><a href="">友情链接1</a><a href="">友情链接1</a><a
+            href="">友情链接1</a><a href="">友情链接1</a><a href="">友情链接1</a><a href="">友情链接1</a><a href="">友情链接1</a><a href="">友情链接1</a><a
+            href="">友情链接1</a><a href="">友情链接1</a>
+    </div>
+</footer>
+
+<script src="../js/laydate.js"></script>
+<script>
+    $(function () {
+        $(".up").click(function () {
+            $(this).removeClass('up').addClass('down');
+            $(".dataCenter .active").removeClass('active');
+        });
+        $(".down").click(function () {
+            $(".dataCenter .up").removeClass('up').addClass('down');
+            $(this).removeClass('down').addClass('up');
+            $(".dataCenter .active").removeClass('active');
+            $(this).parent().parent().next().addClass('active');
+        });
+
+        var ins1 = laydate.render({
+            elem: '#calendar',
+            position: 'static',
+            showBottom: false,
+            theme: 'transparent',
+            done: function (value, date) {
+                if (date.year === 2017 && date.month === 8 && date.date === 15) { //点击2017年8月15日，弹出提示语
+                    ins1.hint('中国人民抗日战争胜利72周年');
+                }
+            }
+        });
+    })
+</script>
+<script src="../js/qs.js"></script>
+<script src="../js/axios.min.js"></script>
+<script src="../js/common2.js"></script>
+<script type="text/javascript">
+
+    jQuery(".slidebox").slide({mainCell: ".bd ul", autoPlay: true, delayTime: 500});
+
+    function getIndexVideosParams() {
+        let params = {};
+        return JSON.stringify(params);
+    }
+
+    function getIndexPictureParams(order) {
+        let params = {};
+        params.p1 = 1;
+        params.listRows1 = 10;
+        params.order = order;
+        params.tag_id = 0;
+        return JSON.stringify(params);
+    }
+
+    function getIndexQuickNewsParams(start_time) {
+        let params = {};
+        params.start_time = start_time;
+        return JSON.stringify(params);
+    }
+
+
+    function AutoScroll(obj) {
+        $(obj).find("ul:first").animate({
+            marginTop: "-25px"
+        }, 500, function () {
+            $(this).css({marginTop: "0px"}).find("indexQuickNewsView:first").appendTo(this);
+        });
+    }
+
+    function initBanner() {
+        heqiao.getResponseData('Picture', 'index', getIndexPictureParams(1))
+            .then(function (reponse) {
+                console.log(reponse);
+                if (reponse.data.data.error === 0) {
+                    indexVM.banners = reponse.data.data.obj.banner;
+                    indexVM.quickNews = reponse.data.data.obj.news;
+                    indexVM.lists = reponse.data.data.obj.list;
+                    setInterval('AutoScroll("#item_quick_news")', 3000);
+                    $('.slidebox_bd_ul').css({
+                        display: "block",
+                    });
+                } else {
+                    console.log("ERRR");
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+
+    function initQuickNews() {
+        heqiao.getResponseData('News', 'index', getIndexQuickNewsParams(ttlj.getDay()))
+            .then(function (reponse) {
+                console.log(reponse);
+                if (reponse.data.data.error === 0) {
+                } else {
+                    console.log("ERRR");
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+
+    function initVideos() {
+        heqiao.getResponseData('Video', 'index', getIndexVideosParams())
+            .then(function (reponse) {
+                console.log(reponse);
+                if (reponse.data.data.error === 0) {
+                } else {
+                    console.log("ERRR");
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+
+    var indexVM = new Vue({
+        el: '#indexVue',
+        data: {
+            banners: {},
+            videos: {},
+            quickNews: {},
+            lists: {},
+        },
+        mounted: function () {
+            console.log("VUE INIT");
+            initBanner();
+            initVideos();
+        }
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+ul {
+    overflow: hidden;
+    zoom: 1;
+    height: 100%;
+}
+/*banner   end*/
+.Main {
+    width: 100%;
+    height: auto;
+     padding-bottom: 25px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.layout {
+    overflow: hidden;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.layoutLeft {
+    float: left;
+    width: 900px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.slideWrap {
+    width: 900px;
+    height: 320px;
+    margin-bottom: 10px;
+}
+
+.displayWrap {
+    width: 900px;
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+.displayWrap ul li {
+    float: left;
+    position: relative;
+    width: 290px;
+    height: 100%;
+    margin-right: 15px;
+}
+
+.displayWrap ul li:last-child {
+    margin-right: 0;
+}
+
+.displayWrap ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+.displayWrap ul li .txt {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 6);
+    text-align: center;
+}
+
+.adviceWrap {
+    width: 100%;
+    height: 44px;
+    background-color: #fff;
+}
+
+.adviceWrap .advice {
+    padding-left: 100px;
+    background: url("../images/icon/kuaixun.png") no-repeat 10px center;
+}
+
+.adviceWrap ul li {
+    float: left;
+    width: 800px;
+}
+
+.adviceWrap ul li a {
+    display: block;
+    font-size: 14px;
+    line-height: 44px;
+}
+
+.adviceWrap ul li a span {
+    display: block;
+    float: left;
+    width: 56px;
+    text-align: center;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+}
+
+.leftMainContent {
+    margin-top: 10px;
+}
+
+.leftMainContent .contentLeft {
+    float: left;
+    width: 614px;
+}
+/**/
+.red-title {
+    line-height: 42px;
+    padding-left: 20px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    background: #ffffff url('../images/icon/triangle_bg.png') no-repeat left top;
+}
+
+.contentRight {
+    float: right;
+    width: 276px;
+}
+
+.contentRight .specialList {
+
+}
+
+.specialList ul {
+
+}
+
+.specialList ul li {
+    margin-bottom: 11px;
+}
+
+.specialList .special_des {
+    background-color: #ffffff;
+    height: 131px;
+    padding: 10px 20px 0 20px;
+}
+
+.specialList .special_des img {
+    float: left;
+    padding: 0 10px;
+    border-left: 2px solid #040000;
+}
+
+.specialList .special_des > div {
+    margin-left: 96px;
+}
+
+.specialList .special_des h2 {
+    margin-top: 6px;
+    font-size: 16px;
+    color: #333333;
+    line-height: 16px;
+}
+
+.specialList .special_des p {
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 10px;
+    color: #999999;
+}
+
+.specialList .special_des p > span {
+    color: #666666;
+}
+
+.specialList .special_des .txt {
+    color: #666666;
+    line-height: 22px;
+}
+
+.specialList .special_btn {
+    padding: 10px 20px 11px;
+    background-color: #fafafa;
+}
+
+.specialList .special_btn a {
+    display: inline-block;
+    width: 72px;
+    height: 26px;
+    line-height: 28px;
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+/**/
+.layoutRight {
+    float: right;
+    width: 280px;
+}
+
+/*交易日历*/
+.calendarWrap {
+    margin-bottom: 10px;
+    height: 320px
+}
+.calendar{
+    text-align: center;
+    background-color: #ffffff;
+    padding: 15px 0;
+}
+/*数据中心*/
+.dataCenterWrap {
+    margin-bottom: 10px;
+}
+
+.dataCenterWrap .dataCenter {
+}
+
+.dataCenterWrap .dataCenter ul {
+}
+
+.dataCenterWrap .dataCenter ul li {
+    background-color: #ffffff;
+}
+
+.dataCenterWrap .dataCenter ul li:nth-child(2n) {
+    background-color: #f5f5f5;
+}
+
+.dataCenterWrap .dataCenter ul li h2 {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+}
+
+.dataCenterWrap .dataCenter ul li h2 span {
+    font-size: 14px;
+}
+
+.dataCenterWrap .dataCenter h2 .dataname {
+    display: inline-block;
+    width: 126px;
+    color: #229fe0;
+}
+
+.dataCenterWrap .dataCenter h2 .dataname i {
+    display: inline-block;
+    width: 9px;
+    height: 6px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.dataCenterWrap .dataCenter h2 .dataname i.down {
+    background: url("../images/icon/down.png") no-repeat center;
+}
+
+.dataCenterWrap .dataCenter h2 .dataname i.up {
+    background: url("../images/icon/up.png") no-repeat center;
+}
+
+.dataCenterWrap .dataCenter h2 .green {
+    color: #5eac2d;
+}
+
+.dataCenterWrap .dataCenter .dataChart {
+    display: none;
+    padding: 0 20px;
+    height: 168px;
+}
+.dataCenterWrap .dataCenter .dataChart.active{
+    display: block;
+}
+.dataCenterWrap .dataCenter .dataChart img {
+
+}
+
+/*会议中心*/
+.conventionWrap {
+}
+
+.conventionWrap ul {
+}
+
+.conventionWrap ul li {
+    margin-bottom: 10px;
+    height: 240px;
+    background-color: #ffffff;
+}
+
+.conventionWrap ul li .conventionPic {
+    position: relative;
+    height: 170px;
+}
+
+.conventionWrap ul li img {
+    width: 280px;
+    height: 170px;
+}
+
+.conventionWrap ul li .txt {
+    position: absolute;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 8px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.conventionWrap ul li p {
+    padding: 0 8px;
+    font-size: 14px;
+    line-height: 23px;
+    color: #333333;
+}

@@ -1,0 +1,132 @@
+.newsflashbox .newslist {
+}
+
+.newsflashbox .newslist li {
+    overflow: hidden;
+    margin-bottom: 5px;
+    padding: 25px 34px 10px 20px;
+    border: 1px solid #efefef;
+    background-color: #fff;
+}
+
+.newsflashbox .newslist .timmer {
+    font-size: 14px;
+    color: #333;
+    padding-bottom: 25px;
+    background: url("./../images/icon/icon_time.png") no-repeat center bottom;
+}
+
+.newsflashbox .newslist .ntxt {
+    margin-left: 74px;
+}
+
+.newsflashbox .newslist .ntxt a {
+    line-height: 21px;
+    font-size: 14px;
+    color: #333;
+}
+
+.newsflashbox .newslist .ntxt {
+}
+
+.newsflashbox .opera {
+    overflow: hidden;
+    margin-top: 8px;
+    padding-right: 4px;
+    color: #3e5be4;
+    font-size: 14px;
+}
+
+.newsflashbox .opera em {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 18px;
+}
+
+.newsflashbox .what {
+    background: url("./../images/icon/icon_what.png") no-repeat center;
+}
+
+.newsflashbox .share {
+    background: url("./../images/icon/icon_share.png") no-repeat center;
+}
+
+/*params*/
+.container .newsflashbox .params {
+    margin: -12px 0 0 0;
+    padding: 0;
+    height: 108px;
+    display: block;
+    padding: 0;
+}
+.container .newsflashbox .params .select {
+    border: 1px solid #ececec;
+    height: 58px;
+    line-height: 58px;
+    vertical-align: top;
+    position: relative;
+    background-color: #FFFFFF;
+}
+
+.container .newsflashbox .params .select p {
+    width: 76px;
+    color: #666666;
+    font-size: 15px;
+    border: 1px solid #636363;
+    margin-left: 30px;
+    outline: none;
+    text-align: center;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    padding: 0;
+}
+
+.container .newsflashbox .params .select p em {
+    padding-left: 14px;
+    background: url(./../images/icon/icon_down.png) no-repeat left center;
+    margin-left: 5px;
+    vertical-align: top;
+}
+
+.container .newsflashbox .params .select .more {
+    height: 32px;
+    line-height: 32px;
+    width: 100px;
+    border: 1px solid #636363;
+    position: absolute;
+    right: 20px;
+    top: 13px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.container .newsflashbox .params .icon_calendar {
+    height: 40px;
+    width: 100%;
+    border: 1px solid #ececec;
+    background-color: #FFFFFF;
+}
+
+.container .newsflashbox .params .icon_calendar p {
+    height: 30px;
+    background-color: rgb(233,233,233);
+    font-size: 12px;
+    line-height: 30px;
+    color: #333333;
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 5px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.container .newsflashbox .params .icon_calendar p img{
+    display: inline-block;
+    vertical-align: middle;
+    height: 15px;
+    width: 15px;
+    margin-left: 20px;
+    margin-right: 10px;
+}

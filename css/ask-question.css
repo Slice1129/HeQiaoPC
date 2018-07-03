@@ -1,0 +1,162 @@
+#ask-question{
+    background-color: #FFFFFF;
+    width: 100%;
+    display: block;
+    margin-bottom: 40px;
+    border: 1px solid #ececec;
+    margin-top: 20px;
+    padding: 20px 20px 10px 20px;
+}
+#ask-question #order_1{
+    display: block;
+}
+#ask-question #order_2{
+    display: none;
+}
+
+#ask-question h1 {
+    font-size: 15px;
+    color: #000000;
+    padding: 0 0 20px 0;
+}
+
+#ask-question h1 span {
+    font-size: 12px;
+    color: #666666;
+}
+
+#ask-question form {
+    position: relative;
+    height: 50px;
+}
+
+#ask-question form input.text {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: 1px solid #ececec;
+}
+
+#ask-question form input.button {
+    color: #FFFFFF;
+    background-color: #666666;
+    border-radius: 3px;
+    width: 60px;
+    height: 30px;
+    line-height: 20px;
+    outline: none;
+    border: none;
+    position: absolute;
+    right: 20px;
+    top: 50px;
+}
+
+#ask-question h2 {
+    font-size: 15px;
+    color: #000;
+}
+
+#ask-question h2 span {
+    display: inline-block;
+}
+
+#ask-question h2 .active {
+    color: darkred;
+}
+
+#ask-question .send-back {
+    width: 100%;
+    padding: 30px 0 0 0;
+    vertical-align: top;
+    display: block;
+}
+
+#ask-question  .send-back .left {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+}
+
+#ask-question .send-back .left img {
+    width: 100%;
+    vertical-align: top;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+#ask-question .send-back .right {
+    width: calc(100% - 70px);
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 0 0 10px;
+}
+
+#ask-question .send-back .right h3 {
+    font-size: 16px;
+    color: #000000;
+}
+
+#ask-question .send-back .right h3 span {
+    color: #999999;
+}
+
+#ask-question .send-back .right p {
+    font-size: 15px;
+    line-height: 22px;
+    color: #666666;
+    padding: 10px 0 0 0;
+}
+
+#ask-question .send-back .right h4 {
+    padding: 10px 0;
+    height: 40px;
+    vertical-align: top;
+    color: #999999;
+}
+
+#ask-question .send-back .right h4 span {
+    color: #999999;
+}
+
+#ask-question .send-back .right h4 img {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#ask-question .send-back .right form div {
+    width: 100%;
+    height: 40px;
+    outline: solid 1px #ececec;;
+    position: relative;
+}
+
+#ask-question .send-back .right form div input.text {
+    width: 460px;
+    height: 40px;
+    font-size: 15px;
+    line-height: 40px;
+    outline: none;
+    border: none;
+    display: inline-block;
+}
+
+#ask-question .send-back .right form div input.button {
+    position: absolute;
+    height: 30px;
+    top: 5px;
+    right: 10px;
+}
+
+#ask-question .send-back .left{
+    border: none;
+}
+#ask-question .pagebox{
+    height: 40px;
+}
+#ask-question .pagebox .page{
+    padding: 0;
+}

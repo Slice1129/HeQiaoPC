@@ -1,0 +1,291 @@
+.actTab .actTitle .alogo-wealth{
+    background: transparent url("../images/icon/moneyicon.png") no-repeat center;
+    background-size: 80%;
+}
+.wealth-title {
+    overflow: hidden;
+    padding: 10px 20px;
+    background: transparent url("../images/icon/asktabbg.png") repeat center;
+    background-size: 100% 100%;
+}
+.wealth-title li {
+    float: left;
+    min-width: 150px;
+}
+.wealth-title li:first-child {
+    line-height: 24px;
+    font-size: 13px;
+    font-weight: bolder;
+}
+.wealth-title .xuanz {
+    width: 390px;
+    margin: 0 10px;
+}
+.wealth-title li span {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+}
+.wealth-title li input[type='text'] {
+    width: 80px;
+}
+.wealth-chart {
+    padding: 30px;
+}
+.wealth-chart img {
+    display: block;
+    margin: 0 auto;
+}
+.wealth-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.wealth-table table tr th {
+    padding: 12px 20px;
+    font-size: 15px;
+    border-top: 1px solid #929292;
+    border-right: 1px solid #c5c5c5;
+    border-bottom: 1px solid #929292;
+    text-align: center;
+}
+.wealth-table table tr td {
+    padding: 12px 20px;
+    border-right: 1px solid #c5c5c5;
+    border-bottom: 1px solid #c5c5c5;
+    text-align: center;
+    font-size: 13px;
+}
+.wealth-table table tr th:last-child, .wealth-table table tr td:last-child {
+    border-right: 0;
+}
+.outerring {
+    overflow: hidden;
+    width: 360px;
+    height: 360px;
+    margin: 36px auto;
+    background: #ff5106;
+    border-radius: 50%;
+}
+.innerring {
+    width: 180px;
+    height: 180px;
+    margin: 90px;
+    border-radius: 50%;
+    background: #fff;
+    padding-top: 60px;
+}
+.innerring p {
+    text-align: center;
+    font-size: 19px;
+    line-height: 40px;
+}
+.innerring p:first-child{
+    margin: 0 auto;
+    width: 120px;
+    border-bottom: 1px solid #333;
+}
+.bank .btns {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.bank .btns span {
+    width: 76px;
+    height: 33px;
+    margin: 0 20px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #adadad;
+    border: 1px solid #adadad;
+    cursor: pointer;
+}
+.bank-money{
+    min-height: 312px;
+}
+.explain {
+    width: 380px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+.explain p {
+    font-size: 13px;
+    color: #666;
+    line-height: 30px;
+}
+.withdrawals.yetxian{
+    display: none;
+}
+.withdrawals {
+    overflow: hidden;
+    width: 626px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #f9f9f9;
+}
+.withdrawals .with-left, .withdrawals .with-right {
+    float: left;
+    width: 50%;
+    padding-left: 18px;
+}
+.withdrawals .with-left {
+    border-right: 1px solid #e5e5e5;
+}
+.withdrawals .with-left p {
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #323232;
+}
+.withdrawals .with-left .bdbank {
+    width: 80px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #3e5be4;
+    color: #3e5be4;
+    border-radius: 5px;
+    padding: 5px 6px;
+    margin-left: 16px;
+}
+.tips, .tips em {
+    line-height: 26px;
+    color: #919191;
+}
+.blue {
+    color: #3e5be4;
+    margin-right: 20px;
+}
+.dao {
+    padding-left: 160px;
+}
+.withdrawals .with-left .cash-btn {
+    float: right;
+    margin-right: 10px;
+    line-height: 1;
+    padding: 4px 16px;
+    color: #919191;
+    border: 1px solid #919191;
+    border-radius: 3px;
+}
+.withdrawals .with-left p i中国银行nput {
+    width: 210px;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+    background: transparent;
+}
+.withdrawals .with-right {
+    font-size: 13px;
+    color: #323232;
+}
+.with-right p {
+    line-height: 26px;
+}
+.with-right p input {
+    width: 126px;
+    border: 0;
+    border-bottom: 1px solid #bebebe;
+    background: transparent;
+}
+.with-right .cash-btn {
+    line-height: 1;
+    margin-right: 10px;
+    float: right;
+    padding: 4px 5px;
+    color: #9b9b9b;
+    border: 1px solid #e7e7e7;
+    border-radius: 3px;
+}
+.Recharge {
+    width: 780px;
+    padding: 10px 0 60px;
+    margin: 50px auto;
+    background: #f9f9f9;
+}
+.re-title{
+    text-align: center;
+    margin-bottom: 56px;
+}
+.re-title em{
+    padding: 10px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #000;
+    border-bottom: 2px solid #f9f9f9;
+    cursor: pointer;
+}
+.re-title em.on{
+    border-bottom: 2px solid #3e5be4;
+}
+.Recharge .txian {
+    display: none;
+}
+.templeft {
+    overflow: hidden;
+    width: 440px;
+    margin: 0 auto;
+}
+.zftitle{
+    width: 440px;
+    margin: 0 auto 30px;
+}
+.templeft li {
+    float: left;
+    cursor: pointer;
+}
+
+.rmingb li {
+    width: 66px;
+    height: 42px;
+    line-height: 40px;
+    margin: 0 22px 44px;
+    border: 1px solid #3e5be4;
+    color: #3e5be4;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 13px;
+}
+.rmingb li.on{
+    background: #3e5be4;
+    color: #fff;
+    font-size: 16px;
+}
+.yhangk li {
+    width: 118px;
+    height: 42px;
+    margin: 0 13px;
+    background-size: 100%;
+    border: 2px solid #f9f9f9;
+    border-radius: 5px;
+}
+.yhangk li.on{
+    background-size: 80%;
+    border: 2px solid #3e5be4;
+}
+.zgylian {
+    background: transparent url("../images/icon/zgyl.png") no-repeat center;
+}
+.zfbao {
+    background: transparent url("../images/icon/zfb.png") no-repeat center;
+}
+.weixin {
+    background: transparent url("../images/icon/wxzf.png") no-repeat center;
+}
+
+.sxia .with-left, .sxia .with-right {
+    float: inherit;
+    margin: 0 auto;
+}
+.sxia .with-left{
+    margin-bottom: 30px;
+    border-right: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.surebtn{
+    display: block;
+    margin: 40px auto 0;
+    width: 68px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #3e5be4;
+    color: #3e5be4;
+    border-radius: 5px;
+}

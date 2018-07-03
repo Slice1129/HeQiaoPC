@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>赫桥财经</title>
+    <meta name="author" content="陆宣良">
+    <meta name="keywords" content="赫桥财经"/>
+    <meta name="Description" content=""/>
+    <link rel="stylesheet" href="../../css/heqiao.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <style>
+        .bg-body {
+            overflow: hidden;
+            background: url("../../images/abg.jpg") no-repeat center;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 3px auto 15px;
+            overflow: hidden;
+        }
+
+        .actNav {
+            float: left;
+            width: 236px;
+            min-height: 763px;
+            background-color: rgba(255, 255, 255, 0.42);
+        }
+
+        .actNav ul {
+            width: 169px;
+            margin: 54px auto;
+        }
+
+        .actNav ul li {
+            line-height: 27px;
+            margin-bottom: 12px;
+            background: url("../../images/navline.png") no-repeat left bottom;
+            text-align: center;
+        }
+
+        .actNav ul li:last-child {
+            background: none;
+        }
+
+        .actNav ul li a {
+            display: block;
+            font-size: 15px;
+        }
+
+        .actContent {
+            margin-left: 236px;
+            padding: 10px;
+            background-color: #ffffff;
+            height: 763px;
+        }
+
+        .actTab {
+            width: 935px;
+        }
+
+        .actTab .actTitle {
+            height: 146px;
+            padding: 0px;
+            background-color: #e2e2e2;
+        }
+
+        .actTab .actTitle .actTitle_left {
+            display: inline-block;
+            padding-left: 56px;
+            padding-top: 38px;
+            margin: 0;
+
+        }
+
+        .actTab .actTitle .actTitle_left div {
+            border-right: 1px solid #999999;
+            display: inline-block;
+            padding-right: 50px;
+            padding-bottom: 10px;
+        }
+
+        .actTab .actTitle .actTitle_left h1 {
+            font-size: 25px;
+            color: #333333;
+        }
+
+        .actTab .actTitle .actTitle_left .level {
+            height: 18px;
+            margin-top: 12px;
+        }
+
+        .actTab .actTitle .actTitle_left .level i {
+            height: 18px;
+            line-height: 18px;
+            font-size: 12px;
+            color: #333333;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .actTab .actTitle .actTitle_left .level span {
+            display: inline-block;
+            background-color: #910010;
+            height: 18px;
+            line-height: 18px;
+            width: 60px;
+            font-size: 12px;
+            color: #ffffff;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .actTab .actTitle .actTitle_left .safety {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #333333;
+        }
+
+        .actTab .actTitle .actTitle_left .safety span:nth-of-type(1) {
+            background-color: #910010;
+            display: inline-block;
+            width: 20px;
+            height: 10px;
+        }
+
+        .actTab .actTitle .actTitle_left .safety span:nth-of-type(2) {
+            background-color: #999999;
+            display: inline-block;
+            width: 20px;
+            height: 10px;
+        }
+
+        .actTab .actTitle .actTitle_left .safety em {
+            font-size: 12px;
+            color: #910010;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .actTab .actTitle .actTitle_right {
+            height: 100%;
+            display: inline-block;
+            padding: 50px 0 0 40px;
+        }
+
+        .actTab .actTitle .actTitle_right p {
+            font-size: 12px;
+            color: #333333;
+            margin-top: 10px;
+        }
+
+        .actTab .actTitle .actTitle_right p:nth-of-type(1) {
+            margin-top: 0px;
+        }
+
+        .actTab .actTitle .actTitle_right p span.my_info {
+            width: 200px;
+            display: inline-block;
+        }
+
+        .actTab .actTitle .actTitle_right p span.my_money i {
+            color: #910010;
+        }
+
+        .actTab .actMain {
+            padding-top: 40px;
+            padding-left: 0px;
+        }
+
+        .actTab .actMain h1 {
+            font-size: 12px;
+            color: #666666;
+            padding: 10px 0 10px 0;
+            text-indent: 20px;
+            border-bottom: 1px solid #ececec;
+        }
+
+        .actTab .actMain ul {
+            padding-left: 20px;
+            padding-top: 30px;
+            padding-bottom: 20px;
+        }
+
+        .actTab .actMain ul li .new_title {
+            width: 90px;
+            height: 90px;
+            background-color: #ececec;
+            display: inline-block;
+        }
+
+        .actTab .actMain ul li .new_content {
+            display: inline-block;
+            margin-left: 26px;
+            vertical-align: top;
+        }
+
+        .actTab .actMain ul li .new_content h2 {
+            font-size: 12px;
+            color: #999999;
+            font-weight: normal;
+        }
+
+        .actTab .actMain ul li .new_content .content {
+            margin-top: 14px;
+            font-size: 14px;
+            color: #333333;
+            width: 700px;
+            line-height: 23px;
+        }
+
+        .actTab .actMain ul li .new_content .time {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #999999;
+            font-weight: normal;
+        }
+
+        .actTab .actMain .newInfo p {
+            text-indent: 136px;
+            margin-top: 10px;
+            color: #999999;
+        }
+
+        .actTab .actMain .newInfo p em {
+            display: inline-block;
+            background-color: #910010;
+            width: 10px;
+            height: 10px;
+
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="topArea">
+        <div class="topLogo">
+            <ul>
+                <li class="logo">
+                    <a href="../index.html">
+                        <img src="../../images/icon/logo.png" width="215">
+                    </a>
+                </li>
+                <li class="blogger">
+                    <img src="../../images/upload/bloggerUser.png">
+
+                    <div class="summary">
+                        <h1>博主名</h1>
+                        <p>锦坤文化发展集团</p>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="topOpera">
+            <ul>
+                <li class="navbar">
+                    <a href="">返回首页</a>
+                    <a href="" style="margin-right: 0">登录</a>/
+                    <a href="" style="margin-left: 0">注册</a>
+                    <a href="">个人中心</a>
+                    <a href="">提问</a>
+                    <a href="">关于赫桥</a>
+
+                </li>
+                <li class="searchbox">
+                    <div class="search">
+                        <input type="text" placeholder="输入关键词">
+                        <span class="btn"></span>
+                    </div>
+                </li>
+                <li class="hotline">
+                    <dl>
+                        <dt>全国服务热线:</dt>
+                        <dd>400-871-6766</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="redLine"></div>
+</header>
+<div class="bg-body">
+    <div class="container">
+        <div class="actNav">
+            <ul>
+                <li><a href="">用户中心</a></li>
+                <li><a href="">消息中心</a></li>
+                <li><a href="">我的问答</a></li>
+                <li><a href="">我的财富</a></li>
+                <li><a href="">我的关注</a></li>
+                <li><a href="">我的视频</a></li>
+                <li><a href="">我的音频</a></li>
+                <li><a href="">我的报告</a></li>
+                <li><a href="">我的图片</a></li>
+                <li><a href="">我的会议</a></li>
+                <li><a href="">我的设置</a></li>
+                <li><a href="">推出登录</a></li>
+            </ul>
+        </div>
+        <div class="actContent">
+            <div class="actTab">
+                <div class="hd actTitle">
+                    <div class="hd actTitle_left">
+                        <div>
+                            <h1>User Name</h1>
+                            <p class="level"><i>会员等级&nbsp;:&nbsp;</i><span>VIP1</span></p>
+                            <p class="safety"><i>账户安全&nbsp;:&nbsp;</i><span></span><span></span><em>较高</em></p>
+                        </div>
+                    </div>
+                    <div class="hd actTitle_right">
+                        <p>
+                            <span class="my_info"><em>粉丝数&nbsp;:&nbsp;</em><i>1514</i></span>
+                            <span class="my_money"><em>我的收入&nbsp;:&nbsp;</em><i>￥255454</i></span>
+                        </p>
+                        <p>
+                            <span class="my_info"><em>我的关注&nbsp;:&nbsp;</em><i>235</i></span>
+                            <span class="my_money"><em>我的支出&nbsp;:&nbsp;</em><i>￥45654</i></span>
+                        </p>
+
+                        <p>
+                            <span class="my_info"><em>未读消息&nbsp;:&nbsp;</em><i>14</i></span>
+                            <span class="my_money"><em>可提现余额&nbsp;:&nbsp;</em><i>￥45654</i></span>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="bd actMain">
+                    <div class="newQuestion">
+                        <h1>最新提问</h1>
+                        <ul>
+                            <li>
+                                <div class="new_title"></div>
+                                <div class="new_content">
+                                    <h2><span>来自财金模块</span></h2>
+                                    <p class="content">
+                                         <span>
+                                          财经类媒体上经常出现的，金融业内人士最不能忍的常识性错误有哪些？财经类媒体上经常出现的，金融业内人
+                                          士最不能忍的常识性错误有哪些？
+                                         </span>
+                                    </p>
+                                    <p class="time">
+                                         <span class="questionTime">
+                                             提问时间&nbsp;:&nbsp; <em>2017-07-12  12:12:12</em>
+                                         </span>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <span class="answerTime">
+                                             回答时间&nbsp;:&nbsp;<em>2017-07-12  12:12:12</em>
+                                         </span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="newAnswer">
+                        <h1>最新回答</h1>
+                        <ul>
+                            <li>
+                                <div class="new_title"></div>
+                                <div class="new_content">
+                                    <h2><span>来自财金模块</span></h2>
+                                    <p class="content">
+                                          <span>
+                                          财经类媒体上经常出现的，金融业内人士最不能忍的常识性错误有哪些？财经类媒体上经常出现的，金融业内人
+                                          士最不能忍的常识性错误有哪些？
+                                         </span>
+                                    </p>
+
+                                    <p class="time">
+                                         <span class="questionTime">
+                                             提问时间&nbsp;:&nbsp; <em>2017-07-12  12:12:12</em>
+                                         </span>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <span class="answerTime">
+                                             回答时间&nbsp;:&nbsp;<em>2017-07-12  12:12:12</em>
+                                         </span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="newInfo">
+                        <h1>最新消息</h1>
+                        <p><em></em>&nbsp;&nbsp;<span>账户等级提升到<i>10</i>级</span></p>
+                        <p><em></em>&nbsp;&nbsp;<span>账户等级提升到<i>9</i>级</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer">
+        <div class="footerLink">
+            <a href="">关于赫桥</a><span></span>
+            <a href="">联系我们</a><span></span>
+            <a href="">人才招聘</a><span></span>
+            <a href="">内容合作</a><span></span>
+            <a href="">网站导航</a><span></span>
+            <a href="">使用条款</a><span></span>
+            <a href="">版权声明</a><span></span>
+            <a href="">隐私保护</a><span></span>
+            <a href="">信息举报</a>
+        </div>
+        <p class="copyright">Copyright 2017-2028 赫桥财经 www.heqiaocaijing.com 版权所有</p>
+    </div>
+</footer>
+
+</body>
+</html>

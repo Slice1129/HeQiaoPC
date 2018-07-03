@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>赫桥财经</title>
+    <meta name="keywords" content="赫桥财经"/>
+    <meta name="Description" content=""/>
+    <link rel="stylesheet" href="../../css/heqiao.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <style>
+        .allConversion > div {
+            display: none;
+        }
+        .calItem {
+            background-color: #fff;
+        }
+        .calItem .Prompt strong {
+            float: left;
+            font-size: .24rem;
+            color: #444;
+        }
+        .calItem .Prompt > div {
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .calItem .Prompt p {
+            display: block;
+            font-size: 13px;
+            color: #6b6b6b;
+            margin-bottom: 10px;
+        }
+        .calItem h3 {
+            padding: 20px;
+            font-size: 13px;
+            color: #757575;
+            border: 1px solid #ebebeb;
+        }
+        .calItem h3 > i.diamond {
+            display: inline-block;
+            width: 11px;
+            height: 11px;
+            margin-right: .18rem;
+            border: 1px solid #aebaf4;
+            background-color: #3e5be4;
+        }
+        .calItem h3 span {
+            float: right;
+            display: block;
+            width: 20px;
+            height: 20px;
+        }
+        .calItem h3 .up {
+            background: url(./../../images/icon/next.png) no-repeat center;
+            background-size: 10px 20px;
+        }
+        .calItem h3 .down {
+            background: url(./../../images/icon/deg90.png) no-repeat center;
+            background-size: 20px 10px;
+        }
+        #commodity .Calculation {
+            padding: 0;
+        }
+        .Calculation, .Prompt {
+            padding: 26px 36px;
+            background-color: #f8f8f8;
+            color: #757575;
+            font-size: 13px;
+            border-radius: .12rem;
+        }
+        .Calculation input {
+            border: 1px solid #cbcbcb;
+            width: 80px;
+            height: 20px;
+            padding: 2px 5px;
+            margin: 0;
+        }
+        .Calculation > div {
+            margin-bottom: 10px;
+            border-radius: .12rem;
+        }
+        .Calculation .handle {
+            background: #fff;
+            padding: 15px 40px 10px;
+            text-align: right;
+        }
+        .row {
+            overflow: hidden;
+        }
+        .row .col-5 {
+            width: 41.66666667%;
+        }
+        .row .col-6 {
+            float: left;
+            width: 50%;
+        }
+        .row .col-7 {
+            width: 58.33333333%
+        }
+        .datalist > div {
+            display: none
+        }
+        .leftNav li > h2 span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-left: 10px;
+            background: url(./../../images/icon/icon_down.png) no-repeat center;
+            background-size: 100%;
+        }
+        .leftNav li > h2 .down {
+            transform: rotate(0deg);
+        }
+        .leftNav li > h2 .up {
+            transform: rotate(-90deg);
+        }
+
+    </style>
+</head>
+<body class="dataPage">
+<header>
+    <div class="topArea">
+        <div class="topLogo">
+            <ul>
+                <li class="logo">
+                    <a href="../index.html">
+                        <img src="../../images/icon/logo.png" width="215">
+                    </a>
+                </li>
+                <li class="subtitle">数据</li>
+            </ul>
+        </div>
+
+        <div class="topOpera">
+            <ul>
+                <li class="navbar">
+                    <a href="">返回首页</a>
+                    <a href="" style="margin-right: 0">登录</a>/
+                    <a href="" style="margin-left: 0">注册</a>
+                    <a href="">个人中心</a>
+                    <a href="">提问</a>
+                    <a href="">关于博主</a>
+                </li>
+                <li class="searchbox">
+                    <div class="search">
+                        <input type="text" placeholder="输入关键词">
+                        <span class="btn"></span>
+                    </div>
+                </li>
+                <li class="hotline">
+                    <dl>
+                        <dt>全国服务热线:</dt>
+                        <dd>400-871-6766</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="redLine"></div>
+</header>
+<div class="topbanner"></div>
+<div class="hQContent">
+    <div class="clearfix">
+        <div class="hQleftLayout">
+            <div class="hqTab born">
+                <div class="hd">
+                    <ul>
+                        <li>宏观经济</li>
+                        <li>股票</li>
+                        <li>债券</li>
+                        <li class="on">商品</li>
+                        <li>外汇</li>
+                        <li>其他</li>
+                    </ul>
+                    <a class="mydata" href="javascript:void(0)">我的数据</a>
+                </div>
+                <div class="bd">
+                    <div>Tab1</div>
+                    <div>Tab2</div>
+                    <div>Tab3</div>
+                    <div>
+                        <div class="navBox">
+                            <div id="dataNav" class="leftNav">
+                                <ul class="level1">
+                                    <li>
+                                        <h2>期货工具<span class="down"></span></h2>
+                                        <ul class="level2" style="display: block">
+                                            <li data-status="futures" class="active">-豆类换算</li>
+                                            <li data-status="futures">-金属换算</li>
+                                            <li data-status="futures">-原油换算</li>
+                                            <li data-status="futures">-棉花换算</li>
+                                            <li data-status="futures">-玉米换算</li>
+                                            <li data-status="futures">-小麦换算</li>
+                                            <li data-status="futures">-橡胶换算</li>
+                                            <li data-status="futures">-白糖换算</li>
+                                            <li data-status="futures">-PTA 换算</li>
+                                            <li data-status="futures">-棕油换算</li>
+                                            <li data-status="futures">-黄金换算</li>
+                                            <li data-status="futures">-其他换算</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h2>商品<span class="up"></span></h2>
+                                        <ul class="level2">
+                                            <li data-status="commodity">-有色金属</li>
+                                            <li data-status="commodity">-贵金属</li>
+                                            <li data-status="commodity">-黑色系列</li>
+                                            <li data-status="commodity">-能源化工</li>
+                                            <li data-status="commodity">-油脂油料</li>
+                                            <li data-status="commodity">-谷物饲料</li>
+                                            <li data-status="commodity">-棉花</li>
+                                            <li data-status="commodity">-白糖</li>
+                                            <li data-status="commodity">-橡胶</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="rightContent">
+                                <div id="futures" class="allConversion">
+                                    <div style="display: block">
+                                        <div class="calItem">
+                                            <div class="Prompt">
+                                                <div>
+                                                    <strong>大豆价格：</strong>
+
+                                                    <p>1美元/蒲式耳＝36.7437美元/吨=36.7437×（美元/人民币）元/吨</p>
+                                                </div>
+                                                <div>
+                                                    <strong>豆粕价格：</strong>
+
+                                                    <p>1美元/短吨＝1.1025美元/吨＝1.1025×（美元/人民币）元/吨</p>
+                                                </div>
+                                                <div>
+                                                    <strong>豆油价格：</strong>
+
+                                                    <p>1美分/磅＝22.0462美元/吨＝22.0462×（美元/人民币）元/吨</p>
+                                                </div>
+                                                <div>
+                                                    <strong>大豆单产：</strong>
+
+                                                    <p>1蒲式耳/英亩＝0.0672吨/公顷＝4.4799公斤/亩</p>
+                                                </div>
+                                                <div>
+                                                    <strong>大豆重量容积：</strong>
+
+                                                    <p>1蒲式耳＝60磅＝0.0272公吨＝0.0268长吨＝0.03短吨</p>
+                                                </div>
+                                                <div>
+                                                    <strong>豆粕重量容积：</strong>
+
+                                                    <p>1短吨＝2000磅＝0.9072公吨</p>
+                                                </div>
+                                                <div>
+                                                    <strong>豆油重量容积：</strong>
+
+                                                    <p>1磅＝0.0004536公吨</p>
+                                                </div>
+                                            </div>
+                                            <h3><i class="diamond"></i>进口大豆到岸成本<span
+                                                    class="down"></span></h3>
+
+                                            <div class="Calculation">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        运费：<input type="text">美元/吨
+                                                    </div>
+                                                    <div class="col-6">
+                                                        基差：<input type="text">美分/蒲式耳
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        税率：<input type="text">%
+                                                    </div>
+                                                    <div class="col-6">
+                                                        汇率：<input type="text">人民币/美元
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <input type="text">
+                                                    美分/蒲式耳（芝加哥盘面价）
+                                                    <span>换算</span>
+                                                </div>
+                                                <div class="row">
+                                                    ＝<input type="text">美元/吨（美国离岸成本）
+                                                </div>
+                                                <div class="row">
+                                                    ＝<input type="text">元/吨（中国到岸成本）
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calItem">
+                                            <h3><i class="diamond"></i>进口豆粕到岸成本<span
+                                                    class="down"></span></h3>
+
+                                            <div class="Calculation">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        运费：<input type="text">美元/吨
+                                                    </div>
+                                                    <div class="col-6">
+                                                        基差：<input type="text">美分/蒲式耳
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        税率：<input type="text">%
+                                                    </div>
+                                                    <div class="col-6">
+                                                        汇率：<input type="text">人民币/美元
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <input type="text">
+                                                    美分/蒲式耳（芝加哥盘面价）
+                                                    <span>换算</span>
+                                                </div>
+                                                <div class="row">
+                                                    ＝<input type="text">美元/吨（美国离岸成本）
+                                                </div>
+                                                <div class="row">
+                                                    ＝<input type="text">元/吨（中国到岸成本）
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calItem">
+                                            <h3><i class="diamond"></i>进口豆油到岸成本<span class="down"></span></h3>
+
+                                            <div class="Calculation">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        运费：<input type="text">美元/吨
+                                                    </div>
+                                                    <div class="col-6">
+                                                        基差：<input type="text">美分/蒲式耳
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        税率：<input type="text">%
+                                                    </div>
+                                                    <div class="col-6">
+                                                        汇率：<input type="text">人民币/美元
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <input type="text">
+                                                    美分/蒲式耳（芝加哥盘面价）
+                                                    <span>换算</span>
+                                                </div>
+                                                <div class="row">
+                                                    ＝<input type="text">美元/吨（美国离岸成本）
+                                                </div>
+                                                <div class="row">
+                                                    ＝<input type="text">元/吨（中国到岸成本）
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calItem">
+                                            <h3><i class="diamond"></i>国产大豆压榨利润（按出油率16.5％ 出粕率79％）<span
+                                                    class="down"></span>
+                                            </h3>
+
+                                            <div class="Calculation">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        豆粕价格：<input type="text">元/吨
+                                                    </div>
+                                                    <div class="col-6">
+                                                        豆油价格：<input type="text">元/吨
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        大豆价格：<input type="text">元/吨
+                                                    </div>
+                                                    <div class="col-6">
+                                                        加 工 费：<input type="text">元/吨
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <span>计算利润</span>
+                                                    <input type="text">
+                                                    元/吨）
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calItem">
+                                            <h3><i class="diamond"></i>进口大豆压榨利润（按出油率18.5％ 出粕率78.5％）<span
+                                                    class="down"></span></h3>
+
+                                            <div class="Calculation">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        运费：<input type="text">美元/吨
+                                                    </div>
+                                                    <div class="col-6">
+                                                        基差：<input type="text">美分/蒲式耳
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        税率：<input type="text">%
+                                                    </div>
+                                                    <div class="col-6">
+                                                        汇率：<input type="text">人民币/美元
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <input type="text">
+                                                    美分/蒲式耳（芝加哥盘面价）
+                                                    <span>换算</span>
+                                                </div>
+                                                <div class="row">
+                                                    ＝<input type="text">美元/吨（美国离岸成本）
+                                                </div>
+                                                <div class="row">
+                                                    ＝<input type="text">元/吨（中国到岸成本）
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--金属换算 -->
+                                    <div>
+                                        <div class="calItem">
+                                            <h3><i class="diamond"></i>LME铜铝进口成本计算<span
+                                                    class="down"></span></h3>
+
+                                            <div class="Calculation">
+                                                <div>LME三月铜铝价：<input type="text"> 美元</div>
+                                                <div>现货三个月升贴水：<input type="text"> 美元</div>
+                                                <div>上海铜铝与LME铜铝升贴水：<input type="text"> 美元</div>
+                                                <div class="row">
+                                                    <div class="col-7">汇率：<input type="text">人民币/美元</div>
+                                                    <div class="col-5">关税税率：<input type="text">％</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">增殖税率：<input type="text">％</div>
+                                                    <div class="col-6">其他费用：<input type="text">元</div>
+                                                </div>
+                                                <div class="row">
+                                                    <span>计算利润</span><input type="text">元/吨
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--原油换算 -->
+                                    <div>
+                                        <div class="calItem">
+                                            <div class="Prompt">
+                                                <div>
+                                                    <strong>原油价格：</strong>
+
+                                                    <p>1美元/桶＝7.3美元/吨＝7.3×（美元/人民币）元/吨</p>
+                                                </div>
+                                                <div>
+                                                    <strong>原油重量容积1：</strong>
+
+                                                    <p>1吨＝7.35桶</p>
+                                                </div>
+                                                <div>
+                                                    <strong>原油重量容积2：</strong>
+
+                                                    <p>1桶＝136公斤</p>
+                                                </div>
+                                                <div>
+                                                    <strong>原油重量容积3：</strong>
+
+                                                    <p>1桶=42美制加仑</p>
+                                                </div>
+                                            </div>
+                                            <h3><i class="diamond"></i>进口原油成本计算<span
+                                                    class="down"></span></h3>
+
+                                            <div class="Calculation">
+                                                <div class="row">
+                                                    <div class="col-6">基准价格：<input type="text">美元</div>
+                                                    <div class="col-6">升贴水：<input type="text">美元</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">关税税率：<input type="text">%</div>
+                                                    <div class="col-6">增值税率：<input type="text">%</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">其他费用：<input type="text">元</div>
+                                                    <div class="col-6">汇 率：<input type="text">人民币/美元</div>
+                                                </div>
+                                                <div>
+                                                    <span>计算成本</span>
+                                                    <input type="text">元/吨）
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calItem">
+                                            <h3><i class="diamond"></i>进口燃料油成本计算<span
+                                                    class="down"></span></h3>
+
+                                            <div class="Calculation">
+                                                <div class="row">
+                                                    <div class="col-6">基准价格：<input type="text">美元</div>
+                                                    <div class="col-6">升贴水：<input type="text">美元</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">关税税率：<input type="text">%</div>
+                                                    <div class="col-6">增值税率：<input type="text">%</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">其他费用：<input type="text">元</div>
+                                                    <div class="col-6">汇 率：<input type="text">人民币/美元</div>
+                                                </div>
+                                                <div>
+                                                    <span>计算成本</span>
+                                                    <input type="text">元/吨）
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--棉花换算 -->
+                                    <div>
+                                        <div class="calItem">
+                                            <div class="Prompt">
+                                                <div>
+                                                    <strong>棉价换算：</strong>
+
+                                                    <p>1美分/磅＝22.0462美元/吨＝22.0462×（美元/人民币）元/吨</p>
+                                                </div>
+                                                <div>
+                                                    <strong>棉花单产：</strong>
+
+                                                    <p>1磅/英亩＝1.12公斤/公顷＝0.07467公斤/亩</p>
+                                                </div>
+                                                <div>
+                                                    <strong style="padding-bottom: 50px">棉包重量：</strong>
+                                                    <p>1包（中国 / 美国）＝217公斤（480磅）</p>
+                                                    <p>1包（澳大利亚）＝227公斤</p>
+                                                    <p>1包（印度 / 巴基斯坦）＝170公斤</p>
+
+                                                </div>
+                                                <div>
+                                                    <strong style="padding-bottom: 50px">重量单位：</strong>
+
+                                                    <p>1Candy（印度）=355.62千克</p>
+                                                    <p>1公吨=1000千克=2204.62磅</p>
+                                                    <p>1磅＝0.4536公斤＝0.002083包</p>
+                                                </div>
+                                            </div>
+                                            <h3><i class="diamond"></i>进口棉花成本计算<span
+                                                    class="down"></span></h3>
+
+                                            <div class="Calculation">
+                                                <div class="row">
+                                                    <div>纽约ICE报价：<input type="text">美分/磅</div>
+                                                    <div>升贴水：<input type="text">美元</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">汇 率：<input type="text">人民币/美元</div>
+                                                    <div class="col-6">关税税率：<input type="text">％</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">增值税率：<input type="text">％</div>
+                                                    <div class="col-6">港口费：<input type="text">元/吨</div>
+                                                </div>
+                                                <div>
+                                                    <span>计算成本</span>
+                                                    <input type="text">元/吨）
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calItem">
+                                            <h3><i class="diamond"></i>籽棉折皮棉收购价(忽略损耗)<span
+                                                    class="down"></span></h3>
+
+                                            <div class="Calculation">
+                                                <div class="row">
+                                                    <div>籽棉：<input type="text">元/斤</div>
+                                                    <div>棉 籽：<input type="text">元/斤</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">衣分：<input type="text">％</div>
+                                                    <div class="col-6"> 加工费：<input type="text">元/吨</div>
+                                                </div>
+                                                <div>
+                                                    <span>计算成本</span>
+                                                    <input type="text">元/吨）
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--玉米换算 -->
+                                    <div>
+                                        <div class="calItem">
+                                            <div class="Prompt">
+                                                <div>
+                                                    <strong>玉米价格：</strong>
+
+                                                    <p>1美元/蒲式耳＝39.36825美元/吨＝39.36825×（美元/人民币）元/吨</p>
+                                                </div>
+                                                <div>
+                                                    <strong>玉米单产：</strong>
+
+                                                    <p>1蒲式耳/英亩＝62.719012公斤/公顷＝4.18126749公斤/亩</p>
+                                                </div>
+                                                <div>
+                                                    <strong>玉米重量容积：</strong>
+
+                                                    <p>1蒲式耳＝56磅＝0.0254012公吨＝0.025长吨＝0.028短吨</p>
+                                                </div>
+                                                <div>
+                                                    <strong style="padding-bottom: 100px">重量单位：</strong>
+
+                                                    <p>1吨(t)=1公吨(t)</p>
+                                                    <p>1吨(t)=0.9842065长吨(lt)</p>
+                                                    <p>1长吨(lt)=1.0160469吨(t)</p>
+                                                    <p>1吨(t)=1.1023113短吨(st)</p>
+                                                    <p>1短吨(st)=0.9071847吨(t)</p>
+
+                                                </div>
+                                            </div>
+                                            <h3><i class="diamond"></i>进口玉米到岸成本<span
+                                                    class="down"></span></h3>
+
+                                            <div class="Calculation">
+                                                <div class="row">
+                                                    <div class="col-6">运费：<input type="text">美分/蒲式耳</div>
+                                                    <div class="col-6">基差：<input type="text">美元/吨</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">税率：<input type="text">%</div>
+                                                    <div class="col-6">汇率：<input type="text">人民币/美元</div>
+                                                </div>
+                                                <div>
+                                                    <input type="text">
+                                                    美分/蒲式耳（芝加哥盘面价）
+                                                    <span>换算</span>
+                                                </div>
+                                                <div>
+                                                    ＝<input type="text">美元/吨（美国离岸成本）
+                                                </div>
+                                                <div>
+                                                    ＝<input type="text"> 元/吨（中国到岸成本）
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--小麦换算 -->
+                                    <div>
+                                        <div class="calItem">
+                                            <div class="Prompt">
+                                                <div>
+                                                    <strong>小麦价格：</strong>
+
+                                                    <p>1美元/蒲式耳＝36.7437美元/吨＝36.7437×（美元/人民币）元/吨</p>
+                                                </div>
+                                                <div>
+                                                    <strong>小麦单产：</strong>
+
+                                                    <p>1蒲式耳/英亩＝67.1987654公斤/公顷＝4.479918公斤/亩</p>
+                                                </div>
+                                                <div>
+                                                    <strong>小麦重量容积：</strong>
+
+                                                    <p>1蒲式耳＝60磅＝0.0272155公吨＝0.0267857长吨＝0.03短吨</p>
+                                                </div>
+                                                <div>
+                                                    <strong style="padding-bottom: 100px">重量单位：</strong>
+                                                    <p>1吨(t)=1公吨(t)</p>
+                                                    <p>1吨(t)=0.9842065长吨(lt)</p>
+                                                    <p>1长吨(lt)=1.0160469吨(t)</p>
+                                                    <p>1吨(t)=1.1023113短吨(st)</p>
+                                                    <p>1短吨(st)=0.9071847吨(t)</p>
+                                                </div>
+                                            </div>
+                                            <h3><i class="diamond"></i>进口小麦到岸成本<span
+                                                    class="down"></span></h3>
+
+                                            <div class="Calculation">
+                                                <div>海运费及保险费：<input type="text">美元/吨 升贴水：<input type="text">美元/吨</div>
+                                                <div>汇率：：<input type="text">人民币/美元 关税税率：<input type="text">%</div>
+                                                <div>增值税率：<input type="text">元/吨 港杂费： <input type="text">元/吨</div>
+                                                <div>国内运费：<input type="text">元/吨 检验费：<input type="text">元/吨</div>
+                                                <div><input type="text">美元/吨（FOB离岸价）<span>换算</span></div>
+                                                <div>＝<input type="text">元/吨（完税价格）</div>
+                                                <div>＝<input type="text">元/吨（上海仓单成本）</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--橡胶换算 -->
+                                    <div>
+                                        <div class="calItem">
+                                            <h3><i class="diamond"></i>进口天胶成本计算<span
+                                                    class="down"></span></h3>
+
+                                            <div class="Calculation">
+                                                <div>海运费及保险费：<input type="text">美元/吨 升贴水：<input type="text">美元/吨</div>
+                                                <div>汇率：：<input type="text">人民币/美元 关税税率：<input type="text">%</div>
+                                                <div>增值税率：<input type="text">元/吨 港杂费： <input type="text">元/吨</div>
+                                                <div>国内运费：<input type="text">元/吨 检验费：<input type="text">元/吨</div>
+                                                <div><input type="text">美元/吨（FOB离岸价）<span>换算</span></div>
+                                                <div>＝<input type="text">元/吨（完税价格）</div>
+                                                <div>＝<input type="text">元/吨（上海仓单成本）</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--白糖换算 -->
+                                    <div>
+                                        <div class="calItem">
+                                            <div class="Prompt">
+                                                <div>
+                                                    <strong>糖价换算：</strong>
+
+                                                    <p>1美分/磅＝22.0462美元/吨＝22.0462×（美元/人民币）元/吨</p>
+                                                </div>
+                                                <div>
+                                                    <strong style="padding-bottom: 60px">重量单位：</strong>
+
+                                                    <p>1吨=1公吨</p>
+                                                    <p>1磅＝453.59237 克 =0.0004536吨</p>
+                                                    <p>1吨=2204.62磅</p>
+
+                                                </div>
+                                            </div>
+                                            <h3><i class="diamond"></i>进口原糖成本计算<span
+                                                    class="down"></span></h3>
+
+                                            <div class="Calculation">
+                                                <div class="row">
+                                                    <div class="col-7">海运费及保险费：<input type="text">美分/磅</div>
+                                                    <div class="col-5">升贴水：<input type="text">美分/磅</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-7">汇率：<input type="text">人民币/美元</div>
+                                                    <div class="col-5">关税税率 ：<input type="text">%</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">增值税率：<input type="text">%</div>
+                                                    <div class="col-6">升贴水：<input type="text">美分/磅</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">加 工 费：<input type="text">元/吨</div>
+                                                    <div class="col-6"> 损 耗：<input type="text">元/吨</div>
+                                                </div>
+                                                <div>
+                                                    <input type="text">
+                                                    美分/磅（FOB离岸价）
+                                                    <spna>换算</spna>
+                                                </div>
+                                                <div>
+                                                    =<input type="text">元/吨（完税价格）
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--PTA换算 -->
+                                    <div>
+                                        <div class="calItem">
+                                            <div class="Prompt">
+                                                <div>
+                                                    <strong>PTA成本核算：</strong>
+
+                                                    <p>PTA（精对苯二甲酸）成本=0.655*PX价格+费用</p>
+                                                </div>
+                                                <div>
+                                                    <strong>PET成本核算：</strong>
+
+                                                    <p>PET（聚酯）成本=0.85*PTA+0.33*MEG+费用</p>
+                                                </div>
+                                            </div>
+                                            <h3><i class="diamond"></i>PTA成本计算<span
+                                                    class="down"></span></h3>
+
+                                            <div class="Calculation">
+                                                <div class="row">
+                                                    <div class="col-6">直接加工费：<input type="text" value="375">元/吨</div>
+                                                    <div class="col-6">包装费：<input type="text" value="45">元/吨</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">人工费：<input type="text" value="20">元/吨</div>
+                                                    <div class="col-6">财务成本：<input type="text" value="145">元/吨</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">管理费：<input type="text" value="60">元/吨</div>
+                                                    <div class="col-6">折旧及摊销：<input type="text" value="305">元/吨</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">运 费：<input type="text" value="50">元/吨</div>
+                                                    <div class="col-6"> 成本合计：<input type="text" value="1000">元/吨</div>
+                                                </div>
+                                                <div>
+                                                    <input type="text">
+                                                    元/吨（PX价格）
+                                                </div>
+                                                <div>
+                                                    <span>计算成本</span>
+                                                    <input type="text">元/吨）
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--棕油换算 -->
+                                    <div>
+                                        <div class="calItem">
+                                            <h3><i class="diamond"></i>棕榈油进口成本换算<span
+                                                    class="down"></span></h3>
+
+                                            <div class="Calculation">
+                                                <div class="row">
+                                                    <div class="col-6">运费：<input type="text">美元/吨</div>
+                                                    <div class="col-6">到岸杂费：<input type="text">元/吨</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">税率：<input type="text">％</div>
+                                                    <div class="col-6">汇率：<input type="text">人民币/美元</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">汇率：<input type="text">令吉/美元</div>
+                                                </div>
+                                                <div>
+                                                    <input type="text">
+                                                    令吉/吨（马来西亚现货）
+                                                    <span>换算</span>
+                                                </div>
+                                                <div>
+                                                    =<input type="text">元/吨（中国到岸成本）
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--黄金换算 -->
+                                    <div>
+                                        <div class="calItem">
+                                            <div class="Prompt">
+                                                <div>
+                                                    <strong style="padding-bottom: 120px">重量单位：</strong>
+
+                                                    <p>1常衡盎司=28.3495231克</p>
+                                                    <p>1金衡盎司=31.1034768克</p>
+                                                    <p>1公斤=35.273962常衡盎司</p>
+                                                    <p>1公斤=32.150747金衡盎司</p>
+                                                    <p>司马两（香港黄金市场）=1.203354金衡盎司=37.42849791克 </p>
+                                                    <p>日本两（日本黄金市场）=0.12057金衡盎司=3.75克 </p>
+
+                                                </div>
+                                            </div>
+                                            <h3><i class="diamond"></i>黄金内外盘价格换算<span
+                                                    class="down"></span></h3>
+
+                                            <div class="Calculation">
+                                                <div>汇率：<input type="text">人民币/美元</div>
+                                                <div><input type="text">美元/盎司<span>换算</span>=<input type="text">元/克
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calItem">
+                                            <h3><i class="diamond"></i>黄金换算<span
+                                                    class="down"></span></h3>
+
+                                            <div class="Calculation">
+                                                <div>汇率：<input type="text">人民币/美元</div>
+                                                <div><input type="text">元/克<span>换算</span>=<input type="text">美元/盎司
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="commodity" class="allConversion">
+                                    <!--有色金属 -->
+                                    <div></div>
+                                    <!--有色金属 -->
+                                    <div></div>
+                                    <!--黑色系列 -->
+                                    <div></div>
+                                    <!--能源化工 -->
+                                    <div></div>
+                                    <!--油脂油料 -->
+                                    <div></div>
+                                    <!--谷物饲料 -->
+                                    <div></div>
+                                    <!--棉花 -->
+                                    <div>
+                                        <div class="calItem">
+                                            <h3><i class="diamond"></i>进口大豆到岸成本<span
+                                                    class="down"></span></h3>
+
+                                            <div class="Calculation">
+                                                <img src="./../../images/upload/bloggerData_01.jpg">
+
+                                                <div class="handle">
+                                                    <span class="mr20"><em class="icon iconshare"></em>分享</span>
+                                                    <span><em class="icon iconcollect"></em>收藏</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--白糖 -->
+                                    <div></div>
+                                    <!--橡胶 -->
+                                    <div></div>
+
+                                </div>
+                                <div class="discussBox">
+                                    <div class="commentW">
+                                        <div class="title">
+                                            <span><b>评论</b>(214)</span>
+                                            <span class="line"></span>
+                                            <span><b>提问</b>(214)</span>
+                                        </div>
+                                        <div class="entry">
+                                            <textarea placeholder="我也说两句"></textarea>
+                                        </div>
+                                        <div class="commentbtn">发表评论</div>
+                                    </div>
+                                    <div class="discussW">
+                                        <div class="title">
+                                            <span class="active">按热门</span>
+                                            <span class="line"></span>
+                                            <span>按时间</span>
+                                        </div>
+                                        <ul class="discussList">
+                                            <li class="ditem">
+                                                <div class="face">
+                                                    <img src="../../images/upload/bloggerUser.png">
+                                                </div>
+                                                <div class="discuss">
+                                                    <h3 class="user">完美985<span>昨日 19：46</span></h3>
+
+                                                    <p class="words">
+                                                        我觉得还好啦，不同的人有不同看法嘛我觉得还好啦，不同的人有不同看法嘛我觉得还好啦，不同的人有不同看法嘛我觉得还好啦，不同的人有不同看法嘛我觉得还好啦，不同的人有不同看法嘛我觉得还好啦。</p>
+
+                                                    <div class="count">
+                                                        <span class="mr30"><em
+                                                                class="icon bigicon iconzan"></em><em>5</em></span>
+                                                        <span><em class="icon bigicon iconplun"></em><em>5</em></span>
+                                                    </div>
+                                                    <div class="reply">
+                                                        <input class="replyiput" type="text" placeholder="回复一下你的看法">
+                                                        <span class="replybtn">回复</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>Tab5</div>
+                    <div>Tab6</div>
+                </div>
+            </div>
+        </div>
+        <div class="hQrightLayout">
+            <div class="hQTraTitle">相关内容</div>
+            <div class="relevantbox">
+                <div class="hq-pack hq-pack-small">
+                    <a class="pic" href="#">
+                        <img src="../../images/upload/b_article_list02.jpg">
+                    </a>
+
+                    <div class="content">
+                        <p><a href="#">地方债风险防控升级升， 允许排列两行....</a></p>
+
+                        <div class="sub_info">
+                            <i>2017/07/05</i>
+                            <i class="fr">阅读2015</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="hq-pack hq-pack-small">
+                    <a class="pic" href="#">
+                        <img src="../../images/upload/b_article_list02.jpg">
+                    </a>
+
+                    <div class="content">
+                        <p><a href="#">地方债风险防控升级升， 允许排列两行....</a></p>
+
+                        <div class="sub_info">
+                            <i>2017/07/05</i>
+                            <i class="fr">阅读2015</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="hq-pack hq-pack-small">
+                    <a class="pic" href="#">
+                        <img src="../../images/upload/b_article_list02.jpg">
+                    </a>
+
+                    <div class="content">
+                        <p><a href="#">地方债风险防控升级升， 允许排列两行....</a></p>
+
+                        <div class="sub_info">
+                            <i>2017/07/05</i>
+                            <i class="fr">阅读2015</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="hq-pack hq-pack-small">
+                    <a class="pic" href="#">
+                        <img src="../../images/upload/b_article_list02.jpg">
+                    </a>
+
+                    <div class="content">
+                        <p><a href="#">地方债风险防控升级升， 允许排列两行....</a></p>
+
+                        <div class="sub_info">
+                            <i>2017/07/05</i>
+                            <i class="fr">阅读2015</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="hq-pack hq-pack-small">
+                    <a class="pic" href="#">
+                        <img src="../../images/upload/b_article_list02.jpg">
+                    </a>
+
+                    <div class="content">
+                        <p><a href="#">地方债风险防控升级升， 允许排列两行....</a></p>
+
+                        <div class="sub_info">
+                            <i>2017/07/05</i>
+                            <i class="fr">阅读2015</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="hq-pack hq-pack-small">
+                    <a class="pic" href="#">
+                        <img src="../../images/upload/b_article_list02.jpg">
+                    </a>
+
+                    <div class="content">
+                        <p><a href="#">地方债风险防控升级升， 允许排列两行....</a></p>
+
+                        <div class="sub_info">
+                            <i>2017/07/05</i>
+                            <i class="fr">阅读2015</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="hq-pack hq-pack-small">
+                    <a class="pic" href="#">
+                        <img src="../../images/upload/b_article_list02.jpg">
+                    </a>
+
+                    <div class="content">
+                        <p><a href="#">地方债风险防控升级升， 允许排列两行....</a></p>
+
+                        <div class="sub_info">
+                            <i>2017/07/05</i>
+                            <i class="fr">阅读2015</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="hq-pack hq-pack-small">
+                    <a class="pic" href="#">
+                        <img src="../../images/upload/b_article_list02.jpg">
+                    </a>
+
+                    <div class="content">
+                        <p><a href="#">地方债风险防控升级升， 允许排列两行....</a></p>
+
+                        <div class="sub_info">
+                            <i>2017/07/05</i>
+                            <i class="fr">阅读2015</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pagebox">
+        <div class="page">
+            <ul>
+                <li class="prev"><a href="">上一页</a></li>
+                <li><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li class="active"><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+                <li class="next"><a href="">下一页</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer">
+        <div class="footerLink">
+            <a href="">关于赫桥</a><span></span>
+            <a href="">联系我们</a><span></span>
+            <a href="">人才招聘</a><span></span>
+            <a href="">内容合作</a><span></span>
+            <a href="">网站导航</a><span></span>
+            <a href="">使用条款</a><span></span>
+            <a href="">版权声明</a><span></span>
+            <a href="">隐私保护</a><span></span>
+            <a href="">信息举报</a>
+        </div>
+        <p class="copyright">Copyright 2017-2028 赫桥财经 www.heqiaocaijing.com 版权所有</p>
+    </div>
+</footer>
+<script src="../../js/jquery-2.1.4.js"></script>
+<script src="../../js/jquery.SuperSlide.2.1.1.js"></script>
+<script>
+    $(function () {
+        $(".hqTab").slide({trigger: "click"});
+
+        $("#dataNav .level2 li").click(function () {
+            var $this = $(this);
+            $("#dataNav .level2 li").removeClass('active');
+            $this.addClass('active')
+            var aObj = $("#" + $this.attr('data-status') + " > div");
+            console.log(aObj)
+            $(".allConversion > div").hide();
+            aObj.eq($this.index()).show();
+
+        });
+
+        $("#dataNav .level1 h2,.calItem h3").click(function () {
+            $(this).next().toggle();
+            var sObj = $(this).children('span');
+            console.log(sObj)
+            if (sObj.hasClass('up')) {
+                sObj.removeClass('up');
+                sObj.addClass('down')
+            } else {
+                sObj.removeClass('down');
+                sObj.addClass('up')
+            }
+        });
+    })
+</script>
+</body>
+</html>

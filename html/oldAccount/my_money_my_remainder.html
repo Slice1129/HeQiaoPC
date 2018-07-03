@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>赫桥财经</title>
+    <meta name="author" content="陆宣良">
+    <meta name="keywords" content="赫桥财经"/>
+    <meta name="Description" content=""/>
+    <link rel="stylesheet" href="../../css/heqiao.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <script src="../../js/jquery-2.1.4.js"></script>
+    <style>
+        .bg-body {
+            overflow: hidden;
+            background: url("../../images/abg.jpg") no-repeat center;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 3px auto 15px;
+            overflow: hidden;
+        }
+
+        .actNav {
+            float: left;
+            width: 236px;
+            min-height: 763px;
+            background-color: rgba(255, 255, 255, 0.42);
+        }
+
+        .actNav ul {
+            width: 169px;
+            margin: 54px auto;
+        }
+
+        .actNav ul li {
+            line-height: 27px;
+            margin-bottom: 12px;
+            background: url("../../images/navline.png") no-repeat left bottom;
+            text-align: center;
+        }
+
+        .actNav ul li:last-child {
+            background: none;
+        }
+
+        .actNav ul li a {
+            display: block;
+            font-size: 15px;
+        }
+
+        .actContent {
+            margin-left: 236px;
+            background-color: #ffffff;
+            height: 763px;
+            padding: 30px 20px;
+        }
+
+        .actTab {
+            width: 935px;
+        }
+
+        .actTab .actTitle {
+            padding: 0 0 15px 30px;
+        }
+
+        .actTab .actTitle div {
+            border: 1px solid #f3f3f3;
+            width: 196px;
+            height: 108px;
+            display: inline-block;
+            vertical-align: top;
+            border-radius: 15px;
+            margin-right: 5px;
+        }
+
+        .actTab .actTitle div p {
+            font-size: 15px;
+            color: #666666;
+            margin-bottom: 10px;
+        }
+
+        .actTab .actTitle div h1 {
+            font-size: 25px;
+            color: #7c7c7c;
+        }
+
+        .actTab .actTitle div.income {
+            padding: 30px 20px;
+        }
+
+        .actTab .actTitle div.pay {
+            padding: 30px 40px;
+        }
+
+        .actTab .actTitle div.remainder {
+            padding: 30px 40px;
+            background-color: #ec8e25;
+        }
+
+        .actTab .actTitle div.remainder p,
+        .actTab .actTitle div.remainder h1 {
+            color: #ffffff;
+        }
+
+        .actTab .actTitle div.operation {
+            padding: 60px 50px;
+            border: none;
+        }
+
+        .actTab .actTitle div.operation button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            margin-right: 10px;
+        }
+
+        .actTab .actTitle div.operation button.recharge {
+            color: rgb(7,107,175);
+            padding-right: 10px;
+            border-right: 1px solid #999999;
+        }
+
+        .actTab .actTitle div.operation button.withdrawals {
+            color: #b7282c;
+        }
+
+        .actTab .actTitle section.select {
+
+        }
+
+        .actTab .actTitle section.select select {
+            width: 86px;
+            height: 24px;
+            font-size: 15px;
+            color: #666666;
+            margin-right: 5px;
+            border: 1px solid #666666;
+        }
+
+        .actTab .actTitle section.select select:nth-of-type(1) {
+            padding: 0 0px 0 20px;
+        }
+
+        .actTab .actMain {
+            padding: 10px 0 0 30px;
+        }
+
+        .actTab .actMain table {
+            width: 90%;
+            font-size: 15px;
+            color: #666666;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        .actTab .actMain table thead {
+            background-color: #f2f2f2;
+            display: block;
+            width: 100%;
+        }
+        .actTab .actMain table tr{
+            display: block;
+            width: 100%;
+        }
+        .actTab .actMain table tbody tr {
+            border-bottom: 1px solid #ececec;
+        }
+        .actTab .actMain table tr th,
+        .actTab .actMain table tr td {
+            height: 46px;
+            text-align: center;
+            line-height: 46px;
+            width: 18%;
+            display: inline-block;
+        }
+
+        .actTab .actMain table tbody tr td button {
+            width: 70px;
+            height: 26px;
+            border: none;
+            outline: none;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="topArea">
+        <div class="topLogo">
+            <ul>
+                <li class="logo">
+                    <a href="../index.html">
+                        <img src="../../images/icon/logo.png" width="215">
+                    </a>
+                </li>
+                <li class="blogger">
+                    <img src="../../images/upload/bloggerUser.png">
+
+                    <div class="summary">
+                        <h1>博主名</h1>
+                        <p>锦坤文化发展集团</p>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="topOpera">
+            <ul>
+                <li class="navbar">
+                    <a href="">返回首页</a>
+                    <a href="" style="margin-right: 0">登录</a>/
+                    <a href="" style="margin-left: 0">注册</a>
+                    <a href="">个人中心</a>
+                    <a href="">提问</a>
+                    <a href="">关于赫桥</a>
+
+                </li>
+                <li class="searchbox">
+                    <div class="search">
+                        <input type="text" placeholder="输入关键词">
+                        <span class="btn"></span>
+                    </div>
+                </li>
+                <li class="hotline">
+                    <dl>
+                        <dt>全国服务热线:</dt>
+                        <dd>400-871-6766</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="redLine"></div>
+</header>
+<div class="bg-body">
+    <div class="container">
+        <div class="actNav">
+            <ul>
+                <li><a href="">用户中心</a></li>
+                <li><a href="">消息中心</a></li>
+                <li><a href="">我的问答</a></li>
+                <li><a href="">我的财富</a></li>
+                <li><a href="">我的关注</a></li>
+                <li><a href="">我的视频</a></li>
+                <li><a href="">我的音频</a></li>
+                <li><a href="">我的报告</a></li>
+                <li><a href="">我的图片</a></li>
+                <li><a href="">我的会议</a></li>
+                <li><a href="">我的设置</a></li>
+                <li><a href="">推出登录</a></li>
+            </ul>
+        </div>
+        <div class="actContent">
+            <div class="actTab">
+                <div class="hd actTitle">
+                    <div class="income">
+                        <p>我的收入&nbsp;:&nbsp;</p>
+                        <h1>53434.00</h1>
+                    </div>
+                    <div class="pay">
+                        <p>我的支出&nbsp;:&nbsp;</p>
+                        <h1>53434.00</h1>
+                    </div>
+                    <div class="remainder">
+                        <p>可用余额&nbsp;:&nbsp;</p>
+                        <h1>53434.00</h1>
+                    </div>
+                    <div class="operation">
+                        <button class="recharge">充值</button>
+                        <button class="withdrawals">提现</button>
+                    </div>
+                    <section class="select">
+                        <select>
+                            <option>本月</option>
+                        </select>
+                        <select>
+                            <option>所有状态</option>
+                        </select>
+                    </section>
+                </div>
+                <div class="bd actMain">
+                    <table>
+                        <thead>
+                          <tr>
+                              <th>时间</th>
+                              <th>状态</th>
+                              <th>金额</th>
+                              <th>订单号</th>
+                              <th>详情</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><span>2017/0705</span></td>
+                            <td><span>提现中</span></td>
+                            <td><span>100.00</span></td>
+                            <td><span>As15244</span></td>
+                            <td>
+                                <button><a href="#">查看</a></button>
+                            </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><span>2017/0705</span></td>
+                              <td><span>提现中</span></td>
+                              <td><span>100.00</span></td>
+                              <td><span>As15244</span></td>
+                              <td>
+                                  <button><a href="#">查看</a></button>
+                              </td>
+                          </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagebox">
+                        <div class="page">
+                            <ul>
+                                <li class="prev"><a href="javascript:void(0);">上一页</a></li>
+                                <li class="next"><a href="javascript:void(0);">下一页</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer">
+        <div class="footerLink">
+            <a href="">关于赫桥</a><span></span>
+            <a href="">联系我们</a><span></span>
+            <a href="">人才招聘</a><span></span>
+            <a href="">内容合作</a><span></span>
+            <a href="">网站导航</a><span></span>
+            <a href="">使用条款</a><span></span>
+            <a href="">版权声明</a><span></span>
+            <a href="">隐私保护</a><span></span>
+            <a href="">信息举报</a>
+        </div>
+        <p class="copyright">Copyright 2017-2028 赫桥财经 www.heqiaocaijing.com 版权所有</p>
+    </div>
+</footer>
+
+</body>
+<script>
+    $(function () {
+        function pageFunction(pageContnt, pageCode, space) {
+            var current = 1;
+            var count = 1;
+            var arr = $(pageContnt);
+            space = Number(space);
+            count = arr.length % space == 0 ? arr.length / space : parseInt(arr.length / space) + 1;
+            $(pageCode).empty();
+            $(pageCode).append("<li class='prev'><a href='javascript:void(0);'>上一页</a></li>")
+            $(pageCode).append("<li class='next'><a href='javascript:void(0);'>下一页</a></li>")
+            for (var i = 1; i < count + 1; i++) {
+                if (i == 1) {
+                    var html = "<li class='active'><a href='javascript:void(0);'>" + i + "</a></li>"
+                } else {
+                    var html = "<li><a href='javascript:void(0);'>" + i + "</a></li>"
+                }
+                $(pageCode + " li.next").before(html)
+            }
+            $(arr).css("display", "none");
+            for (var i = 0; i < space; i++) {
+                $(arr[current * space - 1 - i]).css("display", "block");
+            }
+            //事件监听
+            $(pageCode + "  li").click(function () {
+                arr = $(pageContnt);
+                space = Number(space);
+                count = arr.length % space == 0 ? arr.length / space : parseInt(arr.length / space) + 1;
+                if ($(this).hasClass("prev")) {
+                    if (Number(current) === 1) {
+                        current = 1;
+                    } else {
+                        current = current - 1;
+                    }
+                } else if ($(this).hasClass("next")) {
+                    if (Number(current) === (count)) {
+                        current = count;
+                    } else {
+                        current = current + 1;
+                    }
+                } else {
+                    current = $(this).find("a").html();
+                    current = Number(current)
+                }
+                $(arr).css("display", "none");
+                for (var i = 0; i < space; i++) {
+                    $(arr[current * space - 1 - i]).css("display", "block");
+                }
+                $(pageCode + " li").removeClass("active");
+                var style_index = $(pageCode + " li")[current];
+                $(style_index).addClass("active");
+            })
+        }
+
+        pageFunction(".actTab .actMain tbody tr", ".actTab .actMain .pagebox .page ul", 8);
+    })
+</script>
+</html>

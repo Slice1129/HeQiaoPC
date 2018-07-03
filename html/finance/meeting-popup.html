@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹窗</title>
+    <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body>
+<div class="openPopup" data-status="enterword" style="margin: 200px">点击弹窗</div>
+
+<div class="popup enterword">
+    <div class="modal">
+        <h1 class="modalTitle"><span class="close" data-status="close"></span></h1>
+
+        <div class="modalMain">
+            <div class="enterpass">
+                输入密码：<input type="password">
+            </div>
+            <button class="btn">提 交</button>
+        </div>
+    </div>
+</div>
+
+
+<script src="../../js/jquery-2.1.4.js"></script>
+<script>
+    $(".openPopup,.close").click(function () {
+        var status = $(this).attr('data-status');
+        status === 'close' ? $(".popup").hide() : $("." + status).show();
+    });
+</script>
+</body>
+</html>

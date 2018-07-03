@@ -1,0 +1,184 @@
+.reprotDetail .hd {
+    padding: 24px 44px 20px 34px;
+    margin-bottom: 6px;
+    background-color: #fff;
+    border: 1px solid #ececec;
+}
+
+.reprotDetail .hd h1 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.reprotDetail .hd .hd-author {
+    margin-bottom: 9px;
+    padding-left: 24px;
+    color: #333333;
+    background: url("../images/icon/icon_zuozhe.png") no-repeat left center;
+}
+
+.reprotDetail .hd .hd-reader {
+    margin-bottom: 9px;
+    padding-left: 24px;
+    color: #333333;
+    background: url("../images/icon/icon_time.png") no-repeat left center;
+    position: relative;
+    width: 100%;
+}
+
+.reprotDetail .hd .hd-reader .user_operate {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+
+.reprotDetail .hd .hd-author .hongguan,
+.reprotDetail .hd .hd-author .ruanshangping {
+    display: inline-block;
+    padding: 2px 5px;
+    margin:  0 10px;
+    font-size: 12px;
+    color: #999;
+    border: 1px solid #acacac;
+}
+
+.reprotDetail .hd .hd-reader .user_operate .share {
+    margin-bottom: 9px;
+    padding-left: 24px;
+    color: #333333;
+    background: url("./../images/icon/icon_share.png") no-repeat left center;
+}
+
+.reprotDetail .hd .hd-reader .user_operate .follow {
+    margin-bottom: 9px;
+    padding-left: 24px;
+    color: #333333;
+    background: url("./../images/icon/icon_guanzhu.png") no-repeat left center;
+}
+
+.reprotDetail .hd .hd-reader .user_operate .collection {
+    margin-bottom: 9px;
+    padding-left: 24px;
+    color: #333333;
+    background: url("./../images/icon/icon_shoucang.png") no-repeat left center;
+}
+
+.reprotDetail .bd {
+    background-color: #fff;
+    padding: 20px 40px 60px;
+}
+
+.reprotDetail .bd .content {
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.reprotDetail .bd .content .summary {
+    height: 87px;
+    margin-top: 1px;
+    padding: 24px;
+    background-color: #f7f7f7;
+    margin-bottom: 20px;
+    line-height: 23px;
+    font-weight: bolder;
+}
+
+.reprotDetail .process {
+    position: relative;
+    width: 783px;
+    height: 58px;
+    margin: 0 auto 34px;
+}
+
+.process .playbtn {
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    background: url("./../images/icon/play2.png") no-repeat center;
+    z-index: 9;
+}
+
+.process .linebg {
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 783px;
+    height: 28px;
+    padding: 13px 0;
+    background-color: #f5f5f5;
+}
+
+.process .line {
+    position: relative;
+    height: 2px;
+    border-top: 1px solid #78bfdf;
+    border-bottom: 1px solid #9dcfe5;
+    margin-left: 58px;
+}
+
+.process .line span {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    display: block;
+    width: 6px;
+    height: 18px;
+    margin-left: -3px;
+    background: url("./../images/icon/play2.png") no-repeat center;
+}
+
+.reprotDetail .content p {
+    line-height: 23px;
+    padding-bottom: 28px;
+}
+
+.videobox {
+    width: 820px;
+    height: 312px;
+    position: relative;
+}
+
+.videobox .vOpera {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 44px;
+    background: url("./../images/icon/bgplay2.png") no-repeat center;
+    padding-top: 12px;
+}
+
+.videobox .vOpera {
+    text-align: center;
+}
+
+.videobox .vOpera .vPrev,
+.videobox .vOpera .vStop,
+.videobox .vOpera .vNext {
+    display: inline-block;
+}
+
+.videobox .vOpera .vStop {
+    margin: 0 50px;
+}
+
+.container {
+    margin-bottom: 20px;
+}
+::-webkit-input-placeholder {
+    color: #acacac;
+}
+
+:-moz-placeholder {
+    color: #acacac;
+}
+
+::-moz-placeholder {
+    color: #acacac;
+}
+
+:-ms-input-placeholder {
+    color: #acacac;
+}

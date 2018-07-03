@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>赫桥财经</title>
+    <meta name="keywords" content="赫桥财经"/>
+    <meta name="Description" content=""/>
+    <link rel="stylesheet" href="../../css/heqiao.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/blogger.css">
+    <script src="../../js/jquery-2.1.4.js"></script>
+    <script src="../../js/jquery.SuperSlide.2.1.1.js"></script>
+    <style>
+        .hqTab .bd{
+            border: none;
+            background-color: transparent;
+        }
+        .columbox {
+            overflow: hidden;
+            float: left;
+            width: 216px;
+            margin: 0 12px 26px 0;
+        }
+
+        .columbox:nth-child(4n) {
+            margin: 0;
+        }
+
+        .thumb {
+            position: relative;
+            width: 100%;
+            height: 316px;
+        }
+
+        .thumb img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .thumb .follow {
+            position: absolute;
+            top: 18px;
+            right: 12px;
+            display: block;
+            width: 72px;
+            height: 26px;
+            line-height: 24px;
+            border-radius: 13px;
+            border: 1px solid #359bc8;
+            color: #fff;
+            text-align: center;
+        }
+
+        .thumb .info {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 56px;
+            padding: 12px 16px 0 20px;
+            background-color: rgba(0, 0, 0, 0.259);
+        }
+
+        .thumb .info p.name {
+            font-size: 14px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .thumb .info p.job {
+            color: #e6e6e5;
+        }
+
+        .thumb .info .ask {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 64px;
+            height: 24px;
+            line-height: 24px;
+            background-color: #910010;
+            color: #fff;
+            text-align: center;
+            border-radius: 1px;
+        }
+
+        .count {
+            padding: 16px 20px 18px;
+            border: 1px solid #eeeeee;
+            background-color: #fff;
+        }
+
+        .count > span {
+            color: #999;
+        }
+
+        .count > span > i {
+            color: #666;
+        }
+        .columPage .topbanner{
+            position: relative;
+            height: 480px;
+            background-size: cover;
+        }
+        .columPage .topbanner>h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -25px;
+            margin-left: -275px;
+            font-size: 50px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="columPage">
+<header>
+    <div class="topArea">
+        <div class="topLogo">
+            <ul>
+                <li class="logo">
+                    <a href="index.html">
+                        <img src="../../images/icon/logo.png" width="215">
+                    </a>
+                </li>
+                <li class="subtitle">专栏</li>
+            </ul>
+        </div>
+
+        <div class="topOpera">
+            <ul>
+                <li class="navbar">
+                    <a href="">返回首页</a>
+                    <a href="" style="margin-right: 0">登录</a>/
+                    <a href="" style="margin-left: 0">注册</a>
+                    <a href="">个人中心</a>
+                    <a href="">提问</a>
+                    <a href="">关于博主</a>
+
+                </li>
+                <li class="searchbox">
+                    <div class="search">
+                        <input type="text" placeholder="输入关键词">
+                        <span class="btn"></span>
+                    </div>
+                </li>
+                <li class="hotline">
+                    <dl>
+                        <dt>全国服务热线:</dt>
+                        <dd>400-871-6766</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="redLine"></div>
+</header>
+<div class="topbanner mb10" style="background: url('../../images/upload/columnist.jpg') no-repeat center">
+    <h1>读书百部·不如高手指路</h1>
+</div>
+<div class="hQContent">
+    <div class="hQleftLayout">
+        <div class="hqTab">
+            <div class="hd">
+                <ul>
+                    <li class="on">宏观</li>
+                    <li>金融</li>
+                    <li>商品</li>
+                    <li>外汇</li>
+                    <li>其他</li>
+                </ul>
+            </div>
+            <div class="bd">
+                <div class="clearfix">
+                    <div class="columbox">
+                        <div class="thumb">
+                            <img src="../../images/upload/c01.jpg">
+
+                            <div class="follow">+关注</div>
+                            <div class="info">
+                                <p class="name">王石</p>
+
+                                <p class="job">万科集团董事长</p>
+
+                                <div class="ask">提问</div>
+                            </div>
+                        </div>
+                        <div class="count">
+                            <span> 文章数：<i>258</i></span>
+                            <span class="fr"> 文章数：<i>258</i></span>
+                        </div>
+                    </div>
+                    <div class="columbox">
+                        <div class="thumb">
+                            <img src="../../images/upload/c02.jpg">
+
+                            <div class="follow">+关注</div>
+                            <div class="info">
+                                <p class="name">王石</p>
+
+                                <p class="job">万科集团董事长</p>
+
+                                <div class="ask">提问</div>
+                            </div>
+                        </div>
+                        <div class="count">
+                            <span> 文章数：<i>258</i></span>
+                            <span class="fr"> 文章数：<i>258</i></span>
+                        </div>
+                    </div>
+                    <div class="columbox">
+                        <div class="thumb">
+                            <img src="../../images/upload/c03.jpg">
+
+                            <div class="follow">+关注</div>
+                            <div class="info">
+                                <p class="name">王石</p>
+
+                                <p class="job">万科集团董事长</p>
+
+                                <div class="ask">提问</div>
+                            </div>
+                        </div>
+                        <div class="count">
+                            <span> 文章数：<i>258</i></span>
+                            <span class="fr"> 文章数：<i>258</i></span>
+                        </div>
+                    </div>
+                    <div class="columbox">
+                        <div class="thumb">
+                            <img src="../../images/upload/c04.jpg">
+
+                            <div class="follow">+关注</div>
+                            <div class="info">
+                                <p class="name">王石</p>
+
+                                <p class="job">万科集团董事长</p>
+
+                                <div class="ask">提问</div>
+                            </div>
+                        </div>
+                        <div class="count">
+                            <span> 文章数：<i>258</i></span>
+                            <span class="fr"> 文章数：<i>258</i></span>
+                        </div>
+                    </div>
+                    <div class="columbox">
+                        <div class="thumb">
+                            <img src="../../images/upload/c01.jpg">
+
+                            <div class="follow">+关注</div>
+                            <div class="info">
+                                <p class="name">王石</p>
+
+                                <p class="job">万科集团董事长</p>
+
+                                <div class="ask">提问</div>
+                            </div>
+                        </div>
+                        <div class="count">
+                            <span> 文章数：<i>258</i></span>
+                            <span class="fr"> 文章数：<i>258</i></span>
+                        </div>
+                    </div>
+                    <div class="columbox">
+                        <div class="thumb">
+                            <img src="../../images/upload/c02.jpg">
+
+                            <div class="follow">+关注</div>
+                            <div class="info">
+                                <p class="name">王石</p>
+
+                                <p class="job">万科集团董事长</p>
+
+                                <div class="ask">提问</div>
+                            </div>
+                        </div>
+                        <div class="count">
+                            <span> 文章数：<i>258</i></span>
+                            <span class="fr"> 文章数：<i>258</i></span>
+                        </div>
+                    </div>
+                    <div class="columbox">
+                        <div class="thumb">
+                            <img src="../../images/upload/c03.jpg">
+
+                            <div class="follow">+关注</div>
+                            <div class="info">
+                                <p class="name">王石</p>
+
+                                <p class="job">万科集团董事长</p>
+
+                                <div class="ask">提问</div>
+                            </div>
+                        </div>
+                        <div class="count">
+                            <span> 文章数：<i>258</i></span>
+                            <span class="fr"> 文章数：<i>258</i></span>
+                        </div>
+                    </div>
+                    <div class="columbox">
+                        <div class="thumb">
+                            <img src="../../images/upload/c04.jpg">
+
+                            <div class="follow">+关注</div>
+                            <div class="info">
+                                <p class="name">王石</p>
+
+                                <p class="job">万科集团董事长</p>
+
+                                <div class="ask">提问</div>
+                            </div>
+                        </div>
+                        <div class="count">
+                            <span> 文章数：<i>258</i></span>
+                            <span class="fr"> 文章数：<i>258</i></span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+        <div class="pagebox mr30">
+            <div class="page">
+                <ul class="fr">
+                    <li class="prev"><a href="">上一页</a></li>
+                    <li><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li class="active"><a href="">3</a></li>
+                    <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                    <li class="next"><a href="">下一页</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="hQrightLayout">
+        <div>
+            <div class="hQTraTitle">往期回听</div>
+            <div>
+                <ul>
+                    <li class="memberIntro mb5">
+                        <div class="m-info s-info">
+                            <div class="pic fl">
+                                <img src="../../images/upload/bloggerUser.png">
+                            </div>
+                            <div class="content">
+                                <h2>锦坤石章强</h2>
+
+                                <p>锦坤文化发展集团董事长</p>
+
+                                <div><span>粉丝数:<i>3212</i></span></div>
+                                <div><span>文章数:<i>3212</i></span></div>
+                            </div>
+                        </div>
+                        <div class="m-btn">
+                            <a class="follow">+ 关注</a>
+                            <a class="quiz">我要提问</a>
+                        </div>
+                    </li>
+                    <li class="memberIntro mb5">
+                        <div class="m-info s-info">
+                            <div class="pic fl">
+                                <img src="../../images/upload/bloggerUser.png">
+                            </div>
+                            <div class="content">
+                                <h2>锦坤石章强</h2>
+
+                                <p>锦坤文化发展集团董事长</p>
+
+                                <div><span>粉丝数:<i>3212</i></span></div>
+                                <div><span>文章数:<i>3212</i></span></div>
+                            </div>
+                        </div>
+                        <div class="m-btn">
+                            <a class="follow">+ 关注</a>
+                            <a class="quiz">我要提问</a>
+                        </div>
+                    </li>
+                    <li class="memberIntro mb5">
+                        <div class="m-info s-info">
+                            <div class="pic fl">
+                                <img src="../../images/upload/bloggerUser.png">
+                            </div>
+                            <div class="content">
+                                <h2>锦坤石章强</h2>
+
+                                <p>锦坤文化发展集团董事长</p>
+
+                                <div><span>粉丝数:<i>3212</i></span></div>
+                                <div><span>文章数:<i>3212</i></span></div>
+                            </div>
+                        </div>
+                        <div class="m-btn">
+                            <a class="follow">+ 关注</a>
+                            <a class="quiz">我要提问</a>
+                        </div>
+                    </li>
+                    <li class="memberIntro mb5">
+                        <div class="m-info s-info">
+                            <div class="pic fl">
+                                <img src="../../images/upload/bloggerUser.png">
+                            </div>
+                            <div class="content">
+                                <h2>锦坤石章强</h2>
+
+                                <p>锦坤文化发展集团董事长</p>
+
+                                <div><span>粉丝数:<i>3212</i></span></div>
+                                <div><span>文章数:<i>3212</i></span></div>
+                            </div>
+                        </div>
+                        <div class="m-btn">
+                            <a class="follow">+ 关注</a>
+                            <a class="quiz">我要提问</a>
+                        </div>
+                    </li>
+                    <li class="memberIntro mb5">
+                        <div class="m-info s-info">
+                            <div class="pic fl">
+                                <img src="../../images/upload/bloggerUser.png">
+                            </div>
+                            <div class="content">
+                                <h2>锦坤石章强</h2>
+
+                                <p>锦坤文化发展集团董事长</p>
+
+                                <div><span>粉丝数:<i>3212</i></span></div>
+                                <div><span>文章数:<i>3212</i></span></div>
+                            </div>
+                        </div>
+                        <div class="m-btn">
+                            <a class="follow">+ 关注</a>
+                            <a class="quiz">我要提问</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer">
+        <div class="footerLink">
+            <a href="">关于赫桥</a><span></span>
+            <a href="">联系我们</a><span></span>
+            <a href="">人才招聘</a><span></span>
+            <a href="">内容合作</a><span></span>
+            <a href="">网站导航</a><span></span>
+            <a href="">使用条款</a><span></span>
+            <a href="">版权声明</a><span></span>
+            <a href="">隐私保护</a><span></span>
+            <a href="">信息举报</a>
+        </div>
+        <p class="copyright">Copyright 2017-2028 赫桥财经 www.heqiaocaijing.com 版权所有</p>
+    </div>
+</footer>
+<script>
+    $(".hqTab").slide({trigger: "click"});
+</script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>赫桥财经</title>
+    <title></title>
+    <meta name="keywords" content="赫桥财经"/>
+    <meta name="Description" content=""/>
+    <link rel="stylesheet" href="../../css/heqiao.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/account.css">
+    <link rel="stylesheet" href="../../css/laydate.css">
+    <script src="../../js/jquery-2.1.4.js"></script>
+    <script src="../../js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="../../js/laydate.js"></script>
+    <script src="../../js/nav.js"></script>
+    <style>
+        .actTab .actTitle .alogo-data{
+            background: transparent url("../../images/icon/dataicon.png") no-repeat center;
+            background-size: 88%;
+        }
+        .calItem {
+            background-color: #fff;
+            margin-bottom: 10px;
+        }
+        .calItem .Prompt strong {
+            float: left;
+            font-size: .24rem;
+            color: #444;
+        }
+        .calItem .Prompt > div {
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .calItem .Prompt p {
+            display: block;
+            font-size: 13px;
+            color: #6b6b6b;
+            margin-bottom: 10px;
+        }
+        .calItem h3 {
+            padding: 20px;
+            font-size: 13px;
+            color: #757575;
+            border: 1px solid #ebebeb;
+        }
+        .calItem h3 > i.diamond {
+            display: inline-block;
+            width: 11px;
+            height: 11px;
+            margin-right: .18rem;
+            border: 1px solid #aebaf4;
+            background-color: #3e5be4;
+        }
+        .calItem h3 span {
+            float: right;
+            display: block;
+            width: 20px;
+            height: 20px;
+        }
+        .calItem h3 .up {
+            background: url(./../../images/icon/next.png) no-repeat center;
+            background-size: 10px 20px;
+        }
+        .calItem h3 .down {
+            background: url(./../../images/icon/deg90.png) no-repeat center;
+            background-size: 20px 10px;
+        }
+        .calContent {
+            background: #f9f9f9;
+            padding-bottom: 40px;
+        }
+        .calContent img {
+            display: block;
+            margin: 0 auto 20px;
+            width: 80%;
+            height: auto;
+        }
+        textarea {
+            min-height: auto;
+        }
+        .icon {
+            width: 22px;
+            height: 22px;
+            background: url(../../images/icon/share_group.png) no-repeat center;
+        }
+        .iconshareW {
+            background-position: 0 0;
+        }
+        .iconcollectW {
+            background-position: -105px 0;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="topArea">
+        <div class="topLogo">
+            <ul>
+                <li class="logo">
+                    <a href="../index.html">
+                        <img src="../../images/icon/logo.png" width="215">
+                    </a>
+                </li>
+                <li class="blogger">
+                    <img src="../../images/upload/bloggerUser.png">
+
+                    <div class="summary">
+                        <h1>博主名</h1>
+
+                        <p>锦坤文化发展集团</p>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="topOpera">
+            <ul>
+                <li class="navbar">
+                    <a href="">返回首页</a>
+                    <a href="" style="margin-right: 0">登录</a>/
+                    <a href="" style="margin-left: 0">注册</a>
+                    <a href="">个人中心</a>
+                    <a href="">提问</a>
+                    <a href="">关于赫桥</a>
+
+                </li>
+                <li class="searchbox">
+                    <div class="search">
+                        <input type="text" placeholder="输入关键词">
+                        <span class="btn"></span>
+                    </div>
+                </li>
+                <li class="hotline">
+                    <dl>
+                        <dt>全国服务热线:</dt>
+                        <dd>400-871-6766</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="redLine"></div>
+</header>
+<div class="bg-body">
+    <div class="container">
+        <div class="actNav">
+            <ul>
+                <li><a id="user" href="user_center.html">用户中心</a></li>
+                <li><a id="message" href="message.html">消息中心</a></li>
+                <li><a id="setting" href="setting.html">我的设置</a></li>
+                <li><a id="wealth" href="wealth.html">我的财富</a></li>
+                <li><a id="video" href="video.html">我的视频</a></li>
+                <li><a id="audio" href="audio.html">我的音频</a></li>
+                <li><a id="report" href="report.html">我的报告</a></li>
+                <li><a id="photo" href="photo.html">我的图片</a></li>
+                <li><a id="data" href="data.html">我的数据</a></li>
+                <li><a id="metting" href="metting.html">我的会议</a></li>
+                <li><a id="interlocution" href="interlocution.html">我的问答</a></li>
+                <li><a id="questionnaire" href="questionnaire.html">我的问卷</a></li>
+                <li><a id="follow" href="follow.html">我的关注</a></li>
+                <li><a id="collect" href="collect.html">我的收藏</a></li>
+                <li><a href="javascript:;">退出登录</a></li>
+            </ul>
+        </div>
+        <div class="actContent">
+            <div class="actTab">
+                <div class="hd actTitle">
+                    <div class="alogo alogo-data"></div>
+                    <ul>
+                        <li>我的数据</li>
+                    </ul>
+                </div>
+                <div class="bd actMain">
+                    <ul>
+                        <li>
+                            <div class="calItem">
+                                <h3><i class="diamond"></i>LME铜铝进口成本计算<span class="up"></span></h3>
+
+                                <div style="display: none">
+                                    <div class="calContent">
+                                        <img src="../../images/upload/char.jpg">
+
+                                        <div class="fr">
+                                            <span class="mr20"><em class="icon iconshareW"></em>分享</span>
+                                            <span class="mr20"><em class="icon iconcollectW"></em>收藏</span>
+                                        </div>
+                                    </div>
+                                    <div class="discussBox">
+                                        <div class="commentW">
+                                            <div class="title">
+                                                <span><b>评论</b>(214)</span>
+                                                <span class="line"></span>
+                                                <span><b>提问</b>(214)</span>
+                                            </div>
+                                            <div class="entry">
+                                                <textarea placeholder="我也说两句"></textarea>
+                                            </div>
+                                            <div class="commentbtn">发表评论</div>
+                                        </div>
+                                        <div class="discussW">
+                                            <div class="title">
+                                                <span class="active">按热门</span>
+                                                <span class="line"></span>
+                                                <span>按时间</span>
+                                            </div>
+                                            <ul class="discussList">
+                                                <li class="ditem">
+                                                    <div class="face">
+                                                        <img src="../../images/upload/bloggerUser.png">
+                                                    </div>
+                                                    <div class="discuss">
+                                                        <h3 class="user">完美985<span>昨日 19：46</span></h3>
+
+                                                        <p class="words">
+                                                            我觉得还好啦，不同的人有不同看法嘛我觉得还好啦，不同的人有不同看法嘛我觉得还好啦，不同的人有不同看法嘛我觉得还好啦，不同的人有不同看法嘛我觉得还好啦，不同的人有不同看法嘛我觉得还好啦。</p>
+
+                                                        <div class="count">
+                                                <span class="mr30"><em
+                                                        class="icon bigicon iconzan"></em><em>5</em></span>
+                                                            <span><em
+                                                                    class="icon bigicon iconplun"></em><em>5</em></span>
+                                                        </div>
+                                                        <div class="reply">
+                                                            <input class="replyiput" type="text" placeholder="回复一下你的看法">
+                                                            <span class="replybtn">回复</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="calItem">
+                                <h3><i class="diamond"></i>LME铜铝进口成本计算<span class="up"></span></h3>
+
+                                <div style="display: none">
+                                    <div class="calContent">
+                                        <img src="../../images/upload/char.jpg">
+
+                                        <div class="fr">
+                                            <span class="mr20"><em class="icon iconshareW"></em>分享</span>
+                                            <span class="mr20"><em class="icon iconcollectW"></em>收藏</span>
+                                        </div>
+                                    </div>
+                                    <div class="discussBox">
+                                        <div class="commentW">
+                                            <div class="title">
+                                                <span><b>评论</b>(214)</span>
+                                                <span class="line"></span>
+                                                <span><b>提问</b>(214)</span>
+                                            </div>
+                                            <div class="entry">
+                                                <textarea placeholder="我也说两句"></textarea>
+                                            </div>
+                                            <div class="commentbtn">发表评论</div>
+                                        </div>
+                                        <div class="discussW">
+                                            <div class="title">
+                                                <span class="active">按热门</span>
+                                                <span class="line"></span>
+                                                <span>按时间</span>
+                                            </div>
+                                            <ul class="discussList">
+                                                <li class="ditem">
+                                                    <div class="face">
+                                                        <img src="../../images/upload/bloggerUser.png">
+                                                    </div>
+                                                    <div class="discuss">
+                                                        <h3 class="user">完美985<span>昨日 19：46</span></h3>
+
+                                                        <p class="words">
+                                                            我觉得还好啦，不同的人有不同看法嘛我觉得还好啦，不同的人有不同看法嘛我觉得还好啦，不同的人有不同看法嘛我觉得还好啦，不同的人有不同看法嘛我觉得还好啦，不同的人有不同看法嘛我觉得还好啦。</p>
+
+                                                        <div class="count">
+                                                <span class="mr30"><em
+                                                        class="icon bigicon iconzan"></em><em>5</em></span>
+                                                            <span><em
+                                                                    class="icon bigicon iconplun"></em><em>5</em></span>
+                                                        </div>
+                                                        <div class="reply">
+                                                            <input class="replyiput" type="text" placeholder="回复一下你的看法">
+                                                            <span class="replybtn">回复</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="calItem">
+                                <h3><i class="diamond"></i>LME铜铝进口成本计算<span class="up"></span></h3>
+
+                                <div style="display: none">
+                                    <div class="calContent">
+                                        <img src="../../images/upload/char.jpg">
+
+                                        <div class="fr">
+                                            <span class="mr20"><em class="icon iconshareW"></em>分享</span>
+                                            <span class="mr20"><em class="icon iconcollectW"></em>收藏</span>
+                                        </div>
+                                    </div>
+                                    <div class="discussBox">
+                                        <div class="commentW">
+                                            <div class="title">
+                                                <span><b>评论</b>(214)</span>
+                                                <span class="line"></span>
+                                                <span><b>提问</b>(214)</span>
+                                            </div>
+                                            <div class="entry">
+                                                <textarea placeholder="我也说两句"></textarea>
+                                            </div>
+                                            <div class="commentbtn">发表评论</div>
+                                        </div>
+                                        <div class="discussW">
+                                            <div class="title">
+                                                <span class="active">按热门</span>
+                                                <span class="line"></span>
+                                                <span>按时间</span>
+                                            </div>
+                                            <ul class="discussList">
+                                                <li class="ditem">
+                                                    <div class="face">
+                                                        <img src="../../images/upload/bloggerUser.png">
+                                                    </div>
+                                                    <div class="discuss">
+                                                        <h3 class="user">完美985<span>昨日 19：46</span></h3>
+
+                                                        <p class="words">
+                                                            我觉得还好啦，不同的人有不同看法嘛我觉得还好啦，不同的人有不同看法嘛我觉得还好啦，不同的人有不同看法嘛我觉得还好啦，不同的人有不同看法嘛我觉得还好啦，不同的人有不同看法嘛我觉得还好啦。</p>
+
+                                                        <div class="count">
+                                                <span class="mr30"><em
+                                                        class="icon bigicon iconzan"></em><em>5</em></span>
+                                                            <span><em
+                                                                    class="icon bigicon iconplun"></em><em>5</em></span>
+                                                        </div>
+                                                        <div class="reply">
+                                                            <input class="replyiput" type="text" placeholder="回复一下你的看法">
+                                                            <span class="replybtn">回复</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer">
+        <div class="footerLink">
+            <a href="">关于赫桥</a><span></span>
+            <a href="">联系我们</a><span></span>
+            <a href="">人才招聘</a><span></span>
+            <a href="">内容合作</a><span></span>
+            <a href="">网站导航</a><span></span>
+            <a href="">使用条款</a><span></span>
+            <a href="">版权声明</a><span></span>
+            <a href="">隐私保护</a><span></span>
+            <a href="">信息举报</a>
+        </div>
+        <p class="copyright">Copyright 2017-2028 赫桥财经 www.heqiaocaijing.com 版权所有</p>
+    </div>
+</footer>
+<script>
+    $(function () {
+        $(".calItem h3").click(function () {
+            $(this).next().toggle();
+            var sObj = $(this).children('span');
+            console.log(sObj)
+            if (sObj.hasClass('up')) {
+                sObj.removeClass('up');
+                sObj.addClass('down')
+            } else {
+                sObj.removeClass('down');
+                sObj.addClass('up')
+            }
+        });
+    })
+</script>
+</body>
+</html>

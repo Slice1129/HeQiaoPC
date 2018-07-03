@@ -1,0 +1,557 @@
+.hQContent {
+    padding-bottom: 50px
+}
+.diamond {
+    display: inline-block;
+    margin-right: 5px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #aab7f3;
+    background: #3e5be4;
+}
+.icon {
+    width: 22px;
+    height: 22px;
+    background: url(../images/icon/share_group.png) no-repeat center;
+}
+.iconshareW {
+    background-position: 0 0;
+}
+.iconfollowW {
+    background-position: -57px 0;
+}
+.iconcollectW {
+    background-position: -105px 0;
+}
+.qanda {
+    overflow: hidden;
+}
+.qanda .qaitem {
+    overflow: hidden;
+    margin-bottom: 5px;
+    background: #fff;
+    padding: 0 26px 0 0;
+    border-bottom: 1px solid #ececec;
+    border-top: 1px solid #f3f3f3
+}
+.qaitem .number {
+    float: left;
+    width: 52px;
+    padding: 8px;
+    border: 1px solid #bbb;
+}
+.qaitem .number img {
+    width: auto;
+    height: 26px
+}
+.qaitem .number p {
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    padding-top: 8px
+}
+.qaitem .content {
+    margin-left: 70px;
+    padding: 6px 0;
+    height: 100%
+}
+.qaitem .content > h2 {
+    font-size: 14px;
+    line-height: 21px;
+    color: #000;
+    margin: 10px 0;
+}
+.qaitem .content > h2 > span {
+    font-size: 12px;
+    color: #999
+}
+.qaitem .content .date {
+    overflow: hidden;
+}
+.qaitem .content .date li {
+    float: left;
+    height: 26px;
+    line-height: 26px;
+    margin-right: 45px;
+    color: #999
+}
+.qaitem .content .date .daan {
+    margin: 0 0 0 40px;
+}
+.qaitem .content .date .daan a {
+    color: #f6af1f;
+    padding: 3px 11px 4px;
+    border: 1px solid #f6af1f;
+    border-radius: 5px;
+    font-size: 13px
+}
+.qaitem .content .date li > span {
+    display: block;
+    margin-top: 4px;
+    padding: 0 6px;
+    line-height: 14px;
+    border: 1px solid #ddd
+}
+.qaitem .content .c7f{
+    color: #7f7f7f!important;
+    border-color: #7f7f7f!important;
+}
+.askTab .hd {
+    background: url("../images/icon/asktabbg.png") repeat center;
+}
+.askTab .hd ul li {
+    border-right: 0;
+    padding: 0 18px;
+}
+.askTab .hd ul li.on {
+    color: #3e5be4;
+}
+.level2Parms {
+    overflow: hidden;
+    padding: 20px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+.level2Parms li {
+    float: left;
+    margin-right: 45px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.level2Parms li.on {
+    color: #3e5be4;
+}
+.hqTab .hd ul li.on:after {
+    left: 12px;
+    right: 12px;
+    background: #3e5be4;
+}
+.pagebox .page ul li.active a {
+    background: #3e5be4;
+}
+.ylink {
+    margin-right: 16px;
+    padding: 3px 8px 4px;
+    border: 1px solid #f6af1f;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #f6af1f;
+}
+.unusualTab {
+
+}
+.askArtcile {
+    display: block;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dfdfdf;
+}
+.askArtcile .content {
+    margin-bottom: 16px;
+    line-height: 20px;
+    font-size: 13px;
+    color: #333;
+}
+.askArtcile .intro {
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: #999;
+}
+.askArtcile .intro span {
+    border: 1px solid #cdcdcd;
+    padding: 2px;
+    margin: 0 0 0 20px;
+}
+.unusualTab {
+    position: relative;
+    overflow: hidden;
+    padding-left: 10px;
+    background: url("../images/icon/asktabbg.png") repeat center;
+    background-size: 100% 100%;
+}
+.unusualTab:after, .hQTraTitle:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 12px solid #3e5be4;
+    border-right: 12px solid transparent;
+
+}
+.unusualTab li {
+    font-size: 13px;
+    padding: 0 6px;
+}
+.unusualTab li.on {
+    color: #3e5be4;
+}
+.unusualTab .parms {
+    float: right;
+    padding: 14px 0;
+}
+.unusualTab .parms span {
+    cursor: pointer;
+    padding: 0 6px;
+    border-right: 1px solid #bababa;
+}
+.unusualTab .parms span:last-child {
+    border: 0;
+}
+.unusualTab .parms span.on {
+    color: #f6af1f
+}
+/*问答*/
+.iPage .atypeimg {
+    width: 55px;
+    height: 54px;
+    background: url("../images/icon/ask.png") no-repeat;
+}
+.iPage .typehg {
+    background-position: 0 0;
+}
+.iPage .typejr {
+    background-position: 0 -119px;
+}
+.iPage .typegp {
+    background-position: 0 -235px;
+}
+.iPage .typezq {
+    background-position: 0 -350px;
+}
+.iPage .typencp {
+    background-position: 0 -498px;
+}
+.iPage .typegyp {
+    background-position: 0 -623px;
+}
+.iPage .typewh {
+    background-position: 0 -752px;
+}
+.iPage .qaitem .number.askNumber {
+    width: 95px;
+    min-height: 94px;
+    border: none;
+    padding: 20px
+}
+.iPage .qaitem .content {
+    min-height: 115px;
+    margin-left: 95px;
+    padding-left: 25px;
+    border-left: 2px solid #ebebeb;
+}
+/*问券*/
+.wPage .qtypeimg {
+    width: 36px;
+    height: 34px;
+    background: url("../images/icon/ques.png") repeat center;
+}
+.wPage .typehy {
+    background-position: 0 0;
+}
+.wPage .typeyp {
+    background-position: 0 -34px;
+}
+.wPage .typesp {
+    background-position: 0 -66px;
+}
+.wPage .typewq {
+    background-position: 0 -102px;
+}
+.wPage .qanda .qaitem {
+    padding: 5px 26px 5px 18px;
+}
+/*问答详情页*/
+.answer_title {
+    background: url("../images/icon/asktabbg.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.answer_title ul {
+    overflow: hidden;
+    padding: 10px 38px 10px 0;
+}
+.answer_title li {
+    float: left;
+    line-height: 42px;
+}
+.answer_title li:first-child {
+    width: 110px;
+}
+.answer_title li:nth-child(4) {
+    font-size: 15px;
+    padding-left: 40px;
+    border-left: 1px solid #cecece;
+}
+.answer_title li .pic_box {
+    margin: 0 auto;
+    width: 42px;
+    height: 42px;
+}
+.answer_title li .pic_box img {
+    width: 100%;
+    height: 100%;
+}
+.answer_title li h3 {
+    width: 80px;
+    font-size: 15px;
+    color: #323232;
+    font-weight: bolder;
+}
+.answer_title li p {
+    font-size: 14px;
+    width: 172px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.answer_title li:last-child span {
+    color: #7c7c7c;
+    padding: 3px 11px 4px;
+    border: 1px solid #7c7c7c;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.answer_title .obtn {
+    float: right;
+}
+.answer_title .pay span {
+    color: #3e5be4 !important;
+    border: 1px solid #3e5be4 !important;
+}
+.answer_main {
+    display: none;
+    padding: 20px 24px 20px 30px;
+    background: #fff;
+}
+.answer_desc {
+    color: #333;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 20px;
+}
+.answer_desc p {
+    color: #333;
+    text-indent: .6rem;
+}
+.operabox {
+    color: #999;
+}
+/*播放器*/
+.Audio {
+    border: 2px solid #ccc;
+    padding: 4px 12px;
+}
+.Audio audio {
+    display: none;
+}
+.Audio .NewAudio {
+    overflow: hidden;
+}
+.Audio .btn_Audio {
+    float: left;
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.Audio .btn_play {
+    background: url(../images/icon/play2.png) no-repeat center;
+    background-size: 100% 100%;
+}
+.Audio .btn_pause {
+    background: url(../images/icon/stop2.png) no-repeat center;
+    background-size: 100% 100%;
+}
+.Audio .TimeLine {
+    width: 244px;
+    height: 5px;
+    float: left;
+    background-color: #fff;
+    border-radius: 3px;
+    position: relative;
+    margin: 11px 5px;
+}
+.Audio .TimeLine .btn {
+    display: block;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #939393;
+}
+.Audio .TimeLine .btn span {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px #dcdcdc;
+}
+.Audio .TimeInfo {
+    float: left;
+    color: #494949;
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1;
+}
+/*问卷详情页*/
+.questionnaire_title {
+    background-color: #f8f8f8;
+    padding: 30px 0 24px;
+}
+.questionnaire_title h3 {
+    font-size: 18px;
+    text-align: center;
+    color: #2d2d2d;
+    margin-bottom: 18px;
+    font-weight: bolder;
+}
+.questionnaire_title p {
+    font-size: 12px;
+    text-align: center;
+    color: #939393;
+}
+.questionnaire_list {
+    padding-bottom: 24px;
+    background: #fff;
+    border-bottom: 1px solid #e3e3e3;
+}
+.queshare{
+    clear: both;
+    overflow: hidden;
+    padding: 0 30px;
+    margin-bottom: -12px;
+}
+.questionnaire_list .question {
+    position: relative;
+    padding: 10px 20px 0;
+    border-bottom: 1px solid #e3e3e3;
+}
+.questionnaire_list > .question:last-child ,.bom0{
+    border-bottom: 0 !important;
+}
+.question .labelRed{
+    margin-top: 12px;
+}
+.question > p {
+    color: #2d2d2d;
+    font-size: 15px;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+.question .options textarea{
+    width: 100%;
+    height: auto;
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+    font-size: 14px;
+}
+.question .options {
+    width: 614px;
+    margin-left: 46px;
+}
+.question .options li {
+    overflow: hidden;
+    line-height: 38px;
+    font-size: 15px;
+    color: #2d2d2d;
+}
+.question .options li > div {
+    float: left;
+    width: 466px;
+}
+.question .options li span {
+    float: right;
+    color: #898989;
+}
+.result {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 200px;
+}
+.result .title {
+    display: block;
+    width: 120px;
+    margin: 0 auto 15px;
+    color: #898989;
+    padding: 3px 11px 4px;
+    border: 1px solid #898989;
+    border-radius: 5px;
+    font-size: 13px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+}
+.result .content{
+    display: none;
+}
+.result .content img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+}
+.unoptions {
+    display: none;
+    padding: 20px 48px 0;
+}
+.unoptions dl {
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.unoptions dt {
+    float: left;
+    width: 38px;
+    height: 38px;
+}
+.unoptions dt img {
+    width: 100%;
+    height: 100%;
+}
+.unoptions dd {
+    margin-left: 50px;
+    font-size: 15px;
+}
+.unoptions dd p {
+    color: #8c8c8c;
+    margin-bottom: 8px;
+}
+.unoptions dd p em {
+    color: #333;
+    margin-right: 20px;
+}
+.unoptions dd .content {
+    position: relative;
+    line-height: 22px;
+    padding: 10px 20px;
+    color: #666;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+}
+.unoptions dd .content:after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -6px;
+
+    border-left: 2px solid #e4e4e4;
+    border-top: 2px solid #e4e4e4;
+    height: 10px;
+    width: 10px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    background: #fff;
+}
+.view-more {
+    text-align: center;
+    color: #b7b7b7;
+    font-size: 15px;
+}
+.quesubmit {display: block;outline: none;width: 84px; margin: 40px auto;line-height: 28px; border: 1px solid #3e5be4;color: #3e5be4;border-radius: 5px;cursor: pointer}
+

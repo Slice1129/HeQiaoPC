@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>赫桥财经</title>
+    <meta name="author" content="陆宣良">
+    <meta name="keywords" content="赫桥财经"/>
+    <meta name="Description" content=""/>
+    <link rel="stylesheet" href="../../css/heqiao.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <script src="../../js/jquery-2.1.4.js"></script>
+    <style>
+        .bg-body {
+            overflow: hidden;
+            background: url("../../images/abg.jpg") no-repeat center;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 3px auto 15px;
+            overflow: hidden;
+        }
+
+        .actNav {
+            float: left;
+            width: 236px;
+            min-height: 860px;
+            background-color: rgba(255, 255, 255, 0.42);
+        }
+
+        .actNav ul {
+            width: 169px;
+            margin: 54px auto;
+        }
+
+        .actNav ul li {
+            line-height: 27px;
+            margin-bottom: 12px;
+            background: url("../../images/navline.png") no-repeat left bottom;
+            text-align: center;
+        }
+
+        .actNav ul li:last-child {
+            background: none;
+        }
+
+        .actNav ul li a {
+            display: block;
+            font-size: 15px;
+        }
+
+        .actContent {
+            margin-left: 236px;
+            background-color: #ffffff;
+            height: 860px;
+        }
+
+        .actContent .actTab {
+            width: 100%;
+            padding: 20px 0 0 40px;
+        }
+
+        .actTab .actTitle {
+            position: relative;
+        }
+
+        .actTab .actTitle div.actTitle_left,
+        .actTab .actTitle div.actTitle_right {
+            width: 92px;
+            height: 92px;
+            background-color: #f7f7f7;
+            border: 1px solid #bfbfbf;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .actTab .actTitle div.actTitle_left {
+            text-align: center;
+        }
+
+        .actTab .actTitle div.actTitle_left p {
+            font-size: 14px;
+            color: #333333;
+            text-align: center;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .actTab .actTitle div.actTitle_left p:nth-of-type(2) {
+            margin-top: 8px;
+        }
+
+        .actTab .actTitle div.actTitle_left .line {
+            display: inline-block;
+            width: 45px;
+            background-color: #333333;
+            height: 1px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .actTab .actTitle div.actTitle_right {
+            width: 710px;
+        }
+
+        .actTab .actTitle div.actTitle_right textarea {
+            background-color: #f7f7f7;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            border: none;
+            padding: 12px;
+            font-size: 12px;
+            color: #999999;
+        }
+
+        .actTab .actTitle div.submit_container {
+            display: block;
+            width: 810px;
+            padding: 10px 0px 0 0;
+            text-align: right;
+            font-size: 12px;
+            color: #333333;
+        }
+
+        .actTab .actTitle div.submit_container select,
+        .actTab .actTitle div.submit_container .blogger_name,
+        .actTab .actTitle div.submit_container .submit {
+            outline: none;
+            border: 1px solid #ececec;
+            color: #999999;
+            background-color: transparent;
+            margin-left: 14px;
+            width: 74px;
+            height: 22px;
+        }
+
+        .actTab .actTitle div.submit_container .submit {
+            background-color: #910010;
+            border-radius: 6px;
+            color: #ffffff;
+        }
+
+        .actTab .actTitle div.blogger_name_select {
+            position: absolute;
+            right: 140px;
+            top: 128px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 1px solid #ececec;
+            width: 340px;
+            height: 300px;
+            color: #ffffff;
+            padding: 20px 40px;
+            z-index: 1000;
+        }
+
+        .actTab .actTitle div.blogger_name_select li {
+            display: inline-block;
+            width: 80px;
+            margin-right: 3px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .actTab .actTitle div.blogger_name_select li img {
+            display: inline-block;
+        }
+
+        .actTab .actTitle div.blogger_name_select li h1 {
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            font-size: 15px;
+            color: #ffffff;
+            margin: 3px 0;
+        }
+
+        .actTab .actTitle div.blogger_name_select li h2 {
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            font-size: 12px;
+            color: #ffffff;
+            margin: 3px 0;
+        }
+
+        .actTab .actTitle div.blogger_name_select li h3 {
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            font-size: 12px;
+            color: #ffffff;
+            margin: 3px 0;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .actTab .actMain {
+            padding: 15px 0;
+        }
+
+        .actTab .actMain .question .question-header .question-order {
+            display: inline-block;
+            width: 92px;
+            height: 92px;
+            background-color: #f7f7f7;
+            border: 1px solid #bfbfbf;
+            vertical-align: top;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .actTab .actMain .question .question-header .question-order p {
+            font-size: 14px;
+            color: #333333;
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .actTab .actMain .question .question-header .question-order hr {
+            display: inline-block;
+            background-color: #333333;
+            color: #333333;
+            width: 50%;
+            margin: 8px 0 8px 0;
+            padding: 0;
+        }
+
+        .actTab .actMain .question .question-header .question-content {
+            display: inline-block;
+            width: 670px;
+            margin-left: 26px;
+        }
+
+        .actTab .actMain .question .question-header .question-content p:nth-of-type(1) {
+            font-size: 15px;
+            color: #333333;
+            line-height: 23px;
+            padding: 10px 0 0 0;
+        }
+
+        .actTab .actMain .question .question-header .question-content p:nth-of-type(2) {
+            font-size: 12px;
+            color: #999999;
+            margin-top: 20px;
+        }
+
+        .actTab .actMain .question .question-footer {
+            padding: 10px 0 0 118px;
+
+        }
+
+        .actTab .actMain .question .question-footer ul li.li {
+            background-color: #f7f7f7;
+            width: 700px;
+            margin-bottom: 4px;
+            padding: 3px 0 0 10px;
+        }
+
+        .actTab .actMain .question .question-footer ul li.li i {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: #910010;
+            vertical-align: top;
+            margin-top: 3px;
+        }
+
+        .actTab .actMain .question .question-footer ul li.li > span {
+            display: inline-block;
+            font-size: 12px;
+            color: #999999;
+            vertical-align: top;
+            margin: 0 80px 0 20px;
+        }
+
+        .actTab .actMain .question .question-footer ul li.li p {
+            display: inline-block;
+            font-size: 12px;
+            color: #999999;
+            vertical-align: top;
+            margin-right: 120px;
+        }
+
+        .actTab .actMain .question .question-footer ul li.li em {
+            font-size: 12px;
+            color: #999999;
+            vertical-align: top;
+        }
+
+        .actTab .actMain .question .question-footer ul li.li em i {
+            padding-left: 24px;
+            background: url(../../images/icon/icon_smalldown.png) no-repeat left center;
+            margin-left: 8px;
+            margin-bottom: 9px;
+            vertical-align: top;
+        }
+
+        .actTab .actMain .question .question-footer ul li.last {
+            padding: 10px 0 0 10px;
+            width: 700px;
+            height: 80px;
+        }
+
+        .actTab .actMain .question .question-footer ul li.last p {
+            font-size: 12px;
+            color: #333333;
+            line-height: 23px;
+        }
+
+        .actTab .actMain .question .question-footer ul li.last p span {
+            font-size: 12px;
+            color: #999999;
+        }
+
+        .actTab .actMain .question02 .question-header .question-content p:nth-of-type(2) span:nth-of-type(2) {
+            display: inline-block;
+            margin-left: 40px;
+        }
+
+        .actTab .actMain .question02 .question-header .question-content p:nth-of-type(2) span:nth-of-type(2) em {
+            color: #910010;
+        }
+
+        .actTab .actMain .question03 {
+            margin-top: 15px;
+
+        }
+
+        .actTab .actMain .question03 ul li.last {
+            position: relative;
+            display: inline-block;
+            width: 700px;
+            height: 80px;
+        }
+
+        .actTab .actMain .question03 ul li.last p.user_operation {
+            position: absolute;
+            right: 0px;
+            top: 50px;
+            display: inline-block;
+            width: 300px;
+            text-align: right;
+            height: 20px;
+        }
+
+        .actTab .actMain .question03 ul li.last p.user_operation span em.share,
+        .actTab .actMain .question01 ul li.last p:nth-of-type(2) span em.share {
+            background: url(../../images/icon/icon_share.png) no-repeat left center;
+            padding-left: 24px;
+            margin-left: 8px;
+            margin-bottom: 9px;
+            vertical-align: top;
+        }
+
+        .actTab .actMain .question03 ul li.last p.user_operation span em.collection,
+        .actTab .actMain .question01 ul li.last p:nth-of-type(2) span em.collection {
+            background: url(../../images/icon/icon_shoucang.png) no-repeat left center;
+            padding-left: 24px;
+            margin-left: 8px;
+            margin-bottom: 9px;
+            vertical-align: top;
+        }
+
+        .actTab .actMain .question03 ul li.last p.user_operation span em.follow,
+        .actTab .actMain .question01 ul li.last p:nth-of-type(2) span em.follow {
+            background: url(../../images/icon/icon_guanzhu.png) no-repeat left center;
+            padding-left: 24px;
+            margin-left: 8px;
+            margin-bottom: 9px;
+            vertical-align: top;
+        }
+
+        .actTab .actMain .question03 ul li.last .video {
+            display: inline-block;
+            height: 60px;
+            width: 190px;
+            background-color: #f7f7f7;
+            padding: 10px 30px;
+        }
+
+        .actTab .actMain .question03 ul li.last .video img {
+            display: inline-block;
+            height: 100%;
+        }
+
+        .actTab .actMain .question03 ul li.last .video p {
+            display: inline-block;
+            height: 20px;
+            width: 60px;
+        }
+
+        .actTab .actMain .question03 ul li.last .video p em.videovolume {
+            background: url(../../images/icon/icon_videovolume.png) no-repeat left center;
+            padding-left: 24px;
+            margin-left: 8px;
+            margin-bottom: 9px;
+            vertical-align: top;
+        }
+
+        .actTab .actMain .question01 ul li.last p:nth-of-type(2) {
+            height: 20px;
+            text-align: right;
+        }
+
+        .actContent .title-select {
+            width: 100%;
+            background-color: #ececec;
+            height: 80px;
+            padding: 26px 30px;
+        }
+
+        .actContent .title-select img {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+
+        .actContent .title-select h1 {
+            display: inline-block;
+            height: 24px;
+            vertical-align: top;
+            color: #333333;
+        }
+
+        .actContent .title-select h1 span {
+            display: inline-block;
+            height: 24px;
+            vertical-align: top;
+            line-height: 24px;
+            font-size: 15px;
+
+        }
+        .actContent .title-select h2 {
+            display: none;
+            height: 24px;
+            vertical-align: top;
+            margin-left: 400px;
+            color: #333333;
+        }
+        .actContent .title-select h2 span {
+            display: inline-block;
+            height: 24px;
+            vertical-align: top;
+            line-height: 24px;
+            font-size: 15px;
+
+        }
+
+        .actContent .title-select h1 span:nth-of-type(1) {
+            margin-right: 15px;
+        }
+
+        .actContent .title-select h1 span:nth-of-type(2) {
+            margin-left: 5px;
+        }
+        .actContent .title-select h2 span:nth-of-type(1) {
+            margin-right: 15px;
+        }
+
+        .actContent .title-select h2 span:nth-of-type(2) {
+            margin-left: 5px;
+        }
+
+        .actContent .title-select h1 em {
+            display: inline-block;
+            height: 24px;
+            width: 1px;
+            background-color: #333333;
+        }
+        .actContent .title-select h2 em {
+            display: inline-block;
+            height: 24px;
+            width: 1px;
+            background-color: #333333;
+        }
+        #actTab_1 {
+            display: block;
+        }
+
+        #actTab_2 {
+            display: none;
+        }
+        #actTab_3 {
+            display: none;
+        }
+
+        #actTab_2 .question01 .question-content p:nth-of-type(1) span,
+        #actTab_2 .question03 .question-content p:nth-of-type(1) span {
+            font-size: 12px;
+            color: #999999;
+        }
+
+        #actTab_2 .question01 .question-footer ul li.li {
+            display: block;
+            padding-top: 5px;
+        }
+
+        #actTab_2 .question01 .question-footer ul li.li p,
+        #actTab_2 .question03 .question-footer ul li.li p {
+            margin-right: 190px;
+        }
+
+        #actTab_3 .question {
+            margin-top: 20px;
+        }
+
+        #actTab_3 .actMain .question .question-content p:nth-of-type(2) span:nth-of-type(2) {
+            display: inline-block;
+            width: 160px;
+            color: #910010;
+            margin-left: 300px;
+        }
+
+        #actTab_3 .actMain .question01 .question-content p:nth-of-type(2) span:nth-of-type(2) {
+            color: #999999;
+        }
+
+        #actTab_3 .actMain .question .question-content p:nth-of-type(2) span:nth-of-type(2) i {
+            padding-left: 24px;
+            background: url(../../images/icon/icon_smalldown.png) no-repeat left center;
+            margin-left: 8px;
+            margin-bottom: 9px;
+            vertical-align: top;
+        }
+
+        #actTab_3 .actMain .question01 .question-content p:first-child span {
+            font-size: 12px;
+            color: #999999;
+        }
+
+        #actTab_3 .actMain .question01 .question-footer .upload {
+            display: inline-block;
+        }
+
+        #actTab_3 .actMain .question01 .question-footer .upload textarea {
+            height: 80px;
+            width: 600px;
+            background-color: #f7f7f7;
+            border: 1px solid #bfbfbf;
+            padding: 10px;
+        }
+
+        #actTab_3 .actMain .question01 .question-footer .upload p label {
+            display: inline-block;
+            color: #999999;
+        }
+        #actTab_3 .actMain .question01 .question-footer .upload p input{
+            background-color: transparent;
+            outline: none;
+            border: 1px solid #bfbfbf;
+        }
+        #actTab_3 .actMain .question01 .question-footer .upload p span{
+            width: 42px;
+            height: 20px;
+            text-align: center;
+            display: inline-block;
+            border-radius: 4px;
+            border: 1px solid #bfbfbf;
+            vertical-align: top;
+            line-height: 20px;
+        }
+        #actTab_3 .actMain .question01 .question-footer .upload p button{
+            width: 58px;
+            height: 20px;
+            text-align: center;
+            display: inline-block;
+            border-radius: 4px;
+            vertical-align: top;
+            line-height: 20px;
+            background-color: #910010;
+            color: #ffffff;
+            outline: none;
+            border: none;
+            margin-left: 260px;
+        }
+
+        #actTab_3 .actMain .question01 .question-footer .upload p label i {
+            background: url(../../images/icon/icon_upload.png) no-repeat left center;
+            margin-left: 8px;
+            margin-bottom: 9px;
+            vertical-align: top;
+            padding-left: 24px;
+        }
+
+        #actTab_3 .actMain .question01 .question-footer .upload_voice {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            background-color: #f7f7f7;
+            border: 1px solid #bfbfbf;
+            vertical-align: top;
+            padding: 15px 0;
+        }
+
+        #actTab_3 .actMain .question01 .question-footer .upload_voice img {
+            display: inline-block;
+            margin: 0 auto;
+        }
+
+        #actTab_3 .actMain .question01 .question-footer .upload_voice {
+            text-align: center;
+            font-size: 12px;
+            color: #666666;
+        }
+
+        .ask-active_2 {
+            padding-left: 24px;
+            background: url(../../images/icon/icon_green.png) no-repeat left center;
+            margin-left: 8px;
+            margin-bottom: 9px;
+            color: green;
+        }
+        .ask-active_3 {
+            padding-left: 24px;
+            background: url(../../images/icon/icon_red.png) no-repeat left center;
+            margin-left: 8px;
+            margin-bottom: 9px;
+            color:  #910010;
+        }
+
+        .active {
+            color:  #910010;
+            border-bottom: 3px solid #910010;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="topArea">
+        <div class="topLogo">
+            <ul>
+                <li class="logo">
+                    <a href="../index.html">
+                        <img src="../../images/icon/logo.png" width="215">
+                    </a>
+                </li>
+                <li class="blogger">
+                    <img src="../../images/upload/bloggerUser.png">
+
+                    <div class="summary">
+                        <h1>博主名</h1>
+
+                        <p>锦坤文化发展集团</p>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="topOpera">
+            <ul>
+                <li class="navbar">
+
+                    <a href="" style="margin-right: 0">登录</a>/
+                    <a href="" style="margin-left: 0">注册</a>
+                    <a href="">个人中心</a>
+                    <a href="">提问</a>
+                    <a href="">关于赫桥</a>
+                    <a href="">返回首页</a>
+                </li>
+                <li class="searchbox">
+                    <div class="search">
+                        <input type="text" placeholder="输入关键词">
+                        <span class="btn"></span>
+                    </div>
+                </li>
+                <li class="hotline">
+                    <dl>
+                        <dt>全国服务热线:</dt>
+                        <dd>400-871-6766</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="redLine"></div>
+</header>
+<div class="bg-body">
+    <div class="container">
+        <div class="actNav">
+            <ul>
+                <li><a href="">用户中心</a></li>
+                <li><a href="">消息中心</a></li>
+                <li><a href="">我的问答</a></li>
+                <li><a href="">我的财富</a></li>
+                <li><a href="">我的关注</a></li>
+                <li><a href="">我的视频</a></li>
+                <li><a href="">我的音频</a></li>
+                <li><a href="">我的报告</a></li>
+                <li><a href="">我的图片</a></li>
+                <li><a href="">我的会议</a></li>
+                <li><a href="">我的设置</a></li>
+                <li><a href="">推出登录</a></li>
+            </ul>
+        </div>
+        <div class="actContent">
+            <div class="title-select">
+                <img src="../../images/icon/img_ask.png">
+                <h1>
+                    <span class="active" data-index="1">我的提问</span><em></em>
+                    <span data-index="2">我的回答</span>
+                </h1>
+                <h2>
+                    <span class="ask-active_2" data-index="2">已回答</span><em></em>
+                    <span data-index="3">未回答</span>
+                </h2>
+            </div>
+            <!--我的问题-->
+            <div class="actTab" id="actTab_1">
+                <div class="hd actTitle">
+                    <div class="actTitle_left">
+                        <p>输入</p>
+                        <em class="line"></em>
+                        <p>问题</p>
+                    </div>
+                    <div class="actTitle_right">
+                        <textarea placeholder="输入问题"></textarea>
+                    </div>
+                    <div class="submit_container">
+                        <span>向谁提问&nbsp;:&nbsp;</span>
+                        <select>
+                            <option>--请选择--</option>
+                            <option>金融</option>
+                            <option>商品</option>
+                            <option>外汇</option>
+                            <option>其他</option>
+                        </select>
+                        <button class="blogger_name">博主姓名</button>
+                        <button class="submit">提交</button>
+                    </div>
+                    <div class="blogger_name_select hide">
+                        <ul>
+                            <li>
+                                <img src="../../images/upload/bloggerUser.png">
+                                <h1>博主姓名</h1>
+                                <h2>锦坤文化发展</h2>
+                                <h3>金额&nbsp;:&nbsp;<span>100元</span></h3>
+                            </li>
+                            <li>
+                                <img src="../../images/upload/bloggerUser.png">
+                                <h1>博主姓名</h1>
+                                <h2>锦坤文化发展</h2>
+                                <h3>金额&nbsp;:&nbsp;<span>100元</span></h3>
+                            </li>
+                            <li>
+                                <img src="../../images/upload/bloggerUser.png">
+                                <h1>博主姓名</h1>
+                                <h2>锦坤文化发展</h2>
+                                <h3>金额&nbsp;:&nbsp;<span>100元</span></h3>
+                            </li>
+                            <li>
+                                <img src="../../images/upload/bloggerUser.png">
+                                <h1>博主姓名</h1>
+                                <h2>锦坤文化发展</h2>
+                                <h3>金额&nbsp;:&nbsp;<span>100元</span></h3>
+                            </li>
+                            <li>
+                                <img src="../../images/upload/bloggerUser.png">
+                                <h1>博主姓名</h1>
+                                <h2>锦坤文化发展</h2>
+                                <h3>金额&nbsp;:&nbsp;<span>100元</span></h3>
+                            </li>
+                            <li>
+                                <img src="../../images/upload/bloggerUser.png">
+                                <h1>博主姓名</h1>
+                                <h2>锦坤文化发展</h2>
+                                <h3>金额&nbsp;:&nbsp;<span>100元</span></h3>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="bd actMain">
+                    <div class="question  question01">
+                        <div class="question-header">
+                            <div class="question-order">
+                                <p>问题</p>
+                                <hr>
+                                <p>01</p>
+                            </div>
+                            <div class="question-content">
+                                <p>
+                                    <span>
+                                     财经类媒体上经常出现的，金融业内人士最不能忍的常识性错误有哪些？财经类媒体上经常出现的，
+                                    金融业内人士最不能忍的常识性错误有哪些
+                                    </span>
+                                </p>
+                                <p>提问时间&nbsp;:&nbsp;
+                                    <span>
+                                    2017-05-27 02:09:57
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="question-footer">
+                            <ul>
+                                <li class="li">
+                                    <i></i>
+                                    <span>您有来自【被提问人的ID号】的回复</span>
+                                    <p>回复时间&nbsp;:&nbsp;
+                                        <span>
+                                            2017-05-27 02:09:57
+                                        </span>
+                                    </p>
+                                    <em>查看<i></i></em>
+                                </li>
+                                <li class="li">
+                                    <i></i>
+                                    <span>您有来自【被提问人的ID号】的回复</span>
+                                    <p>回复时间&nbsp;:&nbsp;
+                                        <span>
+                                            2017-05-27 02:09:57
+                                        </span>
+                                    </p>
+                                    <em>查看<i></i></em>
+                                </li>
+
+                                <li class="last">
+                                    <p>【被提问人的ID号】&nbsp;:&nbsp;
+                                        <span>
+                                            财经类媒体上经常出现的，金融业内人士最不能忍的常识性错误有哪些？财经类媒体上经常出现的，
+                                            金融业内人士最不能忍的常识性错误。
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span></span>
+                                        <span><em class="share"></em>分享</span>
+                                        <span><em class="follow"></em>关注</span>
+                                        <span><em class="collection"></em>收藏</span>
+                                    </p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="question  question02">
+                        <div class="question-header">
+                            <div class="question-order">
+                                <p>问题</p>
+                                <hr>
+                                <p>02</p>
+                            </div>
+                            <div class="question-content">
+                                <p>
+                                    <span>
+                                     财经类媒体上经常出现的，金融业内人士最不能忍的常识性错误有哪些？财经类媒体上经常出现的，
+                                    金融业内人士最不能忍的常识性错误有哪些
+                                    </span>
+                                </p>
+                                <p>提问时间&nbsp;:&nbsp;
+                                    <span>
+                                    2017-05-27 02:09:57
+                                    </span>
+
+                                    <span>是否回答&nbsp;:&nbsp;
+                                          <em>否</em>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question  question03">
+                        <div class="question-header">
+                            <div class="question-order">
+                                <p>问题</p>
+                                <hr>
+                                <p>01</p>
+                            </div>
+                            <div class="question-content">
+                                <p>
+                                    <span>
+                                     财经类媒体上经常出现的，金融业内人士最不能忍的常识性错误有哪些？财经类媒体上经常出现的，
+                                    金融业内人士最不能忍的常识性错误有哪些
+                                    </span>
+                                </p>
+                                <p>提问时间&nbsp;:&nbsp;
+                                    <span>
+                                    2017-05-27 02:09:57
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="question-footer">
+                            <ul>
+                                <li class="li">
+                                    <i></i>
+                                    <span>您有来自【被提问人的ID号】的回复</span>
+                                    <p>回复时间&nbsp;:&nbsp;
+                                        <span>
+                                            2017-05-27 02:09:57
+                                        </span>
+                                    </p>
+                                    <em>查看<i></i></em>
+                                </li>
+                                <li class="li">
+                                    <i></i>
+                                    <span>您有来自【被提问人的ID号】的回复</span>
+                                    <p>回复时间&nbsp;:&nbsp;
+                                        <span>
+                                            2017-05-27 02:09:57
+                                        </span>
+                                    </p>
+                                    <em>查看<i></i></em>
+                                </li>
+
+                                <li class="last">
+                                    <div class="video">
+                                        <img src="../../images/icon/play2.png" id="audio_payer">
+                                        <p><em class="videovolume"></em><span>-59:06</span></p>
+                                        <audio id="audio" src="../../uploadfiles/meet.mp3"></audio>
+                                    </div>
+                                    <p class="user_operation">
+                                        <span></span>
+                                        <span><em class="share"></em>分享</span>
+                                        <span><em class="follow"></em>关注</span>
+                                        <span><em class="collection"></em>收藏</span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--我的回答  已回答-->
+            <div class="actTab" id="actTab_2">
+                <div class="bd actMain">
+                    <div class="question  question01">
+                        <div class="question-header">
+                            <div class="question-order">
+                                <p>已回答</p>
+                                <hr>
+                                <p>01</p>
+                            </div>
+                            <div class="question-content">
+                                <p><em>【提问人的ID号】&nbsp;:&nbsp;</em>
+                                    <span>
+                                     财经类媒体上经常出现的，金融业内人士最不能忍的常识性错误有哪些？财经类媒体上经常出现的，
+                                    金融业内人士最不能忍的常识性错误有哪些
+                                    </span>
+                                </p>
+                                <p>提问时间&nbsp;:&nbsp;
+                                    <span>
+                                    2017-05-27 02:09:57
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="question-footer">
+                            <ul>
+                                <li class="li">
+                                    <i></i>
+                                    <span>我对问题的回复</span>
+                                    <p>回复时间&nbsp;:&nbsp;
+                                        <span>
+                                            2017-05-27 02:09:57
+                                        </span>
+                                    </p>
+                                    <em>查看<i></i></em>
+                                </li>
+
+                                <li class="last">
+                                    <p>【我的回答】&nbsp;:&nbsp;
+                                        <span>
+                                            财经类媒体上经常出现的，金融业内人士最不能忍的常识性错误有哪些？财经类媒体上经常出现的，
+                                            金融业内人士最不能忍的常识性错误。
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span></span>
+                                        <span><em class="share"></em>分享</span>
+                                        <span><em class="follow"></em>关注</span>
+                                        <span><em class="collection"></em>收藏</span>
+                                    </p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="question  question02">
+                        <div class="question-header">
+                            <div class="question-order">
+                                <p>已回答</p>
+                                <hr>
+                                <p>02</p>
+                            </div>
+                            <div class="question-content">
+                                <p>
+                                    <span>
+                                     财经类媒体上经常出现的，金融业内人士最不能忍的常识性错误有哪些？财经类媒体上经常出现的，
+                                    金融业内人士最不能忍的常识性错误有哪些
+                                    </span>
+                                </p>
+                                <p>提问时间&nbsp;:&nbsp;
+                                    <span>
+                                    2017-05-27 02:09:57
+                                    </span>
+
+                                    <span>是否回答&nbsp;:&nbsp;
+                                          <em>否</em>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question  question03">
+                        <div class="question-header">
+                            <div class="question-order">
+                                <p>已回答</p>
+                                <hr>
+                                <p>03</p>
+                            </div>
+                            <div class="question-content">
+                                <p><em>【提问人的ID号】&nbsp;:&nbsp;</em>
+                                    <span>
+                                     财经类媒体上经常出现的，金融业内人士最不能忍的常识性错误有哪些？财经类媒体上经常出现的，
+                                    金融业内人士最不能忍的常识性错误有哪些
+                                    </span>
+                                </p>
+                                <p>提问时间&nbsp;:&nbsp;
+                                    <span>
+                                    2017-05-27 02:09:57
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="question-footer">
+                            <ul>
+                                <li class="li">
+                                    <i></i>
+                                    <span>我对问题的回复</span>
+                                    <p>回复时间&nbsp;:&nbsp;
+                                        <span>
+                                            2017-05-27 02:09:57
+                                        </span>
+                                    </p>
+                                    <em>查看<i></i></em>
+                                </li>
+
+                                <li class="last">
+                                    <div class="video">
+                                        <img src="../../images/icon/play2.png">
+                                        <p><em class="videovolume"></em><span>-59:06</span></p>
+                                    </div>
+                                    <p class="user_operation">
+                                        <span></span>
+                                        <span><em class="share"></em>分享</span>
+                                        <span><em class="follow"></em>关注</span>
+                                        <span><em class="collection"></em>收藏</span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--我的回答  未回答-->
+            <div class="actTab" id="actTab_3">
+                <div class="bd actMain">
+                    <div class="question  question01">
+                        <div class="question-header">
+                            <div class="question-order">
+                                <p>未回答</p>
+                                <hr>
+                                <p>01</p>
+                            </div>
+                            <div class="question-content">
+                                <p><em>【提问人的ID号】&nbsp;:&nbsp;</em>
+                                    <span>
+                                     财经类媒体上经常出现的，金融业内人士最不能忍的常识性错误有哪些？财经类媒体上经常出现的，
+                                    金融业内人士最不能忍的常识性错误有哪些
+                                    </span>
+                                </p>
+                                <p>提问时间&nbsp;:&nbsp;
+                                    <span>
+                                    2017-05-27 02:09:57
+                                    </span>
+                                    <span>我要回答 <i></i></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="question-footer">
+                            <div class="upload">
+                                <textarea placeholder="输入文字"></textarea>
+                                <p>
+                                    <label><i></i>上传语音</label>
+                                    <input type="text">
+                                    <span>浏览</span>
+                                    <button>提交</button>
+                                </p>
+                            </div>
+                            <div class="upload_voice">
+                                <img src="../../images/icon/img_voice.png">
+                                <p>
+                                    <span>
+                                        在线录音
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question  question02">
+                        <div class="question-header">
+                            <div class="question-order">
+                                <p>未回答</p>
+                                <hr>
+                                <p>02</p>
+                            </div>
+                            <div class="question-content">
+                                <p>
+                                    <span>
+                                     财经类媒体上经常出现的，金融业内人士最不能忍的常识性错误有哪些？财经类媒体上经常出现的，
+                                    金融业内人士最不能忍的常识性错误有哪些
+                                    </span>
+                                </p>
+                                <p>提问时间&nbsp;:&nbsp;
+                                    <span>
+                                    2017-05-27 02:09:57
+                                    </span>
+                                    <span>我要回答 <i></i></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question  question03">
+                        <div class="question-header">
+                            <div class="question-order">
+                                <p>未回答</p>
+                                <hr>
+                                <p>02</p>
+                            </div>
+                            <div class="question-content">
+                                <p>
+                                    <span>
+                                     财经类媒体上经常出现的，金融业内人士最不能忍的常识性错误有哪些？财经类媒体上经常出现的，
+                                    金融业内人士最不能忍的常识性错误有哪些
+                                    </span>
+                                </p>
+                                <p>提问时间&nbsp;:&nbsp;
+                                    <span>
+                                    2017-05-27 02:09:57
+                                    </span>
+
+                                    <span>我要回答
+                                          <i></i>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question  question04">
+                        <div class="question-header">
+                            <div class="question-order">
+                                <p>未回答</p>
+                                <hr>
+                                <p>02</p>
+                            </div>
+                            <div class="question-content">
+                                <p>
+                                    <span>
+                                     财经类媒体上经常出现的，金融业内人士最不能忍的常识性错误有哪些？财经类媒体上经常出现的，
+                                    金融业内人士最不能忍的常识性错误有哪些
+                                    </span>
+                                </p>
+                                <p>提问时间&nbsp;:&nbsp;
+                                    <span>
+                                    2017-05-27 02:09:57
+                                    </span>
+
+                                    <span>我要回答
+                                          <i></i>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer">
+        <div class="footerLink">
+            <a href="">关于赫桥</a><span></span>
+            <a href="">联系我们</a><span></span>
+            <a href="">人才招聘</a><span></span>
+            <a href="">内容合作</a><span></span>
+            <a href="">网站导航</a><span></span>
+            <a href="">使用条款</a><span></span>
+            <a href="">版权声明</a><span></span>
+            <a href="">隐私保护</a><span></span>
+            <a href="">信息举报</a>
+        </div>
+        <p class="copyright">Copyright 2017-2028 赫桥财经 www.heqiaocaijing.com 版权所有</p>
+    </div>
+</footer>
+
+</body>
+<script>
+    $(function () {
+        $(".bg-body .container .actContent .actTab .actTitle .submit_container .blogger_name").click(function () {
+            $(".bg-body .container .actContent .actTab .actTitle .blogger_name_select").toggle("normal");
+        });
+
+        $(".actContent .title-select h1 span").click(function () {
+            $(".actContent .title-select h1 span").removeClass("active");
+            var index = $(this).attr("data-index");
+            $(this).addClass("active");
+            $(".actTab").css("display", "none");
+            if (Number(index)===2){
+                $(".actContent .title-select h2").css("display", "inline-block");
+                $(".actContent .title-select h2 span").removeClass("ask-active_3").removeClass("ask-active_2");
+                $(".actContent .title-select h2 span:nth-child(1)").addClass("ask-active_2");
+                anserclick();
+            }else if(Number(index)===1){
+                $(".actContent .title-select h2").css("display", "none");
+            }
+            $("#actTab_" + index).css("display", "block");
+        });
+
+        function anserclick() {
+            $(".actContent .title-select h2 span").click(function () {
+                $(".actContent .title-select h2 span").removeClass("ask-active_3").removeClass("ask-active_2");
+                var index = $(this).attr("data-index");
+                $(this).addClass("ask-active_" +index);
+                $(".actTab").css("display", "none");
+                $("#actTab_" + index).css("display", "block");
+                $(".actContent .title-select h1 span:nth-child(2)").addClass("active");
+            });
+        }
+        anserclick();
+
+        var audio_payer=true;
+        $("#audio_payer").click(function () {
+            if (audio_payer){
+                $("#audio").get(0).play();
+            }else {
+                $("#audio").get(0).pause();
+            }
+            audio_payer = !audio_payer;
+        })
+    })
+</script>
+</html>

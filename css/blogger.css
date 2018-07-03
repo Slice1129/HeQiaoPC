@@ -1,0 +1,64 @@
+.superSlide{width: 900px;height: 320px;overflow: hidden;margin-bottom: 12px;}
+.superSlide2{width: 614px;margin-bottom: 0;}
+.container{margin-top: 7px;}
+
+
+.bloggerRe{  display: block;  position: relative;  }
+.bloggerRe .play{  position: absolute;  top: 136px;  left: 117px;  }
+.bloggerRe .txt{  position: absolute;  left: 0;  right: 0;  bottom: 0;  height: 40px;  line-height: 40px;  padding: 0 14px;  font-size: 14px;  color: #fff;  background-color: rgba(0, 0, 0, 0.6);  text-overflow: ellipsis;  }
+.memberIntro{overflow: hidden;background-color: #fff;margin-bottom: 12px;border: 1px solid #ececec;}
+.memberIntro .m-info{text-align: center;}
+.memberIntro .m-info .pic{border:1px solid #e7e7e7;width: 110px;height: 110px;margin: 35px auto 26px;border-radius: 50%;}
+.memberIntro .m-info .pic img{width: 100%;height: 100%;}
+.memberIntro .m-info >h2{font-size: 18px;color: #323232;margin-bottom: 13px;}
+.memberIntro .m-info >p{font-size: 15px;color: #999;margin-bottom: 17px;}
+.memberIntro .m-info .count{text-align: center;margin-bottom: 26px;}
+.memberIntro .m-info .count span,.memberIntro .s-info .content span{font-size: 12px;color:#999;margin: 0 9px;}
+.memberIntro .m-info .count span>i,.memberIntro .s-info .content span>i{color: #666}
+.memberIntro .s-info{overflow: hidden;}
+.memberIntro .s-info .pic{width: 76px;height: 76px;margin: 13px 20px 24px 30px;}
+.memberIntro .s-info .content{margin-left: 127px;text-align: left;padding-top: 20px;}
+.memberIntro .s-info .content>h2{font-size: 15px;margin-bottom: 9px;}
+.memberIntro .s-info .content>p{margin-bottom: 10px;color: #999;}
+.memberIntro .s-info .content span{display: inline-block;margin: 0px;padding-bottom: 5px;}
+.memberIntro .m-btn{padding: 8px 0;border-top: 1px solid #ececec;text-align: center;background-color: #fafafa;}
+.memberIntro .m-btn a{display: inline-block;width: 72px;line-height: 26px;font-size: 12px;border-radius: 13px;text-align: center;margin: 0 20px;cursor: pointer;}
+.memberIntro .m-btn .follow{border: 1px solid #36b0e4}
+.memberIntro .m-btn .quiz{border: 1px solid #ac3f4b;}
+
+.flashList{margin-bottom: 12px;}
+.flash-wrapper{padding:16px 7px 20px 20px;background-color: #fff;}
+.flash-wrapper .time{margin-bottom: 9px;padding-left: 24px;color:#0938ad;background: url("../images/icon/icon_time.png") no-repeat left center;}
+.flash-wrapper ul li{margin-bottom: 18px;}
+.flash-wrapper ul li:last-child{margin-bottom: 0;}
+.flash-wrapper ul li p{font-size: 12px;line-height: 19px;color: #666;}
+.ranking-wrapper{background-color: #fff;padding: 23px 17px 16px 22px;border: 1px solid #ececec;}
+
+.slideTab .hd {  position: relative;  height: 48px;  line-height: 48px;  background: #ffffff;  padding: 0 20px;  margin-bottom: 5px;  border: 1px solid #ececec;  }
+.slideTab .hd ul {  float: left;  position: absolute;  left: 0;  top: -1px;  }
+.slideTab .hd ul li {  float: left;  height: 48px;  padding: 0 15px;  font-size: 15px;  color: #323232;  cursor: pointer;  font-weight: bolder;  }
+.slideTab .hd ul li.on {  border-bottom: 5px solid #910010;  }
+.slideTab .bd ul {  position: relative;  width: 614px;  height: 1332px;}
+.slideTab .bd li {position: absolute;  top: 0;  left: 614px;  width: 100%;  height: 100%;  background-color: #f5f5f5;  }
+/*数据中心*/
+.dataCenter {  }
+.dataCenter ul li {background-color: #ffffff;border: 1px solid #efefef;}
+.dataCenter ul li:nth-child(2n) {background-color: #fafafa;  }
+.dataCenter ul li h2 {height: 35px;line-height: 35px;padding: 0 20px;  }
+.dataCenter ul li h2 span {font-size: 14px;  }
+.dataCenter h2 .dataname {display: inline-block;width: 126px;color: #229fe0;  }
+.dataCenter h2 .dataname i {display: inline-block;width: 12px;height: 11px;margin-right: 12px;cursor: pointer;background: url("../images/icon/lb-allow.png") no-repeat center;}
+.dataCenter h2 .dataname i.down {background-position: 0 -12px;}
+.dataCenter h2 .dataname i.up {background-position: 0 0;}
+.dataCenter h2 .green {  color: #5eac2d;  }
+.dataCenter .dataChart {  display: none;  padding: 0 12px;  height: 138px;  }
+.dataCenter .dataChart.active{display: block;  }
+.dataCenter .dataChart img {  }
+
+/*财经首页*/
+.suggestVideo {  overflow: hidden;  margin-bottom: 9px;}
+.suggestVideo .sItem {  position: relative;  margin-right: 6px;  width: 296px;  height: 126px;  border: 1px solid #dcdcdc;  }
+.suggestVideo .sItem img{width: 100%;height: 100%;}
+.suggestVideo .sItem:last-child {  margin-right: 0;  }
+.suggestVideo .sItem .play {  position: absolute;  top: 42px;  left: 128px;  }
+.suggestVideo .sItem .txt {  position: absolute;  left: 10px;  right: 10px;  bottom: 0;  height: 24px;  line-height: 24px;  font-size: 14px;  color: #fff;  background-color: rgba(0, 0, 0, 0.6);  }

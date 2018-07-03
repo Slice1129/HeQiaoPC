@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>赫桥财经</title>
+    <meta name="author" content="陆宣良">
+    <meta name="keywords" content="赫桥财经"/>
+    <meta name="Description" content=""/>
+    <link rel="stylesheet" href="../../css/heqiao.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <style>
+        .bg-body {
+            overflow: hidden;
+            background: url("../../images/abg.jpg") no-repeat center;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 3px auto 15px;
+            overflow: hidden;
+        }
+
+        .actNav {
+            float: left;
+            width: 236px;
+            min-height: 763px;
+            background-color: rgba(255, 255, 255, 0.42);
+        }
+
+        .actNav ul {
+            width: 169px;
+            margin: 54px auto;
+        }
+
+        .actNav ul li {
+            line-height: 27px;
+            margin-bottom: 12px;
+            background: url("../../images/navline.png") no-repeat left bottom;
+            text-align: center;
+        }
+
+        .actNav ul li:last-child {
+            background: none;
+        }
+
+        .actNav ul li a {
+            display: block;
+            font-size: 15px;
+        }
+
+        .actContent {
+            margin-left: 236px;
+            background-color: #ffffff;
+            height: 763px;
+            padding: 30px 0 0 40px;
+        }
+
+        .actTab {
+            width: 935px;
+        }
+
+        .actTab .actTitle div.actTitle_left,
+        .actTab .actTitle div.actTitle_right{
+            width: 92px;
+            height: 92px;
+            background-color: #f7f7f7;
+            border: 1px solid #bfbfbf;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .actTab .actTitle div.actTitle_left {
+            text-align: center;
+        }
+
+        .actTab .actTitle div.actTitle_left p {
+            font-size: 14px;
+            color: #333333;
+            text-align: center;
+            padding: 0;
+            margin-top: 20px;
+        }
+        .actTab .actTitle div.actTitle_left p:nth-of-type(2){
+            margin-top: 8px;
+        }
+        .actTab .actTitle div.actTitle_left .line{
+            display: inline-block;
+            width: 45px;
+            background-color: #333333;
+            height: 1px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .actTab .actTitle div.actTitle_right {
+            width: 710px;
+        }
+
+        .actTab .actTitle div.actTitle_right textarea {
+            background-color: #f7f7f7;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            border: none;
+            padding: 12px;
+            font-size: 12px;
+            color: #999999;
+        }
+        .actTab .actTitle div.submit_container {
+            display: block;
+            width: 810px;
+            padding: 12px 0px 0  0;
+            text-align: right;
+            font-size: 12px;
+            color: #333333;
+        }
+        .actTab .actTitle div.submit_container select,
+        .actTab .actTitle div.submit_container .blogger_name,
+        .actTab .actTitle div.submit_container .submit{
+            outline: none;
+            border: 1px solid #ececec;
+            color: #999999;
+            background-color: transparent;
+            margin-left: 14px;
+            width: 74px;
+            height: 22px;
+        }
+        .actTab .actTitle div.submit_container .submit{
+            background-color: #910010;
+            border-radius: 6px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="topArea">
+        <div class="topLogo">
+            <ul>
+                <li class="logo">
+                    <a href="../index.html">
+                        <img src="../../images/icon/logo.png" width="215">
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="topOpera">
+            <ul>
+                <li class="navbar">
+                    <a href="">返回首页</a>
+                    <a href="" style="margin-right: 0">登录</a>/
+                    <a href="" style="margin-left: 0">注册</a>
+                    <a href="">个人中心</a>
+                    <a href="">提问</a>
+                    <a href="">关于赫桥</a>
+
+                </li>
+                <li class="searchbox">
+                    <div class="search">
+                        <input type="text" placeholder="输入关键词">
+                        <span class="btn"></span>
+                    </div>
+                </li>
+                <li class="hotline">
+                    <dl>
+                        <dt>全国服务热线:</dt>
+                        <dd>400-871-6766</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="redLine"></div>
+</header>
+<div class="bg-body">
+    <div class="container">
+        <div class="actNav">
+            <ul>
+                <li><a href="">用户中心</a></li>
+                <li><a href="">我的提问</a></li>
+                <li><a href="">财务管理</a></li>
+                <li><a href="">我的关注</a></li>
+                <li><a href="">我的收藏</a></li>
+                <li><a href="">消息中心</a></li>
+                <li><a href="">推出登录</a></li>
+            </ul>
+        </div>
+        <div class="actContent">
+            <div class="actTab">
+                <div class="hd actTitle">
+                    <div class="actTitle_left">
+                        <p>输入</p>
+                        <em class="line"></em>
+                        <p>问题</p>
+                    </div>
+                    <div class="actTitle_right">
+                        <textarea placeholder="输入问题"></textarea>
+                    </div>
+                    <div class="submit_container">
+                        <span>向谁提问&nbsp;:&nbsp;</span>
+                       <select>
+                           <option>--请选择--</option>
+                           <option>金融</option>
+                           <option>商品</option>
+                           <option>外汇</option>
+                           <option>其他</option>
+                       </select>
+                        <button class="blogger_name">博主姓名</button>
+                        <button class="submit">提交</button>
+                    </div>
+                </div>
+                <div class="bd actMain">
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer">
+        <div class="footerLink">
+            <a href="">关于赫桥</a><span></span>
+            <a href="">联系我们</a><span></span>
+            <a href="">人才招聘</a><span></span>
+            <a href="">内容合作</a><span></span>
+            <a href="">网站导航</a><span></span>
+            <a href="">使用条款</a><span></span>
+            <a href="">版权声明</a><span></span>
+            <a href="">隐私保护</a><span></span>
+            <a href="">信息举报</a>
+        </div>
+        <p class="copyright">Copyright 2017-2028 赫桥财经 www.heqiaocaijing.com 版权所有</p>
+    </div>
+</footer>
+
+</body>
+</html>

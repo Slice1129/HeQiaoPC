@@ -1,0 +1,179 @@
+/*我要报名*/
+#tip-baoming {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+#tip-baoming .cover{
+    width: 100%;
+    height: 100%;
+}
+
+#tip-baoming input {
+    outline: none;
+    background-color: transparent;
+}
+
+#tip-baoming .tip-content {
+    width: 514px;
+    height: 642px;
+    position: absolute;
+    background-color: #FFFFFF;
+    left: calc((100% - 514px) * 0.5 );
+    top:20%;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+#tip-baoming .tip-content h1 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 34px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#tip-baoming .tip-content form table {
+    margin: 32px auto 0 40px;
+    width: 430px;
+    border-collapse: collapse;
+}
+
+#tip-baoming .tip-content form table thead {
+    background-color: #F6F6F6;
+}
+
+#tip-baoming .tip-content form table tr {
+    height: 34px;
+    line-height: 34px;
+}
+
+#tip-baoming .tip-content form table tr th,
+#tip-baoming .tip-content form table tr td {
+    text-align: center;
+    border: 1px solid #e8e8e8;
+}
+
+#tip-baoming .tip-content form table tr th {
+    font-size: 14px;
+    color: #333333;
+}
+
+#tip-baoming .tip-content form table tr td {
+    font-size: 14px;
+    color: #666666;
+}
+
+#tip-baoming .tip-content form table tr th:first-child,
+#tip-baoming .tip-content form table tr td:first-child {
+    text-align: left;
+    text-indent: 1rem;
+}
+
+#tip-baoming .tip-content form table tr td:last-child {
+    padding-top: 2px;
+    vertical-align: middle;
+}
+
+#tip-baoming .tip-content form table tr td:last-child p {
+    display: inline-block;
+    height: 20px;
+    padding: 0;
+    line-height: 20px;
+    border: 1px solid #e8e8e8;
+}
+
+#tip-baoming .tip-content form table tr td:last-child p img {
+    display: inline-block;
+    width: 20px;
+    height: 17px;
+    margin: 0;
+    padding: 0;
+}
+
+#tip-baoming .tip-content form table tr td:last-child p span {
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+    display: inline-block;
+    height: 18px;
+    width: 20px;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+#tip-baoming .tip-content form div {
+    margin-top: 16px;
+}
+
+#tip-baoming .tip-content form div.name {
+    margin-top: 20px;
+}
+
+#tip-baoming .tip-content form div label {
+    width: 106px;
+    text-align: right;
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+#tip-baoming .tip-content form div input {
+    margin-left: 0px;
+    height: 26px;
+    border: 1px solid #e8e8e8;
+}
+
+#tip-baoming .tip-content form .name input {
+    width: 200px;
+}
+
+#tip-baoming .tip-content form .tel input {
+    width: 180px;
+}
+
+#tip-baoming .tip-content form .Verification input,
+#tip-baoming .tip-content form .company input,
+#tip-baoming .tip-content form .job input,
+#tip-baoming .tip-content form .email input {
+    width: 220px;
+}
+
+#tip-baoming .tip-content form .remarks textarea {
+    width: 220px;
+    outline: none;
+    background-color: transparent;
+    height: 60px;
+    border: 1px solid #e8e8e8;
+}
+
+#tip-baoming .tip-content form .payType div {
+    display: inline-block;
+    width: 102px;
+    height: 26px;
+    border: 1px solid #e8e8e8;
+    margin:  0 0 0 16px;
+    padding:0;
+}
+#tip-baoming .tip-content form .payType div img{
+    display: inline-block;
+    width: 100px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+}
+#tip-baoming .tip-content form .payType div.yinlain{
+    margin-left: 2px;
+}
+
+
+
+
+
